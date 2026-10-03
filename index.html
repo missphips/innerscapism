@@ -32,6 +32,10 @@
   .hero-scrap { position: absolute; top: -52px; right: -26px; width: 26%; transform: rotate(4deg); z-index: 2; }
   .hero-scrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; box-shadow: 0 10px 18px rgba(24, 18, 17, 0.12); }
   .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
+  .hero-badge { z-index: 3; transform: rotate(-2.5deg); filter: drop-shadow(0 10px 14px rgba(40, 26, 20, 0.16)); }
+  .hero-badge .tape { top: -12px; left: 50%; transform: translateX(-50%) rotate(4deg); width: 84px; }
+  .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
+  .hand-underline { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6 C20 2 38 9 56 5 S86 3 98 6' fill='none' stroke='%23a3453d' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left bottom / 100% 0.4em; padding-bottom: 0.12em; }
   .text-link { color: oklch(25% 0.02 40); text-decoration: underline; text-decoration-color: #a3453d; text-underline-offset: 6px; text-decoration-thickness: 1.5px; font-size: 16px; }
   .text-link:hover { color: #a3453d; }
 
@@ -112,7 +116,8 @@
     .nav-hide-sm { display: none !important; }
     .cta-pill { padding: 8px 16px !important; }
     .hero { padding: 36px 18px 56px !important; gap: 40px !important; }
-    .hero-badge { left: 0 !important; bottom: -18px !important; padding: 16px 18px !important; font-size: 15px !important; max-width: 75% !important; }
+    .hero-badge { left: -4px !important; bottom: -22px !important; max-width: 72% !important; }
+    .badge-paper { padding: 20px 20px 18px; font-size: 15px; }
     .hero-scrap { right: -6px; top: -20px; width: 34%; }
     .hero-kicker, .about-kicker, .how-kicker, .contact-kicker, .exp-kicker, .moments-kicker { font-size: 12px !important; }
     .hero-sub { font-size: 18px !important; }
@@ -167,7 +172,10 @@
         <span class="tape"></span>
         <img class="torn" src="Screenshot 2026-07-30 at 15.07.43.png" alt="">
       </div>
-      <div class="hero-badge" style="position:absolute; bottom: -28px; left: -28px; background: #a3453d; color: oklch(97% 0.01 70); padding: 22px 26px; max-width: 220px; font-family:'Fraunces', serif; font-size: 18px; line-height: 1.4; border-radius: 2px;">Reminder: the world is still slower than your screen.</div>
+      <div class="hero-badge" style="position:absolute; bottom: -34px; left: -34px; max-width: 236px;">
+        <span class="tape"></span>
+        <div class="badge-paper torn-note paper">Reminder: the world is still <span class="hand-underline">slower</span> than your screen.</div>
+      </div>
     </div>
   </div>
 
