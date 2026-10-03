@@ -3,150 +3,318 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>innerscapism — Art therapy &amp; guided reflection</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<title>innerscapism · Making space for what makes us human</title>
+<meta name="description" content="Creative and embodied experiences for slowing down, noticing, making, and reconnecting - with yourself, with others, and with the world around you. Inner Sessions, Inner Walks, Inner Tables, Inner Reset and Inner Sounds.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   body { margin: 0; background: oklch(97% 0.01 70); }
   a { color: #a3453d; }
   a:hover { color: #8a382f; }
 
+  /* ---- Paper, tape & hand-drawn marks ---- */
+  .paper {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .2 0 0 0 .14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .torn { clip-path: polygon(0.0% 1.1%, 3.8% 0.5%, 7.7% 2.3%, 11.5% 0.3%, 15.4% 1.9%, 19.2% 1.3%, 23.1% 0.2%, 26.9% 1.8%, 30.8% 0.1%, 34.6% 1.5%, 38.5% 0.2%, 42.3% 0.3%, 46.2% 1.5%, 50.0% 2.9%, 53.8% 0.4%, 57.7% 0.8%, 61.5% 2.2%, 65.4% 3.3%, 69.2% 2.0%, 73.1% 1.4%, 76.9% 3.4%, 80.8% 0.2%, 84.6% 3.0%, 88.5% 1.0%, 92.3% 0.5%, 96.2% 0.4%, 100.0% 1.1%, 100.0% 97.1%, 96.2% 99.4%, 92.3% 98.0%, 88.5% 97.8%, 84.6% 98.7%, 80.8% 98.1%, 76.9% 99.8%, 73.1% 99.8%, 69.2% 99.3%, 65.4% 97.6%, 61.5% 98.5%, 57.7% 98.9%, 53.8% 98.0%, 50.0% 98.4%, 46.2% 99.0%, 42.3% 97.2%, 38.5% 97.6%, 34.6% 99.1%, 30.8% 98.0%, 26.9% 98.2%, 23.1% 96.9%, 19.2% 97.4%, 15.4% 99.0%, 11.5% 96.6%, 7.7% 99.6%, 3.8% 98.5%, 0.0% 97.4%); }
+  .torn-band { clip-path: polygon(0.0% 0.8%, 2.5% 2.4%, 5.0% 0.2%, 7.5% 3.3%, 10.0% 3.8%, 12.5% 2.9%, 15.0% 4.4%, 17.5% 1.6%, 20.0% 3.5%, 22.5% 3.0%, 25.0% 2.9%, 27.5% 2.3%, 30.0% 4.2%, 32.5% 4.7%, 35.0% 2.4%, 37.5% 3.3%, 40.0% 0.3%, 42.5% 3.5%, 45.0% 3.2%, 47.5% 5.0%, 50.0% 4.1%, 52.5% 1.4%, 55.0% 1.9%, 57.5% 3.3%, 60.0% 0.1%, 62.5% 2.3%, 65.0% 0.8%, 67.5% 0.6%, 70.0% 0.3%, 72.5% 3.8%, 75.0% 0.6%, 77.5% 1.2%, 80.0% 2.0%, 82.5% 4.4%, 85.0% 0.4%, 87.5% 2.2%, 90.0% 2.7%, 92.5% 4.4%, 95.0% 4.1%, 97.5% 4.3%, 100.0% 1.4%, 100.0% 97.9%, 97.5% 98.2%, 95.0% 95.6%, 92.5% 95.2%, 90.0% 99.2%, 87.5% 99.1%, 85.0% 98.8%, 82.5% 98.8%, 80.0% 97.6%, 77.5% 97.1%, 75.0% 98.7%, 72.5% 100.0%, 70.0% 97.9%, 67.5% 98.2%, 65.0% 97.2%, 62.5% 95.2%, 60.0% 96.5%, 57.5% 97.4%, 55.0% 96.9%, 52.5% 96.6%, 50.0% 99.7%, 47.5% 95.5%, 45.0% 96.1%, 42.5% 95.6%, 40.0% 96.0%, 37.5% 98.0%, 35.0% 98.0%, 32.5% 99.5%, 30.0% 96.8%, 27.5% 99.7%, 25.0% 99.7%, 22.5% 99.0%, 20.0% 99.2%, 17.5% 98.3%, 15.0% 99.7%, 12.5% 100.0%, 10.0% 99.2%, 7.5% 99.5%, 5.0% 98.2%, 2.5% 99.9%, 0.0% 95.6%); }
+  .torn-note { clip-path: polygon(0.0% 2.5%, 5.6% 0.6%, 11.1% 1.0%, 16.7% 1.4%, 22.2% 1.5%, 27.8% 0.5%, 33.3% 3.4%, 38.9% 4.0%, 44.4% 1.9%, 50.0% 1.9%, 55.6% 0.3%, 61.1% 0.4%, 66.7% 1.4%, 72.2% 1.1%, 77.8% 3.3%, 83.3% 0.6%, 88.9% 0.1%, 94.4% 3.8%, 100.0% 2.1%, 100.0% 99.4%, 94.4% 97.8%, 88.9% 99.9%, 83.3% 97.9%, 77.8% 96.1%, 72.2% 96.5%, 66.7% 97.2%, 61.1% 99.0%, 55.6% 98.5%, 50.0% 99.3%, 44.4% 96.9%, 38.9% 97.9%, 33.3% 96.9%, 27.8% 98.7%, 22.2% 99.1%, 16.7% 96.8%, 11.1% 96.1%, 5.6% 96.6%, 0.0% 96.8%); }
+  .tape {
+    position: absolute; z-index: 3; width: 92px; height: 26px;
+    background: oklch(93% 0.025 80 / 0.72);
+    box-shadow: 0 1px 2px rgba(40, 28, 22, 0.08);
+    pointer-events: none;
+  }
+  .circled { position: relative; white-space: nowrap; }
+  .circled svg { position: absolute; left: -14px; right: -14px; top: -10px; bottom: -14px; width: calc(100% + 28px); height: calc(100% + 24px); overflow: visible; pointer-events: none; }
+  .scribble-under { display: block; width: 240px; max-width: 70%; height: 14px; margin: 14px auto 0; overflow: visible; }
+
+  /* ---- Hero additions ---- */
+  .hero-scrap { position: absolute; top: -52px; right: -26px; width: 26%; transform: rotate(4deg); z-index: 2; }
+  .hero-scrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; box-shadow: 0 10px 18px rgba(24, 18, 17, 0.12); }
+  .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
+  .text-link { color: oklch(25% 0.02 40); text-decoration: underline; text-decoration-color: #a3453d; text-underline-offset: 6px; text-decoration-thickness: 1.5px; font-size: 16px; }
+  .text-link:hover { color: #a3453d; }
+
+  /* ---- Five doors ---- */
+  .doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 64px 44px; max-width: 1140px; margin: 0 auto; align-items: start; }
+  .door {
+    position: relative; background-color: oklch(98% 0.008 70); padding: 22px 22px 30px;
+    box-shadow: 0 14px 30px rgba(33, 25, 23, 0.06), 0 1px 0 rgba(33, 25, 23, 0.04);
+    transform: rotate(var(--tilt, 0deg)); transition: transform 0.35s ease, box-shadow 0.35s ease;
+    scroll-margin-top: 110px;
+  }
+  .door:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 20px 36px rgba(33, 25, 23, 0.09); }
+  .door:nth-child(1) { --tilt: -0.8deg; }
+  .door:nth-child(2) { --tilt: 0.6deg; margin-top: 56px; }
+  .door:nth-child(3) { --tilt: -0.4deg; }
+  .door:nth-child(4) { --tilt: 0.7deg; }
+  .door:nth-child(5) { --tilt: -0.6deg; margin-top: 56px; }
+  .door-media { position: relative; margin-bottom: 26px; }
+  .door-media .tape { top: -12px; left: 18px; transform: rotate(-8deg); }
+  .door:nth-child(even) .door-media .tape { left: auto; right: 18px; transform: rotate(7deg); }
+  .door-media img { width: 100%; aspect-ratio: 4/5; display: block; object-fit: cover; }
+  .door-num { position: absolute; right: 12px; bottom: 10px; z-index: 2; font-family: 'Fraunces', serif; font-size: 14px; color: oklch(98% 0.01 70); background: #a3453d; padding: 4px 9px 5px; }
+  .door-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: 30px; line-height: 1.1; margin: 0 0 6px; }
+  .door-title span { font-size: 13px; font-family: 'Jost', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; display: block; margin-bottom: 8px; }
+  .door-tag { font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; color: #a3453d; margin: 0 0 18px; }
+  .door-verbs { font-size: 17px; line-height: 1.6; color: oklch(30% 0.02 40); margin: 0 0 16px; }
+  .door-note { font-size: 15.5px; line-height: 1.65; color: oklch(42% 0.02 40); margin: 0 0 20px; }
+  .door-meta { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); padding-top: 14px; border-top: 1px dashed oklch(80% 0.02 50); }
+  .doors-note {
+    position: relative; background: #a3453d; color: oklch(97% 0.01 70); padding: 52px 34px 50px;
+    transform: rotate(1deg); margin-top: 28px;
+  }
+  .doors-note a { color: oklch(97% 0.01 70); text-underline-offset: 5px; }
+  .doors-note a:hover { color: oklch(90% 0.03 60); }
+
+  /* ---- Moments list ---- */
+  .moments-list { list-style: none; padding: 0; margin: 0; }
+  .moments-list li { font-family: 'Fraunces', serif; font-size: 24px; line-height: 1.3; padding: 14px 0 14px 44px; border-bottom: 1px solid oklch(88% 0.015 60); position: relative; }
+  .moments-list li::before { content: ""; position: absolute; left: 0; top: 50%; width: 28px; height: 10px; transform: translateY(-50%); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 10'%3E%3Cpath d='M1 6 C6 2 10 8 15 5 S23 3 27 5' fill='none' stroke='%23a3453d' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain; }
+  .stamp { position: relative; display: inline-block; transform: rotate(-3deg); margin-top: 40px; }
+  .stamp img { width: 300px; max-width: 100%; aspect-ratio: 47/40; object-fit: cover; display: block; }
+  .stamp .tape { top: -8px; left: 40px; transform: rotate(-5deg); }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    .door, .door:hover { transition: none; }
+  }
+
   /* ---- Responsive overrides ---- */
+  @media (max-width: 1000px) {
+    .doors { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .door:nth-child(n) { margin-top: 0; }
+    .door:nth-child(even) { margin-top: 48px; }
+    .doors-note { margin-top: 48px; }
+  }
+
   @media (max-width: 860px) {
     .nav { padding: 20px 28px !important; }
     .nav-links { gap: 18px !important; font-size: 14px !important; }
-    .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 32px !important; }
+    .nav-hide-md { display: none !important; }
+    .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
     .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
+    .experiences { padding: 80px 28px 96px !important; }
+    .moments { grid-template-columns: 1fr !important; padding: 80px 28px !important; gap: 36px !important; }
     .how-section { padding: 72px 28px 88px !important; }
     .how-grid { grid-template-columns: 1fr !important; }
     .contact { padding: 88px 28px !important; }
     .stats-row { flex-wrap: wrap !important; gap: 28px !important; }
-    h1 { font-size: 46px !important; }
+      h1 { font-size: 46px !important; }
     h2 { font-size: 32px !important; }
   }
 
   @media (max-width: 600px) {
     .nav { padding: 14px 18px !important; }
-    .nav-links { gap: 12px !important; font-size: 13px !important; }
+    .nav-links { gap: 14px !important; font-size: 13px !important; }
+    .nav-hide-sm { display: none !important; }
     .cta-pill { padding: 8px 16px !important; }
-    .hero { padding: 36px 18px 56px !important; gap: 24px !important; }
+    .hero { padding: 36px 18px 56px !important; gap: 40px !important; }
     .hero-badge { left: 0 !important; bottom: -18px !important; padding: 16px 18px !important; font-size: 15px !important; max-width: 75% !important; }
-    .hero-kicker, .about-kicker, .how-kicker, .contact-kicker { font-size: 12px !important; }
+    .hero-scrap { right: -6px; top: -20px; width: 34%; }
+    .hero-kicker, .about-kicker, .how-kicker, .contact-kicker, .exp-kicker, .moments-kicker { font-size: 12px !important; }
     .hero-sub { font-size: 18px !important; }
     .hero-desc { font-size: 16px !important; }
+    .strip { padding: 64px 18px !important; }
+    .strip p { font-size: 24px !important; }
     .about { padding: 56px 18px !important; }
     .about-copy p { font-size: 16px !important; }
+    .experiences { padding: 64px 18px 72px !important; }
+    .doors { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .door:nth-child(n), .doors-note { margin-top: 0 !important; }
+    .door { padding: 18px 18px 26px; }
+      .moments { padding: 64px 18px !important; }
+    .moments-list li { font-size: 20px; }
     .how-section { padding: 56px 18px 64px !important; }
     .card { padding: 32px 24px !important; }
     .contact { padding: 64px 18px !important; }
     .contact-desc { font-size: 16px !important; }
-    .footer { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
-    h1 { font-size: 34px !important; }
+        .footer { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
+    h1 { font-size: 36px !important; }
     h2 { font-size: 26px !important; }
   }
 </style>
 </head>
 <body>
 
-<div style="font-family: 'Jost', sans-serif; color: oklch(25% 0.02 40); background: oklch(97% 0.01 70); overflow-x: hidden;">
+<div id="top" style="font-family: 'Jost', sans-serif; color: oklch(25% 0.02 40); background: oklch(97% 0.01 70); overflow-x: hidden;">
 
   <!-- NAV -->
   <div class="nav" style="display:flex; align-items:center; justify-content:space-between; padding: 28px 64px; position: sticky; top:0; z-index: 10; background: oklch(97% 0.01 70 / 0.9); backdrop-filter: blur(6px);">
-    <div style="font-family:'Fraunces', serif; font-size: 22px; letter-spacing: 0.02em; font-weight: 500;">innerscapism</div>
-    <div class="nav-links" style="display:flex; gap: 40px; align-items:center; font-size: 15px;">
-      <a href="#about" style="text-decoration:none;">About</a>
-      <a href="#how-it-works" style="text-decoration:none;">How it works</a>
-      <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Book a call</a>
+    <a href="#top" style="font-family:'Fraunces', serif; font-size: 22px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);">innerscapism</a>
+    <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
+      <a href="#experiences" style="text-decoration:none;">Experiences</a>
+      <a href="#about" class="nav-hide-md" style="text-decoration:none;">About</a>
+      <a href="#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contact</a>
     </div>
   </div>
 
   <!-- HERO -->
-  <div class="hero" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; padding: 60px 64px 100px; align-items:center;">
+  <div class="hero" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; padding: 60px 64px 100px; align-items:center;">
     <div>
-      <div class="hero-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 24px;">Art therapy &amp; guided reflection</div>
-      <h1 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 28px; max-width: 620px;">Finding <br>your way back</h1>
-      <p class="hero-sub" style="font-size: 22px; line-height: 1.5; color: oklch(38% 0.02 40); max-width: 500px; margin: 0 0 12px;">through place, creativity and reflection.</p>
-      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 480px; margin: 0 0 40px;">Art therapy for grief, burnout and life transition.<br>Held space to slow down, make something with your hands, and remember your story.</p>
-      <div style="display:flex; gap: 20px; align-items:center; flex-wrap: wrap;">
-        <div style="font-size: 16px; color: #000000">Workshops for teams &nbsp;•&nbsp; 1:1 online</div>
+      <div class="hero-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 24px;">Innerscapism</div>
+      <h1 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 28px; max-width: 620px;">Making space for what makes us <span class="circled">human<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
+      <p class="hero-sub" style="font-size: 22px; line-height: 1.5; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 12px;">Creative and embodied experiences for slowing down, noticing, making, and reconnecting - with yourself, with others, and with the world around you.</p>
+      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 480px; margin: 0 0 40px;">Not another way to optimise yourself.<br>A space to become more familiar with yourself, and more present with each other.</p>
+      <div style="display:flex; gap: 28px; align-items:center; flex-wrap: wrap;">
+        <a href="#experiences" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Explore the experiences</a>
       </div>
     </div>
     <div style="position: relative;">
-      <img src="Screenshot 2026-07-30 at 15.07.43.png" alt="Landscape through trees" style="width: 100%; aspect-ratio: 4/5; display:block; border-radius: 2px; object-fit: cover;">
+      <img src="assets/images/experiences/gathering.jpg" alt="Friends talking and laughing around a table with tea, food and a drawn circle" style="width: 100%; aspect-ratio: 4/3; display:block; border-radius: 2px; object-fit: cover;">
+      <div class="hero-scrap" aria-hidden="true">
+        <span class="tape"></span>
+        <img class="torn" src="Screenshot 2026-07-30 at 15.07.43.png" alt="">
+      </div>
       <div class="hero-badge" style="position:absolute; bottom: -28px; left: -28px; background: #a3453d; color: oklch(97% 0.01 70); padding: 22px 26px; max-width: 220px; font-family:'Fraunces', serif; font-size: 18px; line-height: 1.4; border-radius: 2px;">Reminder: the world is still slower than your screen.</div>
     </div>
   </div>
 
   <!-- INTRO STRIP -->
-  <div style="color: oklch(97% 0.01 70); padding: 80px 64px; text-align: center; background-color: #A3453D">
-    <p style="font-family:'Fraunces', serif; font-size: 32px; line-height: 1.5; max-width: 780px; margin: 0 auto; font-weight: 400;">Not drawing. Not performing. Just grounding through texture, image and quiet attention.</p>
+  <div class="strip torn-band" style="color: oklch(97% 0.01 70); padding: 88px 64px; text-align: center; background-color: #A3453D">
+    <p style="font-family:'Fraunces', serif; font-size: 40px; line-height: 1.3; max-width: 780px; margin: 0 auto; font-weight: 400;">Making the invisible visible.</p>
+    <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
+    <p style="font-family:'Fraunces', serif; font-size: 22px; line-height: 1.55; max-width: 640px; margin: 22px auto 0; font-weight: 400; opacity: 0.92;">Art, yoga, walking, conversation, sound, empathy and attention. Different ways of entering the same space.</p>
   </div>
 
-  <!-- ABOUT -->
-  <div id="about" class="about" style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; padding: 110px 64px; align-items:start;">
-    <img src="Screenshot 2026-07-30 at 20.31.34.png" alt="Founder portrait" style="width: 100%; aspect-ratio: 3/4; display:block; border-radius: 2px; object-fit: cover;">
+  <!-- ABOUT / PHILOSOPHY -->
+  <div id="about" class="about" style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; padding: 110px 64px; align-items:start; scroll-margin-top: 90px;">
+    <img class="torn" src="Screenshot 2026-07-30 at 15.07.43.png" alt="A hand-drawn compass held up in a forest" style="width: 100%; aspect-ratio: 3/4; display:block; object-fit: cover;">
     <div class="about-copy">
-      <div class="about-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">About</div>
-      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 24px; line-height: 1.15;">Held by someone <br>who has walked the path too.</h2>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px;">Innerscapism is a practice of returning.<br>To the body, to place, to the parts of yourself that got quiet during loss or burnout. Sessions blend simple art-making (collage, texture transfer, mark-making) with reflective conversation, no artistic skill required.</p>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 32px; max-width: 560px;">Every practice is an invitation, never a performance. <br>You bring your hands and your attention, the rest unfolds.</p>
-      <div class="stats-row" style="display:flex; gap: 48px;">
-        <div>
-          <div style="font-family: 'Fraunces', serif; font-size: 28px; margin-bottom: 6px; color: #000000EB">Grief</div>
-          <div style="font-size: 16px; color: #000000">&amp; loss</div>
-        </div>
-        <div>
-          <div style="font-family: 'Fraunces', serif; font-size: 28px; margin-bottom: 6px; color: #000000">Burnout</div>
-          <div style="font-size: 16px; color: #000000">&amp; overwhelm</div>
-        </div>
-        <div>
-          <div style="font-family: 'Fraunces', serif; font-size: 28px; margin-bottom: 6px; color: #000000; position: relative">Transition</div>
-          <div style="font-size: 16px; color: #000000">&amp; change</div>
-        </div>
-      </div>
+      <div class="about-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">What is Innerscapism?</div>
+      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 24px; line-height: 1.15;">Innerscapism is a practice of returning.</h2>
+      <p style="font-family:'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 28px; max-width: 560px;">To your attention.<br>To your curiosity.<br>To your body.<br>To place.<br>To each other.<br>To the parts of yourself that become quieter when life gets busy.</p>
+      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px;">We spend so much of our lives doing, solving, producing and responding. Innerscapism creates space to pause, notice, make and ask better questions.</p>
+      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 560px;">Creative practices are the medium, not the goal.<br>No artistic skill required. Just curiosity.</p>
     </div>
   </div>
 
-  <!-- HOW IT WORKS -->
-  <div id="how-it-works" class="how-section" style="padding: 100px 64px 120px; background: oklch(94% 0.015 65);">
-    <div style="text-align:center; margin-bottom: 64px;">
-      <div class="how-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">How it works</div>
-      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0;">Two ways to begin</h2>
+  <!-- EXPERIENCES: FIVE WAYS IN -->
+  <div id="experiences" class="experiences paper" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;">
+    <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
+      <div class="exp-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">The experiences</div>
+      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Five ways in.</h2>
     </div>
-    <div class="how-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto;">
-      <div class="card" style="background: oklch(98% 0.008 70); border-radius: 2px; padding: 48px 40px; display:flex; flex-direction:column; gap: 18px;">
-        <img src="Screenshot 2026-07-30 at 15.08.06.png" alt="Team workshop with flipchart" style="width:100%; aspect-ratio: 16/10; display:block; border-radius: 2px; margin-bottom: 8px; object-fit: cover;">
-        <h3 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 26px; margin: 0;">Workshops for teams</h3>
-        <p style="font-size: 16px; line-height: 1.7; color: oklch(40% 0.02 40); margin: 0;">On-site or remote sessions for teams navigating change, burnout risk, or collective grief. Shared art-making opens honest conversation that meetings can't reach. Fostering real connection and psychological safety.</p>
-        <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.9; color: oklch(40% 0.02 40);">
-          <li>60–120 minute sessions</li>
-          <li>Groups of 6–30</li>
-          <li>Materials provided</li>
-        </ul>
+
+    <div class="doors">
+
+      <article class="door" id="inner-sessions">
+        <div class="door-media">
+          <span class="tape"></span>
+          <img class="torn" src="assets/images/experiences/sessions.jpg" alt="Torn sketchbook page with a charcoal drawing of a horizon">
+          <span class="door-num">01</span>
+        </div>
+        <h3 class="door-title"><span>Inner</span>Sessions</h3>
+        <p class="door-tag">Make space to reflect.</p>
+        <p class="door-verbs">Art.<br>Prompts.<br>Conversation.<br>Attention.</p>
+        <p class="door-note">For moments when something is changing, and you need somewhere to put it.</p>
+        <div class="door-meta">1:1 · Creative coaching · Art therapy</div>
+      </article>
+
+      <article class="door" id="inner-walks">
+        <div class="door-media">
+          <span class="tape"></span>
+          <img class="torn" style="object-position: top;" src="assets/images/experiences/walks.jpg" alt="Three people walking slowly, collaged on paper">
+          <span class="door-num">02</span>
+        </div>
+        <h3 class="door-title"><span>Inner</span>Walks</h3>
+        <p class="door-tag">A different kind of walk.</p>
+        <p class="door-verbs">Go for a walk.<br>Slow down.<br>Look closely.<br>Draw what you notice.</p>
+        <p class="door-note">Let your thoughts catch up with you. Walking, observation and drawing. In place, in nature, with attention.</p>
+        <div class="door-meta">Small groups · Outdoors</div>
+      </article>
+
+      <article class="door" id="inner-tables">
+        <div class="door-media">
+          <span class="tape"></span>
+          <img class="torn" src="assets/images/experiences/tables.jpg" alt="People drawing around a candlelit table with olives and tomatoes">
+          <span class="door-num">03</span>
+        </div>
+        <h3 class="door-title"><span>Inner</span>Tables</h3>
+        <p class="door-tag">Making room for conversation.</p>
+        <p class="door-verbs">Come to the table.<br>Eat.<br>Draw.<br>Talk.</p>
+        <p class="door-note">Ask questions you don't usually get to ask. Food, drawing and conversation. The table as a space for curiosity.</p>
+        <div class="door-meta">Intimate groups · Shared table</div>
+      </article>
+
+      <article class="door" id="inner-reset">
+        <div class="door-media">
+          <span class="tape"></span>
+          <img class="torn" src="assets/images/experiences/reset.jpg" alt="People stretching on mats beside large charcoal and paint drawings">
+          <span class="door-num">04</span>
+        </div>
+        <h3 class="door-title"><span>Inner</span>Reset</h3>
+        <p class="door-tag">Move. Breathe. Make.</p>
+        <p class="door-verbs">The body leads.<br>Creativity follows.</p>
+        <p class="door-note">Yoga, breath, drawing, painting and embodied exploration. Not another yoga class. A creative reset through movement and making.</p>
+        <div class="door-meta">Movement · Breath · Paint</div>
+      </article>
+
+      <article class="door" id="inner-sounds">
+        <div class="door-media">
+          <span class="tape"></span>
+          <img class="torn" src="assets/images/experiences/sounds.jpg" alt="Brass singing bowls and a striker resting on a woven cloth">
+          <span class="door-num">05</span>
+        </div>
+        <h3 class="door-title"><span>Inner</span>Sounds</h3>
+        <p class="door-tag">Listen. Feel. Resonate.</p>
+        <p class="door-verbs">Singing bowls.<br>Stillness.<br>Deep listening.</p>
+        <p class="door-note">A space to slow down, listen and reconnect with yourself through sound and attention.</p>
+        <div class="door-meta">Guided sound · Stillness</div>
+      </article>
+
+      <aside class="doors-note torn-note paper" aria-label="Where the experiences happen">
+        <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">These can happen</div>
+        <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0 0 22px;">
+          For yourself ·<br>
+          With others ·<br>
+          At work
+        </p>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.9;">Five ways in. One space.</p>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <!-- MOMENTS -->
+  <div class="moments" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; padding: 110px 64px; align-items:start; max-width: 1240px; margin: 0 auto;">
+    <div>
+      <div class="moments-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">Who it's for</div>
+      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 22px; line-height: 1.15;">For moments when something is changing.</h2>
+      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 420px;">Or when nothing is, and you'd simply like to notice more.</p>
+      <div class="stamp">
+        <span class="tape"></span>
+        <img class="torn" src="assets/images/experiences/meadow.jpg" alt="A person standing still in a meadow, looking up at the trees">
       </div>
-      <div class="card" style="background: oklch(98% 0.008 70); border-radius: 2px; padding: 48px 40px; display:flex; flex-direction:column; gap: 18px;">
-        <img src="Screenshot 2026-07-30 at 15.07.53.png" alt="Collage art materials" style="width:100%; aspect-ratio: 16/10; display:block; border-radius: 2px; margin-bottom: 8px; object-fit: cover;">
-        <h3 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 26px; margin: 0;">1:1 online</h3>
-        <p style="font-size: 16px; line-height: 1.7; color: oklch(40% 0.02 40); margin: 0;">Individual sessions from wherever you are. <br>A quiet, private space to process grief, burnout or transition at your own pace, over video.&nbsp;<br>Let's meet.</p>
-        <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.9; color: oklch(40% 0.02 40);">
-          <li>50-minute sessions</li>
-          <li>Weekly or as-needed</li>
-          <li>Free discovery call first</li>
-        </ul>
-      </div>
+      <p style="font-family:'Fraunces', serif; font-style: italic; font-size: 17px; color: oklch(38% 0.02 40); margin: 16px 0 0;">Finding your way back.</p>
+    </div>
+    <div>
+      <p style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 6px 0 8px;">You might be</p>
+      <ul class="moments-list">
+        <li>navigating transition</li>
+        <li>feeling creatively stuck</li>
+        <li>needing space to reflect</li>
+        <li>recovering from an intense period</li>
+        <li>wanting to reconnect with yourself</li>
+        <li>looking for more meaningful connection</li>
+        <li>simply wanting to slow down and pay attention</li>
+      </ul>
     </div>
   </div>
 
-  <!-- CONTACT / CTA -->
+  <!-- CLOSING / CONTACT -->
   <div id="contact" class="contact" style="padding: 120px 64px; text-align:center; background: oklch(97% 0.01 70);">
-    <div class="contact-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">Begin</div>
-    <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 20px; max-width: 700px; margin-left:auto; margin-right:auto;">If you're here, <br>this might be for you.</h2>
-    <p class="contact-desc" style="font-size: 18px; color: oklch(40% 0.02 40); margin: 0 0 40px; max-width: 480px; margin-left:auto; margin-right:auto;">A free 20-minute call to talk through what's going on and whether this practice fits.</p>
-    <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 18px 40px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 17px;">Book a free discovery call</a>
+    <p class="contact-desc" style="font-size: 18px; line-height: 1.6; color: oklch(40% 0.02 40); margin: 0 0 36px; max-width: 480px; margin-left:auto; margin-right:auto;">If you're here, this might be for you. <br>A free 20-minute call to talk through what's going on and which way in fits.</p>
+    <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 18px 40px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 17px;">Start with a conversation</a>
   </div>
 
   <!-- FOOTER -->
-  <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; font-size: 14px; color: oklch(50% 0.02 40);">
+  <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
     <div style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40);">innerscapism</div>
+    <div style="font-family:'Fraunces', serif; font-style: italic; font-size: 15px;">Making the invisible visible.</div>
     <div style="display:flex; gap: 32px;">
       <a href="https://www.instagram.com/innerscapism/" style="text-decoration:none;">Instagram</a>
     </div>
