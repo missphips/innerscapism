@@ -55,7 +55,6 @@
   .door:nth-child(5) { --tilt: -0.6deg; margin-top: 56px; }
   .door:nth-child(6) { --tilt: 0.5deg; }
   .door-soon { position: absolute; top: 18px; left: 14px; z-index: 2; transform: rotate(-6deg); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #a3453d; background: oklch(97% 0.01 70 / 0.92); border: 1.5px solid #a3453d; padding: 6px 10px; }
-  .doors-note { grid-column: 2; }
   .door-media { position: relative; margin-bottom: 26px; }
   .door-media .tape { top: -12px; left: 18px; transform: rotate(-8deg); }
   .door:nth-child(even) .door-media .tape { left: auto; right: 18px; transform: rotate(7deg); }
@@ -69,10 +68,8 @@
   .door-meta { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); padding-top: 14px; border-top: 1px dashed oklch(80% 0.02 50); }
   .doors-note {
     position: relative; background: #a3453d; color: oklch(97% 0.01 70); padding: 52px 34px 50px;
-    transform: rotate(1deg); margin-top: 28px;
+    transform: rotate(1deg); width: min(100%, 420px); margin: 0 auto 72px; text-align: left;
   }
-  .doors-note a { color: oklch(97% 0.01 70); text-underline-offset: 5px; }
-  .doors-note a:hover { color: oklch(90% 0.03 60); }
 
   /* ---- Moments list ---- */
   .moments-list { list-style: none; padding: 0; margin: 0; }
@@ -94,7 +91,6 @@
     .doors { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     .door:nth-child(n) { margin-top: 0; }
     .door:nth-child(even) { margin-top: 48px; }
-    .doors-note { margin-top: 48px; grid-column: 1 / -1; justify-self: center; width: min(100%, 420px); }
   }
 
   @media (max-width: 860px) {
@@ -131,8 +127,7 @@
     .about-copy p { font-size: 16px !important; }
     .experiences { padding: 64px 18px 72px !important; }
     .doors { grid-template-columns: 1fr !important; gap: 40px !important; }
-    .door:nth-child(n), .doors-note { margin-top: 0 !important; }
-    .doors-note { width: auto; justify-self: stretch; }
+    .door:nth-child(n) { margin-top: 0 !important; }
     .door { padding: 18px 18px 26px; }
       .moments { padding: 64px 18px !important; }
     .moments-list li { font-size: 20px; }
@@ -290,16 +285,6 @@
         <div class="door-meta">Coming soon</div>
       </article>
 
-      <aside class="doors-note torn-note paper" aria-label="Where the experiences happen">
-        <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">These can happen</div>
-        <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
-          For yourself ·<br>
-          With others ·<br>
-          At work -<br>
-          with your team!
-        </p>
-      </aside>
-
     </div>
 
   </div>
@@ -331,6 +316,14 @@
 
   <!-- CLOSING / CONTACT -->
   <div id="contact" class="contact" style="padding: 10px 64px 120px; text-align:center; background: oklch(97% 0.01 70);">
+    <aside class="doors-note torn-note paper" aria-label="Where the experiences happen">
+      <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">These can happen</div>
+      <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
+        For yourself ·<br>
+        With others ·<br>
+        At work - with your team!
+      </p>
+    </aside>
     <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 auto 20px; max-width: 700px;">Finding your way back.</h2>
     <p class="contact-desc" style="font-size: 18px; line-height: 1.6; color: oklch(40% 0.02 40); margin: 0 0 36px; max-width: 480px; margin-left:auto; margin-right:auto;">If you're here, this might be for you. <br>A free 20-minute call to talk through what's going on and which way in fits.</p>
     <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 18px 40px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 17px;">Start with a conversation</a>
