@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Innerware · innerscapism</title>
+<meta name="description" content="Innerware: creating technology from the inside out. A field of exploration within Innerscapism on attention, agency, creativity and what should remain human in the systems we create.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/innerscapism.css">
+<style>
+  html { scroll-behavior: smooth; }
+  .kicker { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 0 0 20px; }
+  .body-copy { font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px; }
+  .serif-lines { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 24px; }
+
+  /* ---- Graph paper: the "system" that hand-drawn marks move through ---- */
+  .grid-paper {
+    background-color: oklch(96% 0.015 75);
+    background-image:
+      linear-gradient(oklch(78% 0.02 60 / 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(78% 0.02 60 / 0.35) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* ---- Hero ---- */
+  .iw-sketch { position: relative; transform: rotate(-1.5deg); filter: drop-shadow(0 16px 26px rgba(33, 25, 23, 0.1)); }
+  .iw-sketch .tape { top: -12px; left: 34px; transform: rotate(-7deg); }
+  .iw-sketch .tape + .tape { left: auto; right: 34px; transform: rotate(6deg); }
+  .iw-sketch svg { display: block; width: 100%; height: auto; }
+
+  /* ---- Questions ---- */
+  .questions { list-style: none; margin: 0 auto; padding: 0; max-width: 1000px; }
+  .questions li { display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: baseline; padding: 40px 0; border-bottom: 1px dashed oklch(78% 0.03 45); }
+  .questions li:first-child { border-top: 1px dashed oklch(78% 0.03 45); }
+  .q-num { font-family: 'Fraunces', serif; font-size: 20px; color: #a3453d; }
+  .q-text { font-family: 'Fraunces', serif; font-weight: 400; font-size: 40px; line-height: 1.2; margin: 0; color: oklch(25% 0.02 40); text-wrap: balance; }
+  .questions li:last-child .q-text { font-style: italic; color: #a3453d; }
+
+  /* ---- The horse ---- */
+  .torn-edges {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpolygon points='0.0,1.6 2.5,4.8 5.0,0.4 7.5,6.6 10.0,7.6 12.5,5.8 15.0,8.8 17.5,3.2 20.0,7.0 22.5,6.0 25.0,5.8 27.5,4.6 30.0,8.4 32.5,9.4 35.0,4.8 37.5,6.6 40.0,0.6 42.5,7.0 45.0,6.4 47.5,10.0 50.0,8.2 52.5,2.8 55.0,3.8 57.5,6.6 60.0,0.2 62.5,4.6 65.0,1.6 67.5,1.2 70.0,0.6 72.5,7.6 75.0,1.2 77.5,2.4 80.0,4.0 82.5,8.8 85.0,0.8 87.5,4.4 90.0,5.4 92.5,8.8 95.0,8.2 97.5,8.6 100.0,2.8 100,10 0,10'/%3E%3C/svg%3E") top / 100% 26px no-repeat, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 100.0,5.8 97.5,6.4 95.0,1.2 92.5,0.4 90.0,8.4 87.5,8.2 85.0,7.6 82.5,7.6 80.0,5.2 77.5,4.2 75.0,7.4 72.5,10.0 70.0,5.8 67.5,6.4 65.0,4.4 62.5,0.4 60.0,3.0 57.5,4.8 55.0,3.8 52.5,3.2 50.0,9.4 47.5,1.0 45.0,2.2 42.5,1.2 40.0,2.0 37.5,6.0 35.0,6.0 32.5,9.0 30.0,3.6 27.5,9.4 25.0,9.4 22.5,8.0 20.0,8.4 17.5,6.6 15.0,9.4 12.5,10.0 10.0,8.4 7.5,9.0 5.0,6.4 2.5,9.8 0.0,1.2'/%3E%3C/svg%3E") bottom / 100% 26px no-repeat, linear-gradient(#000, #000) center / 100% calc(100% - 50px) no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpolygon points='0.0,1.6 2.5,4.8 5.0,0.4 7.5,6.6 10.0,7.6 12.5,5.8 15.0,8.8 17.5,3.2 20.0,7.0 22.5,6.0 25.0,5.8 27.5,4.6 30.0,8.4 32.5,9.4 35.0,4.8 37.5,6.6 40.0,0.6 42.5,7.0 45.0,6.4 47.5,10.0 50.0,8.2 52.5,2.8 55.0,3.8 57.5,6.6 60.0,0.2 62.5,4.6 65.0,1.6 67.5,1.2 70.0,0.6 72.5,7.6 75.0,1.2 77.5,2.4 80.0,4.0 82.5,8.8 85.0,0.8 87.5,4.4 90.0,5.4 92.5,8.8 95.0,8.2 97.5,8.6 100.0,2.8 100,10 0,10'/%3E%3C/svg%3E") top / 100% 26px no-repeat, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 100.0,5.8 97.5,6.4 95.0,1.2 92.5,0.4 90.0,8.4 87.5,8.2 85.0,7.6 82.5,7.6 80.0,5.2 77.5,4.2 75.0,7.4 72.5,10.0 70.0,5.8 67.5,6.4 65.0,4.4 62.5,0.4 60.0,3.0 57.5,4.8 55.0,3.8 52.5,3.2 50.0,9.4 47.5,1.0 45.0,2.2 42.5,1.2 40.0,2.0 37.5,6.0 35.0,6.0 32.5,9.0 30.0,3.6 27.5,9.4 25.0,9.4 22.5,8.0 20.0,8.4 17.5,6.6 15.0,9.4 12.5,10.0 10.0,8.4 7.5,9.0 5.0,6.4 2.5,9.8 0.0,1.2'/%3E%3C/svg%3E") bottom / 100% 26px no-repeat, linear-gradient(#000, #000) center / 100% calc(100% - 50px) no-repeat;
+  }
+  .horse { background-color: oklch(25% 0.02 40); color: oklch(94% 0.015 70); }
+  .horse-inner { max-width: 760px; margin: 0 auto; }
+  .horse h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.04; letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 28px; text-wrap: balance; }
+  .speed { display: block; width: 100%; height: 120px; margin: 0 0 56px; }
+  .story p { font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; line-height: 1.6; margin: 0 0 18px; opacity: 0.92; }
+  .story .spoken { padding-left: 28px; position: relative; font-style: normal; opacity: 1; }
+  .story .spoken::before { content: ""; position: absolute; left: 0; top: 0.8em; width: 16px; height: 6px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 6'%3E%3Cpath d='M1 3.5 C5 1.5 9 5 15 2.5' fill='none' stroke='%23d98c7a' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain; }
+  .horse-turn { margin: 72px 0 0; padding-top: 56px; border-top: 1px dashed oklch(94% 0.015 70 / 0.25); }
+  .horse-turn .body { font-size: 18px; line-height: 1.75; margin: 0 0 22px; opacity: 0.88; }
+  .can-do { font-family: 'Fraunces', serif; font-size: 28px; line-height: 1.5; margin: 0 0 30px; }
+  .faster { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 22px; margin: 0 0 36px; font-family: 'Fraunces', serif; font-weight: 500; line-height: 1; }
+  .faster span:nth-child(1) { font-size: 20px; opacity: 0.55; }
+  .faster span:nth-child(2) { font-size: 26px; opacity: 0.65; }
+  .faster span:nth-child(3) { font-size: 33px; opacity: 0.75; letter-spacing: -0.01em; }
+  .faster span:nth-child(4) { font-size: 41px; opacity: 0.88; letter-spacing: -0.02em; }
+  .faster span:nth-child(5) { font-size: 52px; letter-spacing: -0.03em; }
+  .direction { display: grid; grid-template-columns: 1fr 220px; gap: 48px; align-items: center; margin: 80px 0 0; }
+  .direction p { font-family: 'Fraunces', serif; font-size: 44px; line-height: 1.15; margin: 0; }
+  .direction figure { margin: 0; position: relative; transform: rotate(3deg); }
+  .direction figure img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+  .direction figure .tape { top: -12px; left: 50%; transform: translateX(-50%) rotate(-5deg); background: oklch(90% 0.02 75 / 0.6); }
+  .reins { font-family: 'Fraunces', serif; font-style: italic; font-size: 48px; line-height: 1.2; margin: 88px 0 0; text-align: center; }
+  .reins .hand-underline { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6 C20 2 38 9 56 5 S86 3 98 6' fill='none' stroke='%23d98c7a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+
+  /* ---- What is Innerware ---- */
+  .threads { list-style: none; margin: 0 0 36px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 12px; max-width: 640px; }
+  .threads li { font-size: 15px; padding: 7px 16px; border: 1px solid oklch(78% 0.03 45); border-radius: 999px; color: oklch(35% 0.02 40); }
+  .threads li:nth-child(3n+2) { transform: rotate(-1.5deg); }
+  .threads li:nth-child(3n) { transform: rotate(1.2deg); }
+  .purpose { font-family: 'Fraunces', serif; font-size: 26px; line-height: 1.4; color: oklch(25% 0.02 40); margin: 0 0 18px; max-width: 620px; }
+
+  /* ---- Four areas (reuses the experience card) ---- */
+  .doors-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 56px 32px; }
+  .doors-4 .door:nth-child(4) { margin-top: 56px; }
+  .doors-4 .door-media .drawing { aspect-ratio: 4/3; }
+  .doors-4 .door-media .drawing svg { display: block; width: 100%; height: 100%; }
+  .doors-4 .door-title { font-size: 28px; }
+  .doors-4 .door-tag { font-size: 19px; line-height: 1.35; }
+
+  /* ---- Inner to outer ---- */
+  .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+  .diagram text { font-family: 'Jost', sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; fill: oklch(40% 0.02 40); }
+  .chain p { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.5; color: oklch(30% 0.02 40); margin: 0 0 14px; max-width: 560px; }
+  .final-line { font-family: 'Fraunces', serif; font-style: italic; font-size: 28px; color: #a3453d; margin: 34px 0 0; }
+
+  /* ---- Who it's for ---- */
+  .for-list { list-style: none; margin: 34px auto 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 26px; max-width: 1120px; }
+  .for-list li { font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(30% 0.02 40); padding-left: 24px; position: relative; }
+  .for-list li::before { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 14px; transform: translateY(-50%) rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
+
+  /* ---- Closing ---- */
+  .closing-statement { font-family: 'Fraunces', serif; font-weight: 500; font-size: 48px; line-height: 1.18; margin: 0 auto; max-width: 860px; text-wrap: balance; }
+  .closing-statement span { display: block; font-size: 0.72em; line-height: 1.3; font-weight: 400; color: oklch(40% 0.02 40); margin-top: 18px; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 1100px) {
+    .doors-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 860px) {
+    .iw-hero, .iw-two { grid-template-columns: 1fr !important; padding-left: 28px !important; padding-right: 28px !important; gap: 48px !important; }
+    .iw-section { padding-left: 28px !important; padding-right: 28px !important; }
+    .horse h2 { font-size: 46px !important; }
+    .q-text { font-size: 32px; }
+    .direction { grid-template-columns: 1fr; gap: 36px; }
+    .direction figure { width: 200px; }
+    .reins { font-size: 38px; }
+    .closing-statement { font-size: 38px; }
+  }
+  @media (max-width: 600px) {
+    .iw-hero, .iw-two { padding-left: 18px !important; padding-right: 18px !important; padding-top: 40px !important; padding-bottom: 64px !important; }
+    .iw-section { padding-left: 18px !important; padding-right: 18px !important; padding-top: 72px !important; padding-bottom: 80px !important; }
+    .kicker { font-size: 12px; }
+    .body-copy { font-size: 16px; }
+    .serif-lines, .chain p { font-size: 19px; }
+    .questions li { grid-template-columns: 1fr; gap: 6px; padding: 28px 0; }
+    .q-text { font-size: 26px; }
+    .horse h2 { font-size: 34px !important; }
+    .speed { height: 70px; margin-bottom: 36px; }
+    .story p { font-size: 19px; }
+    .can-do { font-size: 22px; }
+    .faster span:nth-child(5) { font-size: 40px; }
+    .faster span:nth-child(4) { font-size: 33px; }
+    .direction p { font-size: 32px; }
+    .reins { font-size: 30px; margin-top: 64px; }
+    .purpose { font-size: 21px; }
+    .final-line { font-size: 23px; }
+    .closing-statement { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="top" style="font-family: 'Jost', sans-serif; color: oklch(25% 0.02 40); background: oklch(97% 0.01 70); overflow-x: hidden;">
+
+  <!-- NAV (same as homepage) -->
+  <div class="nav" style="display:flex; align-items:center; justify-content:space-between; padding: 28px 64px; position: sticky; top:0; z-index: 10; background: oklch(97% 0.01 70 / 0.9); backdrop-filter: blur(6px);">
+    <a href="index.html" style="font-family:'Fraunces', serif; font-size: 26px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);">innerscapism</a>
+    <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
+      <a href="index.html#experiences" style="text-decoration:none;">Experiences</a>
+      <a href="index.html#about" class="nav-hide-md" style="text-decoration:none;">About</a>
+      <a href="index.html#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contact</a>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- 1. HERO -->
+  <section class="iw-hero" style="display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; padding: 60px 64px 110px; align-items:center;" aria-labelledby="iw-title">
+    <div>
+      <p class="kicker">Innerware</p>
+      <h1 id="iw-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 30px; max-width: 620px;">Creating technology from the <span class="circled" style="margin-left: 10px;">inside out<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
+      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 16px;">We are building technologies that can write, create, recommend, analyse and decide faster than ever.</p>
+      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 40px;">But the question isn't only what technology can do.<br>It's what technology is doing to us.</p>
+      <a href="#questions" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Explore the questions ↓</a>
+    </div>
+    <div class="iw-sketch" aria-hidden="true">
+      <span class="tape"></span><span class="tape"></span>
+      <div class="grid-paper torn paper">
+        <svg viewBox="0 0 400 320" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="36" y="36" width="168" height="96" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <line x1="36" y1="60" x2="204" y2="60" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <rect x="222" y="196" width="146" height="84" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <rect x="238" y="212" width="54" height="8" fill="oklch(30% 0.02 40)" opacity="0.25"/>
+          <rect x="238" y="230" width="96" height="8" fill="oklch(30% 0.02 40)" opacity="0.18"/>
+          <rect x="52" y="210" width="96" height="62" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.45"/>
+          <path d="M39.4 61.2 C47.7 62.9 72.2 72.1 89.1 71.7 C106.1 71.2 124.5 58.5 141.1 58.4 C157.7 58.4 180.8 69.3 188.8 71.5" stroke="oklch(30% 0.02 40)" stroke-width="1.2" opacity="0.55"/>
+          <path d="M9.8 270.2 C20.1 266.8 53.3 251.2 71.7 249.9 C90.1 248.5 104.7 268.2 120.0 262.3 C135.4 256.5 158.7 230.2 163.7 215.0 C168.8 199.9 159.7 179.6 150.5 171.2 C141.3 162.7 116.2 158.4 108.4 164.2 C100.5 170.1 96.3 198.1 103.4 206.2 C110.4 214.4 133.5 217.2 150.8 213.2 C168.0 209.1 190.3 197.3 206.9 181.9 C223.6 166.4 235.3 133.6 250.6 120.5 C265.9 107.3 285.4 100.1 298.6 103.1 C311.9 106.0 328.4 126.4 330.1 138.2 C331.8 150.1 317.4 170.4 308.8 174.0 C300.1 177.6 279.6 168.6 278.1 159.9 C276.6 151.1 286.9 136.3 299.8 121.4 C312.6 106.5 339.7 82.0 355.1 70.6 C370.4 59.1 385.8 55.6 392.0 52.6" stroke="#a3453d" stroke-width="2.4"/>
+          <path d="M225.6 126.2 Q222.6 122.9 222.5 118.9 Q223.5 115.0 225.0 111.4 Q227.9 108.4 230.3 105.5 Q232.9 102.7 236.4 101.0 Q238.9 97.5 243.2 97.1 Q247.0 95.2 251.1 96.4 Q255.5 95.2 259.5 96.6 Q262.1 100.4 265.6 101.9 Q270.1 103.0 271.6 106.8 Q275.0 109.5 274.8 113.7 Q274.5 117.4 276.4 121.1 Q276.3 125.0 273.7 128.2 Q271.5 131.3 269.9 134.7 Q268.5 138.7 264.8 140.6 Q260.3 140.8 256.7 142.4 Q252.8 142.7 248.9 142.7 Q244.6 144.4 241.2 141.6 Q237.1 141.0 233.9 138.6 Q231.5 135.6 227.7 133.6 Q227.4 129.5 224.5 126.5 Q225.4 122.6 224.3 118.9 Q225.4 115.4 226.3 111.8 Q226.1 107.5 228.9 104.5" stroke="oklch(30% 0.02 40)" stroke-width="1.4"/>
+          <circle cx="250" cy="120" r="3" fill="#a3453d"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. THE SHIFT -->
+  <section class="iw-two" style="display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 72px; padding: 40px 64px 120px; align-items:start; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="shift-title">
+    <div>
+      <p class="kicker">The shift</p>
+      <h2 id="shift-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0;">The more powerful our tools become, the more important our inner capacities become.</h2>
+    </div>
+    <div>
+      <p class="body-copy">AI is changing how we work, create, communicate and make decisions.</p>
+      <p class="body-copy">As more of our cognitive work becomes automated, we need to become more conscious of the things technology cannot decide for us:</p>
+      <p class="serif-lines">What matters.<br>What is meaningful.<br>What deserves our attention.<br>What should remain human.</p>
+      <p class="body-copy" style="margin-bottom: 0;">Innerware explores this space between human inner life and the systems we create.</p>
+    </div>
+  </section>
+
+  <!-- 3. THE QUESTIONS -->
+  <section id="questions" class="iw-section paper" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="q-title">
+    <div style="max-width: 1000px; margin: 0 auto 48px;">
+      <p class="kicker">The questions</p>
+      <h2 id="q-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0;">Four prompts to sit with.</h2>
+    </div>
+    <ol class="questions">
+      <li><span class="q-num">01</span><p class="q-text">What happens to our attention when everything is optimised?</p></li>
+      <li><span class="q-num">02</span><p class="q-text">What happens to creativity when everything can be generated?</p></li>
+      <li><span class="q-num">03</span><p class="q-text">What happens to agency when everything can be delegated?</p></li>
+      <li><span class="q-num">04</span><p class="q-text">What should remain human?</p></li>
+    </ol>
+  </section>
+
+  <!-- 4. THE HORSE -->
+  <section class="horse torn-edges iw-section" style="padding: 130px 64px 140px; margin-top: -26px; position: relative;" aria-labelledby="horse-title">
+    <div class="horse-inner">
+      <p class="kicker" style="color: #d98c7a;">A Zen story</p>
+      <h2 id="horse-title">The horse is getting faster.</h2>
+      <svg class="speed" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none" stroke-linecap="round" aria-hidden="true">
+        <path d="M120.9 7.5 C136.8 7.4 184.8 7.5 216.7 7.3 C248.7 7.2 280.6 6.7 312.5 6.6 C344.5 6.5 376.4 6.4 408.4 6.7 C440.3 7.0 472.3 8.2 504.2 8.3 C536.1 8.3 568.1 7.2 600.0 7.2 C632.0 7.2 679.9 8.1 695.9 8.3" stroke="oklch(94% 0.015 70)" stroke-width="1.54" opacity="0.45"/>
+        <path d="M172.3 17.7 C185.2 17.3 224.0 15.9 249.9 15.5 C275.8 15.1 301.7 15.0 327.6 15.4 C353.5 15.8 379.4 17.5 405.3 17.8 C431.2 18.2 457.1 17.9 482.9 17.5 C508.8 17.2 534.7 16.0 560.6 15.7 C586.5 15.4 625.3 15.5 638.3 15.5" stroke="oklch(94% 0.015 70)" stroke-width="2.13" opacity="0.66"/>
+        <path d="M447.0 25.3 C464.7 25.2 517.6 25.0 552.9 24.7 C588.2 24.5 623.5 23.9 658.8 23.7 C694.1 23.5 729.4 23.1 764.7 23.5 C799.9 24.0 835.2 26.4 870.5 26.5 C905.8 26.6 941.1 24.3 976.4 24.2 C1011.7 24.0 1064.6 25.4 1082.3 25.7" stroke="oklch(94% 0.015 70)" stroke-width="1.99" opacity="0.39"/>
+        <path d="M120.5 34.2 C127.3 33.9 147.9 32.4 161.5 32.1 C175.2 31.9 188.9 32.4 202.6 32.6 C216.3 32.9 230.0 33.4 243.7 33.7 C257.4 34.0 271.1 34.6 284.8 34.6 C298.5 34.7 312.2 34.2 325.9 33.9 C339.6 33.6 360.1 33.0 367.0 32.8" stroke="oklch(94% 0.015 70)" stroke-width="1.24" opacity="0.75"/>
+        <path d="M133.9 40.6 C144.9 40.7 177.8 40.8 199.8 41.0 C221.7 41.1 243.7 41.4 265.6 41.6 C287.6 41.8 309.5 42.4 331.5 42.2 C353.4 42.1 375.4 40.9 397.4 40.8 C419.3 40.7 441.3 41.2 463.2 41.6 C485.2 42.0 518.1 43.0 529.1 43.3" stroke="oklch(94% 0.015 70)" stroke-width="1.79" opacity="0.79"/>
+        <path d="M231.6 49.0 C237.9 49.0 256.9 48.5 269.5 49.0 C282.1 49.4 294.7 51.4 307.4 51.8 C320.0 52.2 332.6 51.1 345.2 51.1 C357.8 51.2 370.5 52.3 383.1 52.0 C395.7 51.6 408.3 49.1 420.9 49.0 C433.6 48.8 452.5 50.6 458.8 50.9" stroke="oklch(94% 0.015 70)" stroke-width="1.88" opacity="0.52"/>
+        <path d="M451.9 59.1 C457.2 59.2 473.1 59.6 483.8 59.8 C494.4 59.9 505.0 60.3 515.7 60.3 C526.3 60.3 536.9 59.9 547.6 59.8 C558.2 59.7 568.8 59.6 579.5 59.7 C590.1 59.7 600.7 59.8 611.4 59.9 C622.0 60.1 638.0 60.3 643.3 60.3" stroke="oklch(94% 0.015 70)" stroke-width="1.82" opacity="0.44"/>
+        <path d="M317.8 68.4 C328.4 68.5 360.0 68.8 381.1 68.7 C402.2 68.5 423.2 67.9 444.3 67.7 C465.4 67.6 486.5 68.0 507.6 67.9 C528.6 67.8 549.7 67.1 570.8 67.1 C591.9 67.1 613.0 67.6 634.0 67.8 C655.1 67.9 686.7 67.8 697.3 67.8" stroke="oklch(94% 0.015 70)" stroke-width="1.77" opacity="0.29"/>
+        <path d="M308.8 75.6 C324.1 75.8 370.0 76.6 400.6 76.8 C431.1 76.9 461.7 76.4 492.3 76.3 C522.9 76.1 553.5 75.7 584.1 75.8 C614.6 75.9 645.2 77.3 675.8 77.1 C706.4 76.9 737.0 74.7 767.6 74.7 C798.2 74.6 844.0 76.4 859.3 76.8" stroke="oklch(94% 0.015 70)" stroke-width="1.72" opacity="0.27"/>
+        <path d="M98.5 84.5 C113.3 84.6 157.8 84.6 187.5 84.9 C217.2 85.1 246.9 86.0 276.5 85.8 C306.2 85.7 335.9 84.2 365.5 83.7 C395.2 83.2 424.9 82.9 454.6 82.9 C484.2 83.0 513.9 83.5 543.6 83.9 C573.2 84.2 617.8 84.9 632.6 85.1" stroke="oklch(94% 0.015 70)" stroke-width="1.2" opacity="0.36"/>
+        <path d="M240.3 94.3 C251.2 94.0 284.0 92.6 305.8 92.4 C327.7 92.3 349.5 93.6 371.4 93.5 C393.2 93.5 415.0 92.2 436.9 92.0 C458.7 91.9 480.5 92.5 502.4 92.8 C524.2 93.1 546.0 93.7 567.9 94.0 C589.7 94.2 622.5 94.3 633.4 94.3" stroke="oklch(94% 0.015 70)" stroke-width="1.46" opacity="0.73"/>
+        <path d="M130.6 101.5 C136.8 101.7 155.6 102.4 168.0 102.6 C180.5 102.8 193.0 102.7 205.5 102.6 C218.0 102.5 230.5 102.1 243.0 102.2 C255.5 102.2 268.0 103.2 280.5 102.9 C293.0 102.7 305.5 101.2 318.0 100.8 C330.5 100.4 349.2 100.5 355.5 100.4" stroke="oklch(94% 0.015 70)" stroke-width="1.33" opacity="0.5"/>
+        <path d="M193.7 110.0 C207.4 109.9 248.6 109.2 276.1 109.4 C303.5 109.6 331.0 110.7 358.4 111.1 C385.9 111.4 413.3 111.7 440.8 111.5 C468.2 111.3 495.7 110.3 523.1 109.8 C550.6 109.4 578.0 108.9 605.5 108.6 C632.9 108.4 674.1 108.5 687.9 108.5" stroke="oklch(94% 0.015 70)" stroke-width="1.05" opacity="0.73"/>
+      </svg>
+      <div class="story">
+        <p>There is a story in Zen circles about a man and a horse.</p>
+        <p>A man is riding a horse that is galloping very quickly. It appears that the man is going somewhere very important.</p>
+        <p>Another man, standing alongside the road, calls out:</p>
+        <p class="spoken">“Where are you going?”</p>
+        <p>The rider shouts back:</p>
+        <p class="spoken">“I don't know! Ask the horse!”</p>
+        <p>The horse continues to run faster and faster. The man on the road calls:</p>
+        <p class="spoken">“Then stop the horse!”</p>
+        <p>And the rider answers:</p>
+        <p class="spoken">“I don't know how!”</p>
+      </div>
+
+      <div class="horse-turn">
+        <p class="body">If this story already sounds familiar when applied to human behaviour, imagine it now in the age of AI.</p>
+        <p class="body">We have built a horse that can run faster than we ever could.</p>
+        <p class="can-do">It can write. Design. Code. Analyse. Generate. Recommend.</p>
+        <p class="body">And our response has largely been:</p>
+        <p class="faster"><span>Faster.</span><span>More.</span><span>Automate it.</span><span>Optimise it.</span><span>Scale it.</span></p>
+        <p class="body">But somewhere in this race, we may have forgotten to ask:</p>
+        <p class="can-do" style="margin: 0;">Where are we actually going?</p>
+
+        <div class="direction">
+          <p>Acceleration is not the same as direction.</p>
+          <figure>
+            <span class="tape"></span>
+            <img class="torn" src="Screenshot 2026-07-30 at 15.07.43.png" alt="A hand-drawn compass held up in a forest">
+          </figure>
+        </div>
+      </div>
+
+      <p class="reins"><span class="hand-underline">Who is holding the reins?</span></p>
+    </div>
+  </section>
+
+  <!-- 5. WHAT IS INNERWARE -->
+  <section class="iw-section" style="padding: 120px 64px; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="what-title">
+    <div style="max-width: 820px;">
+      <p class="kicker">What is Innerware?</p>
+      <h2 id="what-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 26px;">Innerware is a practice of designing from the inside out.</h2>
+      <p class="body-copy">Innerware explores the relationship between inner life and technology. It brings together:</p>
+      <ul class="threads">
+        <li>Product thinking</li>
+        <li>UX</li>
+        <li>AI</li>
+        <li>Creativity</li>
+        <li>Embodiment</li>
+        <li>Humanistic design</li>
+        <li>Attention</li>
+        <li>Agency</li>
+        <li>Systems thinking</li>
+      </ul>
+      <p class="purpose">The purpose isn't to reject technology.</p>
+      <p class="body-copy" style="margin-bottom: 0;">It is to become more conscious of the relationship we have with it, and the kinds of relationships our products create for others.</p>
+    </div>
+  </section>
+
+  <!-- 6. FOUR AREAS -->
+  <section class="iw-section paper" style="padding: 110px 64px 130px; background-color: oklch(94% 0.015 65);" aria-labelledby="areas-title">
+    <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
+      <p class="kicker">Four areas</p>
+      <h2 id="areas-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0; line-height: 1.12;">Where we look.</h2>
+    </div>
+    <div class="doors doors-4">
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Hand-drawn concentric circles narrowing to a single point">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" aria-hidden="true">
+              <path d="M68.0 21.1 Q75.3 21.0 82.5 18.9 Q89.1 22.8 95.9 24.0 Q102.9 25.5 107.6 30.4 Q115.3 32.3 117.6 38.8 Q120.5 44.3 122.4 50.1 Q126.3 55.7 125.7 62.1 Q125.6 68.4 123.6 74.5 Q121.1 80.6 117.4 86.3 Q111.4 90.3 104.3 92.5 Q98.7 96.4 91.5 97.4 Q84.6 97.8 77.6 99.8 Q70.2 100.0 64.1 96.2 Q57.5 93.9 51.5 90.6 Q45.2 87.3 41.4 81.8 Q37.5 76.5 34.4 70.6 Q34.7 64.2 32.7 57.9 Q33.2 51.4 38.8 46.3 Q38.4 39.1 43.4 34.3 Q50.3 31.4 55.0 26.6 Q61.0 23.0 67.6 19.8 Q75.2 20.7 82.4 19.8" stroke="oklch(30% 0.02 40)" stroke-width="1.3" opacity="0.5"/>
+              <path d="M102.5 41.4 Q106.0 44.4 106.9 48.8 Q109.3 52.4 108.7 56.7 Q110.8 60.6 110.6 64.9 Q108.8 68.8 107.1 72.7 Q103.0 75.2 101.7 79.7 Q98.0 82.6 93.7 84.8 Q88.6 85.0 84.1 86.7 Q79.3 85.4 74.3 86.8 Q69.6 85.6 66.0 82.5 Q62.7 79.6 58.4 77.8 Q55.2 74.9 52.1 71.6 Q51.3 67.4 51.9 63.2 Q48.9 59.3 52.0 55.6 Q50.7 51.1 54.6 48.1 Q56.6 44.5 58.6 40.5 Q63.7 39.5 67.6 37.5 Q71.4 35.0 75.9 33.5 Q80.8 32.9 85.5 33.8 Q90.5 34.2 94.3 37.1 Q99.2 38.2 100.6 43.0 Q103.9 45.7 107.1 48.7" stroke="oklch(30% 0.02 40)" stroke-width="1.4" opacity="0.75"/>
+              <path d="M78.1 47.8 Q80.3 48.0 82.6 47.5 Q84.7 48.6 86.4 49.7 Q88.3 50.6 90.7 51.2 Q92.2 52.7 92.0 55.0 Q94.2 56.3 94.9 58.3 Q94.1 60.3 93.9 62.2 Q92.6 63.8 92.4 65.7 Q91.1 67.3 89.8 68.8 Q87.4 69.1 86.5 71.6 Q84.0 71.5 81.9 71.7 Q79.7 72.6 77.5 71.9 Q75.4 71.3 73.2 70.9 Q72.1 68.9 69.8 68.3 Q68.7 66.7 66.5 65.6 Q65.7 63.7 66.6 61.6 Q66.1 59.7 67.0 58.0 Q66.9 56.1 67.0 54.0 Q68.1 52.3 70.4 51.4 Q72.3 50.4 74.2 49.7 Q75.9 48.3 78.0 47.3 Q80.3 48.7 82.6 47.7 Q84.3 49.5 86.3 49.9" stroke="#a3453d" stroke-width="2"/>
+              <circle cx="80" cy="60" r="3" fill="#a3453d"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>01</span>Attention</h3>
+        <p class="door-tag">What is your product teaching people to pay attention to?</p>
+        <p class="door-note">Exploring how interfaces, notifications, algorithms and interactions shape attention.</p>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="A hand-drawn line that forks into three paths, one chosen in rust">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" aria-hidden="true">
+              <path d="M13.5 64.4 C17.8 63.9 30.8 61.7 39.6 61.7 C48.4 61.7 58.8 64.6 66.2 64.2 C73.7 63.8 81.4 60.1 84.5 59.2" stroke="oklch(30% 0.02 40)" stroke-width="1.6"/>
+              <path d="M84.0 59.4 C88.2 55.8 100.0 44.4 109.3 38.1 C118.6 31.8 134.8 24.4 139.8 21.7" stroke="oklch(30% 0.02 40)" stroke-width="1.3" opacity="0.5" stroke-dasharray="3 5"/>
+              <path d="M83.8 60.1 C88.4 59.9 100.8 59.6 111.2 59.3 C121.6 59.0 140.5 58.5 146.3 58.3" stroke="#a3453d" stroke-width="2.2"/>
+              <path d="M84.1 60.8 C88.1 64.8 99.4 78.2 108.3 84.9 C117.1 91.5 132.5 98.0 137.4 100.6" stroke="oklch(30% 0.02 40)" stroke-width="1.3" opacity="0.5" stroke-dasharray="3 5"/>
+              <circle cx="84" cy="60" r="3" fill="oklch(30% 0.02 40)"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>02</span>Agency</h3>
+        <p class="door-tag">Are we helping people make better decisions, or making decisions for them?</p>
+        <p class="door-note">Exploring autonomy, delegation, AI and human choice.</p>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="A loose, looping hand-drawn scribble">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21.6 82.0 C24.5 74.9 32.0 41.3 39.1 39.1 C46.2 36.8 62.2 59.4 64.1 68.6 C66.0 77.7 56.5 95.6 50.5 93.9 C44.5 92.3 24.7 69.6 28.2 58.7 C31.6 47.8 60.2 29.0 71.1 28.8 C82.1 28.6 91.9 47.9 94.0 57.7 C96.1 67.4 88.6 86.8 83.6 87.4 C78.6 88.1 60.6 70.8 64.1 61.5 C67.7 52.2 94.2 33.0 104.9 31.6 C115.7 30.2 126.0 43.5 128.5 52.9 C131.0 62.4 125.1 85.5 120.1 88.3 C115.0 91.2 94.2 78.1 98.1 70.0 C101.9 62.0 135.8 45.0 143.3 40.0" stroke="#a3453d" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>03</span>Creativity</h3>
+        <p class="door-tag">What happens to creativity when generation becomes effortless?</p>
+        <p class="door-note">Exploring the relationship between AI, originality, expression and creative agency.</p>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Hand-drawn outline of a person with a small rust heart">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M74.3 18.9 Q76.5 18.2 78.7 17.7 Q80.9 17.8 83.3 17.3 Q85.6 18.2 87.7 19.3 Q89.2 21.4 90.9 23.1 Q92.3 25.2 94.2 27.1 Q95.2 29.6 95.6 32.4 Q94.4 35.1 94.0 37.6 Q94.6 40.6 92.8 42.7 Q91.8 45.2 89.7 46.6 Q88.0 48.3 85.9 49.6 Q83.7 50.4 81.4 51.1 Q79.1 50.1 76.6 50.9 Q74.3 50.3 72.6 48.1 Q70.5 47.0 68.5 45.5 Q67.4 43.0 66.6 40.5 Q66.0 38.1 65.0 35.6 Q65.8 33.0 64.8 30.1 Q65.6 27.5 66.8 25.1 Q68.0 22.7 70.0 21.1 Q72.1 19.8 74.0 18.2 Q76.3 17.5 78.6 16.3 Q81.0 16.5 83.2 17.8" stroke="oklch(30% 0.02 40)" stroke-width="1.6"/>
+              <path d="M35.0 118.6 C35.9 112.9 36.9 94.0 40.7 84.8 C44.5 75.5 51.1 67.7 57.8 63.0 C64.5 58.2 73.4 56.5 80.9 56.5 C88.4 56.4 96.2 58.0 102.6 62.6 C109.1 67.3 116.1 75.4 119.8 84.5 C123.5 93.7 124.1 112.1 125.0 117.6" stroke="oklch(30% 0.02 40)" stroke-width="1.6"/>
+              <path d="M80 92 C72 85 66 80 70 74 C73 70 78 71 80 76 C82 71 87 70 90 74 C94 80 88 85 80 92 Z" fill="#a3453d" stroke="#a3453d" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>04</span>Humanity</h3>
+        <p class="door-tag">What should remain human?</p>
+        <p class="door-note">Exploring meaning, uncertainty, intuition, connection and the things we shouldn't optimise away.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 7. FROM INNER TO OUTER -->
+  <section class="iw-two" style="display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; padding: 120px 64px; align-items:center; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="outer-title">
+    <div>
+      <p class="kicker">From inner to outer</p>
+      <h2 id="outer-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 26px;">We go inward to create differently outward.</h2>
+      <p class="body-copy">Innerscapism begins with the inner world. But the inner world doesn't exist separately from the world we build.</p>
+      <div class="chain">
+        <p>The way we understand ourselves shapes the way we relate to others.</p>
+        <p>The way we relate to others shapes what we create.</p>
+        <p>And what we create becomes part of the systems that shape everyone else.</p>
+      </div>
+      <p class="final-line">From inner landscape to outer world.</p>
+    </div>
+    <div class="diagram" role="img" aria-label="Sketch diagram: a hand-drawn core labelled within ourselves, inside a ring labelled with each other, inside a precise grid labelled in the systems we create">
+      <svg viewBox="0 0 420 420" fill="none" stroke-linecap="round" aria-hidden="true">
+        <line x1="74" y1="40" x2="74" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="74" x2="380" y2="74" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="108" y1="40" x2="108" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="108" x2="380" y2="108" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="142" y1="40" x2="142" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="142" x2="380" y2="142" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="176" y1="40" x2="176" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="176" x2="380" y2="176" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="210" y1="40" x2="210" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="210" x2="380" y2="210" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="244" y1="40" x2="244" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="244" x2="380" y2="244" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="278" y1="40" x2="278" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="278" x2="380" y2="278" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="312" y1="40" x2="312" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="312" x2="380" y2="312" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="346" y1="40" x2="346" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="346" x2="380" y2="346" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <rect x="40" y="40" width="340" height="340" stroke="oklch(30% 0.02 40)" stroke-width="1.2"/>
+        <path d="M88.8 233.5 Q83.8 220.4 80.8 206.6 Q82.1 192.6 88.4 179.7 Q86.7 164.5 94.9 152.5 Q104.7 142.0 111.0 129.2 Q121.5 119.5 132.8 110.8 Q145.4 104.1 155.8 92.9 Q170.6 90.7 184.6 86.7 Q198.9 84.2 213.6 81.9 Q227.2 91.3 242.1 88.9 Q256.3 92.2 267.6 101.7 Q280.5 107.5 289.9 118.2 Q300.9 126.5 311.3 136.0 Q317.1 148.7 324.8 160.1 Q335.4 171.2 336.0 185.6 Q337.6 199.5 342.1 213.5 Q337.4 227.3 338.3 241.9 Q330.8 254.5 326.2 268.0 Q313.3 276.8 308.5 290.5 Q299.6 301.7 284.6 305.9 Q277.1 320.0 261.1 320.4 Q248.9 327.9 234.5 328.8 Q220.9 333.5 206.5 334.9 Q192.8 329.0 177.2 333.8 Q164.7 325.2 151.2 320.4 Q138.5 313.9 128.3 303.9 Q118.5 294.0 106.7 285.5 Q99.3 273.4 95.0 260.0 Q86.2 248.3 86.3 234.0 Q86.8 220.2 84.3 206.7" stroke="oklch(30% 0.02 40)" stroke-width="1.5" fill="oklch(97% 0.01 70)"/>
+        <path d="M258.4 222.8 Q258.6 231.2 252.9 237.2 Q249.9 245.0 243.3 250.0 Q234.5 251.5 229.2 259.1 Q220.9 261.2 212.3 257.8 Q204.0 261.7 196.3 257.9 Q188.6 255.4 180.0 253.7 Q175.8 246.0 169.3 241.3 Q162.8 235.8 160.2 228.0 Q159.2 220.0 155.6 212.4 Q156.7 204.3 159.3 196.6 Q164.5 190.1 166.0 182.1 Q171.8 176.4 178.5 172.1 Q185.5 168.5 191.6 163.1 Q199.9 162.9 207.6 160.3 Q215.9 159.5 223.7 162.0 Q231.0 165.5 238.9 167.9 Q244.8 173.4 251.8 177.9 Q255.3 185.2 261.1 191.5 Q263.2 199.5 263.2 207.7 Q260.3 215.4 258.2 222.8 Q259.2 231.5 254.7 238.3" stroke="#a3453d" stroke-width="2.2" fill="oklch(93% 0.025 75)"/>
+        <path d="M180.5 245.4 Q173.4 242.0 169.3 235.6 Q165.6 229.1 162.8 222.2 Q160.8 214.9 163.9 207.4 Q164.5 200.3 162.7 192.0 Q166.5 185.1 171.1 178.9 Q179.8 176.9 185.4 172.6 Q191.2 168.2 197.9 165.0 Q205.1 162.5 212.6 165.3 Q220.2 163.8 226.5 168.4 Q233.0 171.4 241.0 172.8 Q246.0 178.5 251.0 184.2 Q253.3 191.4 256.3 198.1 Q256.1 205.4 257.0 212.6 Q258.3 220.3 256.6 227.7 Q249.3 232.5 245.5 238.4 Q243.2 246.4 236.4 250.1 Q230.0 254.4 221.8 253.9 Q214.8 256.3 207.4 255.6 Q199.4 257.6 192.9 253.1 Q185.4 251.4 177.9 248.5" stroke="#a3453d" stroke-width="1" opacity="0.6"/>
+        <circle cx="210" cy="210" r="3.5" fill="#a3453d"/>
+        <text x="210" y="28" text-anchor="middle">In the systems we create</text>
+        <text x="210" y="134" text-anchor="middle">With each other</text>
+        <text x="210" y="292" text-anchor="middle" style="fill:#a3453d">Within ourselves</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 8. WHO IT IS FOR -->
+  <section class="iw-section paper" style="padding: 100px 64px 110px; background-color: oklch(94% 0.015 65); text-align: center;" aria-labelledby="for-title">
+    <p class="kicker">Who it's for</p>
+    <h2 id="for-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.4; margin: 0 auto; max-width: 640px; text-wrap: balance;">For people building the technologies that increasingly shape how we live and work.</h2>
+    <ul class="for-list">
+      <li>Product people</li>
+      <li>UX &amp; designers</li>
+      <li>Technology teams</li>
+      <li>AI teams</li>
+      <li>Leaders</li>
+      <li>Organisations</li>
+    </ul>
+  </section>
+
+  <!-- 9. CLOSING -->
+  <section class="iw-section" style="padding: 130px 64px 140px; text-align: center;" aria-labelledby="closing-title">
+    <h2 id="closing-title" class="closing-statement">Technology is becoming more powerful. <span>The question is whether we are becoming more conscious alongside it.</span></h2>
+    <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true" style="margin-top: 40px;"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="#a3453d" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <p class="kicker" style="margin: 44px 0 10px;">Innerware</p>
+    <p style="font-family:'Fraunces', serif; font-size: 20px; line-height: 1.5; color: oklch(38% 0.02 40); margin: 0 auto 40px; max-width: 520px;">A practice for creating technology without losing what makes us human.</p>
+    <a href="index.html" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 18px 40px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 17px;">Back to Innerscapism →</a>
+  </section>
+
+  </main>
+
+  <!-- FOOTER (same as homepage) -->
+  <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
+    <a href="index.html" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
+    <div style="display:flex; gap: 32px;">
+      <a href="https://www.instagram.com/innerscapism/" style="text-decoration:none;">Instagram</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
