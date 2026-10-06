@@ -100,6 +100,12 @@
     .doors-note { box-sizing: border-box; padding: 40px 26px 38px; }
     .doors-note p { font-size: 26px !important; }
   }
+  /* Five cards: centre the second row on wide screens */
+  @media (min-width: 1001px) {
+    .doors { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .doors .door { grid-column: span 2; }
+    .doors .door:nth-child(4) { grid-column: 2 / span 2; }
+  }
 </style>
 </head>
 <body>
@@ -184,11 +190,11 @@
     </div>
   </div>
 
-  <!-- EXPERIENCES: SIX WAYS IN -->
+  <!-- EXPERIENCES: FIVE WAYS IN -->
   <div id="experiences" class="experiences paper" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;">
     <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
       <div class="exp-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">The experiences</div>
-      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Six ways in.</h2>
+      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Five ways in.</h2>
     </div>
 
     <div class="doors">
@@ -261,21 +267,6 @@
         <p class="door-note">A space to slow down, listen and reconnect with yourself through sound and attention.</p>
         <div class="door-meta">Guided sound · Stillness</div>
         <a class="door-ask" href="https://www.instagram.com/innerscapism/">Ask about the next session →</a>
-      </article>
-
-      <article class="door" id="inner-retreats">
-        <div class="door-media">
-          <span class="tape"></span>
-          <img class="torn" src="assets/images/experiences/retreats.jpg" alt="Collage of people gathering, walking, drawing and moving, with an anatomical heart">
-          <span class="door-soon">Coming soon</span>
-          <span class="door-num">06</span>
-        </div>
-        <h3 class="door-title"><span>Inner</span>Retreats</h3>
-        <p class="door-tag">All five ways in, together.</p>
-        <p class="door-verbs">Reflect.<br>Walk.<br>Gather.<br>Move.<br>Listen.</p>
-        <p class="door-note">Retreats that combine all five modalities.</p>
-        <div class="door-meta">Coming soon</div>
-        <a class="door-ask" href="https://www.instagram.com/innerscapism/">Ask to hear first →</a>
       </article>
 
     </div>
