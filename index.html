@@ -264,5 +264,11 @@
 
 </div>
 
+<script>
+  // Opened as a local file (not on innerscapism.com): point clean /innerware links at the file itself.
+  if (location.protocol === 'file:') {
+    document.querySelectorAll('a[href="/innerware"]').forEach(function (a) { a.href = 'innerware.html'; });
+  }
+</script>
 </body>
 </html>
