@@ -77,6 +77,8 @@ a:hover { color: #8a382f; }
   .nav { padding: 14px 18px !important; }
   .nav-links { gap: 14px !important; font-size: 13px !important; }
   .nav-hide-sm { display: none !important; }
+  .nav { flex-wrap: wrap; row-gap: 10px; }
+  .nav-links { width: 100%; justify-content: space-between; }
   .cta-pill { padding: 8px 16px !important; }
   .doors { grid-template-columns: 1fr !important; gap: 40px !important; }
   .door:nth-child(n) { margin-top: 0 !important; }
