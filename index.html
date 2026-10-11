@@ -101,11 +101,16 @@
     .doors-note { box-sizing: border-box; padding: 40px 26px 38px; }
     .doors-note p { font-size: 26px !important; }
   }
-  /* Four cards: centre the last card on wide screens */
+  /* Four cards: a 2 x 2 grid on wide screens */
   @media (min-width: 1001px) {
-    .doors { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .doors .door { grid-column: span 2; }
-    .doors .door:nth-child(4) { grid-column: 3 / span 2; }
+    .doors { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 960px; gap: 72px 56px; }
+    .doors .door:nth-child(odd) { margin-top: 0; }
+    .doors .door:nth-child(even) { margin-top: 64px; }
+    .doors .door { padding: 26px 26px 34px; }
+    .doors .door-media img { aspect-ratio: 1 / 1; }
+    .doors .door-title { font-size: 34px; }
+    .doors .door-tag { font-size: 22px; }
+    .doors .door-note { font-size: 16.5px; }
   }
 
   /* ---- Copy update: hero line, quotes, closing reminder ---- */
