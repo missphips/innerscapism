@@ -54,6 +54,8 @@ a:hover { color: #8a382f; }
 }
 .doors-note .note-link { display: inline-block; margin-top: 26px; padding-top: 16px; border-top: 1px dashed oklch(97% 0.01 70 / 0.45); font-size: 15px; color: oklch(97% 0.01 70); text-decoration: none; opacity: 0.85; }
 .doors-note .note-link:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; color: oklch(97% 0.01 70); }
+.btn-outline { text-decoration: none; display: inline-block; padding: 16px 38px; background: transparent; color: #a3453d; border: 1.5px solid #a3453d; border-radius: 999px; font-size: 17px; transition: background 0.2s ease, color 0.2s ease; }
+.btn-outline:hover { background: #a3453d; color: oklch(98% 0.01 70); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   .door, .door:hover { transition: none; }
