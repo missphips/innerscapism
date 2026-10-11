@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Innerware · innerscapism</title>
-<meta name="description" content="Innerware: creating technology and systems from the inside out. A field of exploration within Innerscapism on attention, agency, creativity and what should remain human in the systems we create.">
+<meta name="description" content="Innerware: workshops and reflection tools for product, design and AI teams who want to understand what their products are teaching people, and decide what should stay human.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="innerscapism">
 <meta property="og:title" content="Innerware · Creating technology and systems from the inside out">
-<meta property="og:description" content="Innerware: creating technology and systems from the inside out. A field of exploration within Innerscapism on attention, agency, creativity and what should remain human in the systems we create.">
+<meta property="og:description" content="Innerware: workshops and reflection tools for product, design and AI teams who want to understand what their products are teaching people, and decide what should stay human.">
 <meta property="og:url" content="https://innerscapism.com/innerware">
 <meta property="og:image" content="https://innerscapism.com/assets/images/share/innerware.jpg">
 <meta property="og:image:width" content="1200">
@@ -44,18 +44,12 @@
   .teaches p { font-family: 'Fraunces', serif; font-size: 21px; line-height: 1.6; margin: 0 auto 14px; max-width: 640px; opacity: 0.92; text-wrap: balance; }
   .teaches .teaches-turn { font-weight: 600; font-size: 24px; margin-top: 26px; opacity: 1; }
 
-  /* ---- Work with Innerware (reuses the experience card) ---- */
-  .work { margin: 96px auto 0; padding-top: 88px; border-top: 1px dashed oklch(78% 0.03 45); max-width: 900px; }
+  /* ---- The workshop (reuses the experience card) ---- */
   .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; text-align: left; align-items: start; }
   .work-grid .door { padding: 34px 32px 30px; }
   .work-grid .door-title { font-size: 30px; margin-bottom: 14px; }
 
   /* ---- What is Innerware ---- */
-  .threads { list-style: none; margin: 0 0 36px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 12px; max-width: 640px; }
-  .threads li { font-size: 15px; padding: 7px 16px; border: 1px solid oklch(78% 0.03 45); border-radius: 999px; color: oklch(35% 0.02 40); }
-  .threads li:nth-child(3n+2) { transform: rotate(-1.5deg); }
-  .threads li:nth-child(3n) { transform: rotate(1.2deg); }
-  .purpose { font-family: 'Fraunces', serif; font-size: 26px; line-height: 1.4; color: oklch(25% 0.02 40); margin: 0 0 18px; max-width: 620px; }
 
   /* ---- Four areas (reuses the experience card) ---- */
   .doors-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 56px 32px; }
@@ -72,13 +66,31 @@
   .final-line { font-family: 'Fraunces', serif; font-weight: 600; font-size: 28px; color: #a3453d; margin: 34px 0 0; }
 
   /* ---- Who it's for ---- */
-  .for-list { list-style: none; margin: 34px auto 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 26px; max-width: 1120px; }
-  .for-list li { font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(30% 0.02 40); padding-left: 24px; position: relative; }
-  .for-list li::before { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 14px; transform: translateY(-50%) rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
 
   /* ---- Closing ---- */
   .closing-statement { font-family: 'Fraunces', serif; font-weight: 500; font-size: 48px; line-height: 1.18; margin: 0 auto; max-width: 860px; text-wrap: balance; }
   .closing-statement span { display: block; font-size: 0.72em; line-height: 1.3; font-weight: 400; color: oklch(40% 0.02 40); margin-top: 18px; }
+
+  /* ---- Workshop steps ---- */
+  .work-grid { max-width: 1040px; margin: 0 auto; grid-template-columns: 1.55fr 1fr; }
+  .steps-label { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 4px 0 12px; }
+  .steps { list-style: none; margin: 0 0 24px; padding: 0; }
+  .steps li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0; border-top: 1px dashed oklch(82% 0.02 50); font-size: 15.5px; line-height: 1.6; color: oklch(38% 0.02 40); }
+  .steps li:last-child { border-bottom: 1px dashed oklch(82% 0.02 50); }
+  .steps strong { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; color: oklch(25% 0.02 40); }
+  .door-ask { display: inline-block; margin-top: 16px; font-size: 15px; color: #a3453d; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+  .door-ask:hover { color: #8a382f; }
+
+  /* ---- Who it's for ---- */
+  .for-list { list-style: none; margin: 44px auto 0; padding: 0; max-width: 760px; text-align: left; }
+  .for-list li { font-family: 'Fraunces', serif; font-size: 21px; line-height: 1.45; color: oklch(28% 0.02 40); padding: 16px 0 16px 38px; border-bottom: 1px solid oklch(88% 0.015 60); position: relative; }
+  .for-list li:first-child { border-top: 1px solid oklch(88% 0.015 60); }
+  .for-list li::before { content: ""; position: absolute; left: 2px; top: 27px; width: 18px; height: 18px; transform: rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
+
+  /* ---- Diagram labels ---- */
+  .diagram { position: relative; width: 100%; max-width: 460px; margin: 0 auto; }
+  .diagram-label { position: absolute; left: 0; right: 0; text-align: center; transform: translateY(-75%); font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(40% 0.02 40); pointer-events: none; }
+  .diagram-label-core { color: #a3453d; }
 
   /* ---- Responsive ---- */
   @media (max-width: 1100px) {
@@ -98,12 +110,14 @@
     .teaches { padding: 64px 18px 68px; }
     .teaches h2 { font-size: 27px; }
     .teaches p { font-size: 18px; }
-    .work { margin-top: 64px; padding-top: 64px; }
     .work-grid { grid-template-columns: 1fr; }
+    .steps li { grid-template-columns: 1fr; gap: 2px; }
+    .for-list li { font-size: 18px; padding-left: 34px; }
+    .for-list li::before { top: 23px; }
+    .diagram-label { font-size: 10.5px; letter-spacing: 0.1em; }
     .work-grid .door { padding: 26px 22px 24px; }
     .body-copy { font-size: 16px; }
     .serif-lines, .chain p { font-size: 19px; }
-    .purpose { font-size: 21px; }
     .final-line { font-size: 23px; }
     .closing-statement { font-size: 30px; }
   }
@@ -131,12 +145,11 @@
     <div>
       <p class="kicker">Innerware</p>
       <h1 id="iw-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 30px; max-width: 620px;">Creating technology and systems from the <span class="circled" style="margin-left: 10px;">inside out<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
-      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 16px;">We are building technologies that can write, create, recommend, analyse and decide faster than ever.</p>
-      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 40px;">But the question isn't only what technology can do.<br>It's what technology is doing to us.</p>
-      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: -24px 0 40px;">The same is true of every product, service and business we build.</p>
+      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 16px;">Workshops and reflection tools for product, design and AI teams who want to understand what their products are teaching people, and decide what should stay human.</p>
+      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 40px;">The question isn't only what technology can do. It's what technology is doing to us.</p>
       <div style="display:flex; gap: 28px; align-items:center; flex-wrap: wrap;">
-        <a href="#areas" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Explore the four areas</a>
-        <a href="#work" class="text-link">Work with Innerware</a>
+        <a href="#work" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">See the workshop</a>
+        <a href="#areas" class="text-link">Explore the four questions</a>
       </div>
     </div>
     <div class="iw-sketch" aria-hidden="true">
@@ -158,20 +171,7 @@
     </div>
   </section>
 
-  <!-- 2. THE SHIFT -->
-  <section class="iw-two" style="display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 72px; padding: 40px 64px 120px; align-items:start; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="shift-title">
-    <div>
-      <p class="kicker">The shift</p>
-      <h2 id="shift-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0;">The more powerful our tools become, the more important our inner capacities become.</h2>
-    </div>
-    <div>
-      <p class="body-copy">AI is changing how we work, create, communicate and make decisions. As more of our cognitive work becomes automated, we need to become more conscious of the things technology cannot decide for us:</p>
-      <p class="serif-lines">What matters.<br>What is meaningful.<br>What deserves our attention.<br>What should remain human.</p>
-      <p class="body-copy" style="margin-bottom: 0;">innerware explores this space between human inner life and the systems we create.</p>
-    </div>
-  </section>
-
-  <!-- 3. EVERY INTERFACE TEACHES SOMETHING -->
+  <!-- 2. EVERY INTERFACE TEACHES SOMETHING -->
   <section class="teaches torn-band" aria-labelledby="teaches-title">
     <h2 id="teaches-title">Every interface teaches something.</h2>
     <p>A feed teaches us to keep scrolling. A notification teaches us that someone else decides when we pay attention. Autocomplete teaches us that the first answer is good enough.</p>
@@ -179,29 +179,7 @@
     <p class="teaches-turn">Which means someone can design it differently.</p>
   </section>
 
-  <!-- 4. WHAT IS INNERWARE -->
-  <section class="iw-section" style="padding: 120px 64px; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="what-title">
-    <div style="max-width: 820px;">
-      <p class="kicker">What is Innerware?</p>
-      <h2 id="what-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 26px;">Innerware is a practice of<br>designing with inner awareness.</h2>
-      <p class="body-copy">Innerware explores the relationship between inner life and technology.<br>It brings together:</p>
-      <ul class="threads">
-        <li>Product thinking</li>
-        <li>UX</li>
-        <li>AI</li>
-        <li>Creativity</li>
-        <li>Embodiment</li>
-        <li>Humanistic design</li>
-        <li>Attention</li>
-        <li>Agency</li>
-        <li>Systems thinking</li>
-      </ul>
-      <p class="purpose">The purpose isn't to reject technology.</p>
-      <p class="body-copy" style="margin-bottom: 0;">It is to become more conscious of the relationship we have with it, and the kinds of relationships our products create for others.</p>
-    </div>
-  </section>
-
-  <!-- 5. FOUR AREAS -->
+  <!-- 3. FOUR QUESTIONS -->
   <section id="areas" class="iw-section paper" style="padding: 110px 64px 130px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="areas-title">
     <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
       <p class="kicker">Four areas</p>
@@ -277,7 +255,63 @@
     </div>
   </section>
 
-  <!-- 6. FROM INNER TO OUTER -->
+  <!-- 4. THE WORKSHOP -->
+  <section id="work" class="iw-section" style="padding: 120px 64px 130px; scroll-margin-top: 70px; text-align: center;" aria-labelledby="work-title">
+    <p class="kicker">The workshop</p>
+    <h2 id="work-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 auto 18px; max-width: 640px; text-wrap: balance;">Bring these questions into your team.</h2>
+    <p class="body-copy" style="margin: 0 auto 64px; text-align: center;">A workshop for product, design and technology teams to step back from what they're building and look at it from the inside out.</p>
+    <div class="work-grid">
+      <article class="door">
+        <h3 class="door-title"><span>01 · For teams</span>Workshop</h3>
+        <p class="door-note">Your team looks at its own product through four lenses: attention, agency, creativity and humanity. Not just through discussion, but through drawing, mapping and short embodied exercises that surface what slides and spreadsheets don't.</p>
+        <p class="steps-label">What happens</p>
+        <ol class="steps">
+          <li><strong>Map</strong><span>Walk through your product as your users experience it, and notice what it asks of them.</span></li>
+          <li><strong>Look</strong><span>Explore it through the four lenses, using creative and reflective exercises.</span></li>
+          <li><strong>Ask</strong><span>Name the trade-offs your team is making, often without realising it.</span></li>
+          <li><strong>Leave with</strong><span>A short set of questions and decisions to bring back to your roadmap.</span></li>
+        </ol>
+        <p class="door-tag" style="margin: 0 0 22px;">You leave with questions worth keeping, not a framework to file away.</p>
+        <div class="door-meta">[3 hours / half day] · Groups of [6–20] · On-site or remote · Materials provided · [from €X]</div>
+      </article>
+      <article class="door">
+        <span class="door-soon" style="top: -14px; left: auto; right: 18px;">In development</span>
+        <h3 class="door-title"><span>02 · For your process</span>Prompts</h3>
+        <p class="door-note">A set of reflection prompts your team can use in sprints, reviews and retros, so these questions don't stay in one workshop.</p>
+        <div class="door-meta">Sprints · Reviews · Retros</div>
+        <a class="door-ask" href="https://www.instagram.com/innerscapism/">Want early access? Get in touch.</a>
+      </article>
+    </div>
+    <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 16px 34px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px; margin-top: 64px;">Start a conversation</a>
+  </section>
+
+  <!-- 5. WHAT IS INNERWARE -->
+  <section class="iw-section paper" style="padding: 120px 64px; background-color: oklch(94% 0.015 65);" aria-labelledby="what-title">
+    <div style="max-width: 1112px; margin: 0 auto;">
+      <div style="max-width: 820px;">
+        <p class="kicker">What is Innerware?</p>
+        <h2 id="what-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 26px;">Innerware is a practice of<br>designing with inner awareness.</h2>
+        <p class="body-copy">As AI and automation take on more of our cognitive work, the things technology can't decide for us matter more: what matters, what is meaningful, what deserves our attention, what should remain human.</p>
+        <p class="body-copy">Innerware brings together product thinking, UX, AI and systems thinking with creativity, embodiment and attention.</p>
+        <p class="body-copy" style="margin-bottom: 0;">The purpose isn't to reject technology. It's to become more conscious of the relationship we have with it, and the kinds of relationships our products create for others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHO IT'S FOR -->
+  <section class="iw-section" style="padding: 110px 64px 120px; text-align: center;" aria-labelledby="for-title">
+    <p class="kicker">Who it's for</p>
+    <h2 id="for-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.4; margin: 0 auto; max-width: 680px; text-wrap: balance;">For people building the technologies, products and organisations that shape how we live and work.</h2>
+    <ul class="for-list">
+      <li>You're adding AI features and want to think about what they replace, not just what they add.</li>
+      <li>Your engagement numbers look good, but something about the product feels off.</li>
+      <li>Your team ships fast and rarely gets space to ask why.</li>
+      <li>You lead a product, design, AI or technology team and want them to think more deeply, together.</li>
+    </ul>
+  </section>
+
+  <!-- 7. FROM INNER TO OUTER -->
+  <div class="paper" style="background-color: oklch(94% 0.015 65);">
   <section class="iw-two" style="display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; padding: 120px 64px; align-items:center; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="outer-title">
     <div>
       <p class="kicker">From inner to outer</p>
@@ -291,6 +325,9 @@
       <p class="final-line">From inner landscape to outer world.</p>
     </div>
     <div class="diagram" role="img" aria-label="Sketch diagram: a hand-drawn core labelled within ourselves, inside a ring labelled with each other, inside a precise grid labelled in the systems we create">
+      <span class="diagram-label" style="top: 6.7%;">In the systems we create</span>
+      <span class="diagram-label" style="top: 31.9%;">With each other</span>
+      <span class="diagram-label diagram-label-core" style="top: 69.5%;">Within ourselves</span>
       <svg viewBox="0 0 420 420" fill="none" stroke-linecap="round" aria-hidden="true">
         <line x1="74" y1="40" x2="74" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
         <line x1="40" y1="74" x2="380" y2="74" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
@@ -315,46 +352,10 @@
         <path d="M258.4 222.8 Q258.6 231.2 252.9 237.2 Q249.9 245.0 243.3 250.0 Q234.5 251.5 229.2 259.1 Q220.9 261.2 212.3 257.8 Q204.0 261.7 196.3 257.9 Q188.6 255.4 180.0 253.7 Q175.8 246.0 169.3 241.3 Q162.8 235.8 160.2 228.0 Q159.2 220.0 155.6 212.4 Q156.7 204.3 159.3 196.6 Q164.5 190.1 166.0 182.1 Q171.8 176.4 178.5 172.1 Q185.5 168.5 191.6 163.1 Q199.9 162.9 207.6 160.3 Q215.9 159.5 223.7 162.0 Q231.0 165.5 238.9 167.9 Q244.8 173.4 251.8 177.9 Q255.3 185.2 261.1 191.5 Q263.2 199.5 263.2 207.7 Q260.3 215.4 258.2 222.8 Q259.2 231.5 254.7 238.3" stroke="#a3453d" stroke-width="2.2" fill="oklch(93% 0.025 75)"/>
         <path d="M180.5 245.4 Q173.4 242.0 169.3 235.6 Q165.6 229.1 162.8 222.2 Q160.8 214.9 163.9 207.4 Q164.5 200.3 162.7 192.0 Q166.5 185.1 171.1 178.9 Q179.8 176.9 185.4 172.6 Q191.2 168.2 197.9 165.0 Q205.1 162.5 212.6 165.3 Q220.2 163.8 226.5 168.4 Q233.0 171.4 241.0 172.8 Q246.0 178.5 251.0 184.2 Q253.3 191.4 256.3 198.1 Q256.1 205.4 257.0 212.6 Q258.3 220.3 256.6 227.7 Q249.3 232.5 245.5 238.4 Q243.2 246.4 236.4 250.1 Q230.0 254.4 221.8 253.9 Q214.8 256.3 207.4 255.6 Q199.4 257.6 192.9 253.1 Q185.4 251.4 177.9 248.5" stroke="#a3453d" stroke-width="1" opacity="0.6"/>
         <circle cx="210" cy="210" r="3.5" fill="#a3453d"/>
-        <text x="210" y="28" text-anchor="middle">In the systems we create</text>
-        <text x="210" y="134" text-anchor="middle">With each other</text>
-        <text x="210" y="292" text-anchor="middle" style="fill:#a3453d">Within ourselves</text>
       </svg>
     </div>
   </section>
-
-  <!-- 7. WHO IT'S FOR + WORK WITH INNERWARE -->
-  <section class="iw-section paper" style="padding: 100px 64px 110px; background-color: oklch(94% 0.015 65); text-align: center;" aria-labelledby="for-title">
-    <p class="kicker">Who it's for</p>
-    <h2 id="for-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.4; margin: 0 auto; max-width: 640px; text-wrap: balance;">For people building the technologies, products and organisations that increasingly shape how we live and work.</h2>
-    <ul class="for-list">
-      <li>Product people</li>
-      <li>UX &amp; designers</li>
-      <li>Technology teams</li>
-      <li>AI teams</li>
-      <li>Leaders</li>
-      <li>Organisations</li>
-    </ul>
-
-    <div id="work" class="work" style="scroll-margin-top: 90px;">
-      <p class="kicker" style="margin-top: 0;">Work with Innerware</p>
-      <h2 id="work-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 auto 18px; max-width: 640px; text-wrap: balance;">Bring these questions into your team.</h2>
-      <p class="body-copy" style="margin: 0 auto 64px; text-align: center;">Time for product, design and technology teams to step back from what they're building, and look at it from the inside out.</p>
-      <div class="work-grid">
-        <article class="door">
-          <h3 class="door-title"><span>01 · For teams</span>Workshop</h3>
-          <p class="door-note">Your team looks at its own product through four lenses: attention, agency, creativity and humanity. You leave with questions worth keeping, not a framework to file away.</p>
-          <div class="door-meta">Product, design and technology teams</div>
-        </article>
-        <article class="door">
-          <span class="door-soon" style="top: -14px; left: auto; right: 18px;">In development</span>
-          <h3 class="door-title"><span>02 · For your process</span>Prompts</h3>
-          <p class="door-note">Reflection prompts your team can use in sprints, reviews and retros.</p>
-          <div class="door-meta">Sprints · Reviews · Retros</div>
-        </article>
-      </div>
-      <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 16px 34px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px; margin-top: 64px;">Start a conversation</a>
-    </div>
-  </section>
+  </div>
 
   <!-- 8. CLOSING -->
   <section class="iw-section" style="padding: 130px 64px 140px; text-align: center;" aria-labelledby="closing-title">
