@@ -123,8 +123,10 @@
   .quote:nth-child(4) { --tilt: 0.6deg; }
   .quote blockquote { margin: 0 0 18px; font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; line-height: 1.45; color: oklch(28% 0.02 40); }
   .quote figcaption { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); padding-top: 14px; border-top: 1px dashed oklch(80% 0.02 50); }
-  .closing-reminder { position: relative; display: block; width: fit-content; max-width: 300px; margin: 6px auto 44px; transform: rotate(-2deg); filter: drop-shadow(0 10px 14px rgba(40, 26, 20, 0.14)); }
-  .closing-reminder .tape { top: -12px; left: 50%; transform: translateX(-50%) rotate(4deg); width: 84px; }
+  .collage { position: relative; width: min(100%, 420px); margin: 90px auto 72px; }
+  .collage .doors-note { margin: 0; width: 100%; }
+  .closing-reminder { position: absolute; right: -150px; top: -74px; width: 240px; z-index: 2; transform: rotate(4deg); filter: drop-shadow(0 12px 16px rgba(40, 26, 20, 0.22)); }
+  .closing-reminder .tape { top: -12px; left: 50%; transform: translateX(-50%) rotate(5deg); width: 84px; }
   .closing-reminder .badge-paper { margin: 0; text-align: left; }
   .iw-bridge-end { margin: 0 auto; padding: 0 24px 56px; }
   @media (max-width: 860px) {
@@ -134,7 +136,9 @@
   @media (max-width: 600px) {
     .quotes { margin-top: 64px; }
     .quote blockquote { font-size: 18px; }
-    .closing-reminder { max-width: 260px; }
+    .collage { margin-top: 96px; margin-bottom: 56px; }
+    .closing-reminder { right: -6px; top: -88px; width: 200px; }
+    .closing-reminder .badge-paper { padding: 18px 18px 16px; font-size: 15px; }
   }
 </style>
 </head>
@@ -315,16 +319,18 @@
 
   <!-- CLOSING / CONTACT -->
   <div id="contact" class="contact" style="padding: 10px 64px 120px; text-align:center; background: oklch(97% 0.01 70);">
-    <aside class="doors-note torn-note paper" aria-label="Where the experiences happen">
-      <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">These can happen</div>
-      <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
-        For yourself ·<br>
-        With others ·<br>
-        At work - with your team!
-      </p>
-    </aside>
+    <div class="collage">
+  <aside class="doors-note torn-note paper" aria-label="Where the experiences happen">
+        <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">These can happen</div>
+        <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
+          For yourself ·<br>
+          With others ·<br>
+          At work - with your team!
+        </p>
+      </aside>
+      <div class="closing-reminder"><span class="tape"></span><p class="badge-paper torn-note paper">Reminder: the world is still slower than your screen.</p></div>
+    </div>
     <p class="contact-desc" style="font-size: 18px; line-height: 1.6; color: oklch(40% 0.02 40); margin: 0 0 36px; max-width: 480px; margin-left:auto; margin-right:auto;">If you're here, this might be for you. <br>Send a message and we'll find a time for a free 20&#8209;minute call.</p>
-    <div class="closing-reminder"><span class="tape"></span><p class="badge-paper torn-note paper">Reminder: the world is still slower than your screen.</p></div>
     <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 18px 40px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 17px;">Start with a conversation</a>
   </div>
 
