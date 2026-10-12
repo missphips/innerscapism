@@ -15,6 +15,11 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://innerscapism.com/innerware">
+<link rel="alternate" hreflang="en" href="https://innerscapism.com/innerware">
+<link rel="alternate" hreflang="pt-PT" href="https://innerscapism.com/pt/innerware">
+<link rel="alternate" hreflang="x-default" href="https://innerscapism.com/innerware">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="pt_PT">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/innerscapism.css">
 <style>
@@ -121,6 +126,11 @@
     .final-line { font-size: 23px; }
     .closing-statement { font-size: 30px; }
   }
+  .lang-switch { font-size: 13px; letter-spacing: 0.12em; color: oklch(48% 0.02 40); white-space: nowrap; }
+  .lang-switch a { text-decoration: none; }
+  .lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .lang-switch [aria-current] { color: oklch(25% 0.02 40); font-weight: 500; }
+  @media (max-width: 600px) { .lang-switch { position: absolute; top: 20px; right: 18px; } }
 </style>
 </head>
 <body>
@@ -133,8 +143,9 @@
     <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
       <a href="index.html#about" style="text-decoration:none;">About</a>
       <a href="index.html#experiences" style="text-decoration:none;">Experiences</a>
-      <a href="/innerware" aria-current="page" style="text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 6px;">innerware</a>
+      <a href="/innerware" data-local="innerware.html" aria-current="page" style="text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 6px;">innerware</a>
       <a href="index.html#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contact</a>
+      <span class="lang-switch"><span aria-current="true">EN</span> · <a href="/pt/innerware" data-local="pt/innerware.html" hreflang="pt-PT" lang="pt-PT" aria-label="Ver em português">PT</a></span>
     </div>
   </div>
 
@@ -379,9 +390,9 @@
 </div>
 
 <script>
-  // Opened as a local file (not on innerscapism.com): point clean /innerware links at the file itself.
+  // Opened as a local file (not on innerscapism.com): use file paths for clean links.
   if (location.protocol === 'file:') {
-    document.querySelectorAll('a[href="/innerware"]').forEach(function (a) { a.href = 'innerware.html'; });
+    document.querySelectorAll('a[data-local]').forEach(function (a) { a.href = a.getAttribute('data-local'); });
   }
 </script>
 </body>

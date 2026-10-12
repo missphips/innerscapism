@@ -4,17 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>innerscapism · Making space for what makes us human</title>
-<meta name="description" content="Creative and embodied experiences for slowing down, noticing, making, and reconnecting - with yourself, with others, and with the world around you. Inner Sessions, Inner Walks, Inner Tables, Inner Reset and Inner Sounds.">
+<meta name="description" content="Creative and embodied experiences for slowing down, noticing, making, and reconnecting - with yourself, with others, and with the world around you. Inner Sessions, Inner Walks, Inner Tables and Inner Reset.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="innerscapism">
 <meta property="og:title" content="innerscapism · Making space for what makes us human">
-<meta property="og:description" content="Creative and embodied experiences for slowing down, noticing, making, and reconnecting - with yourself, with others, and with the world around you. Inner Sessions, Inner Walks, Inner Tables, Inner Reset and Inner Sounds.">
+<meta property="og:description" content="Creative and embodied experiences for slowing down, noticing, making, and reconnecting - with yourself, with others, and with the world around you. Inner Sessions, Inner Walks, Inner Tables and Inner Reset.">
 <meta property="og:url" content="https://innerscapism.com/">
 <meta property="og:image" content="https://innerscapism.com/assets/images/share/home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://innerscapism.com/">
+<link rel="alternate" hreflang="en" href="https://innerscapism.com/">
+<link rel="alternate" hreflang="pt-PT" href="https://innerscapism.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://innerscapism.com/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="pt_PT">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/innerscapism.css">
 <style>
@@ -140,6 +145,11 @@
     .closing-reminder { right: -6px; top: -88px; width: 200px; }
     .closing-reminder .badge-paper { padding: 18px 18px 16px; font-size: 15px; }
   }
+  .lang-switch { font-size: 13px; letter-spacing: 0.12em; color: oklch(48% 0.02 40); white-space: nowrap; }
+  .lang-switch a { text-decoration: none; }
+  .lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .lang-switch [aria-current] { color: oklch(25% 0.02 40); font-weight: 500; }
+  @media (max-width: 600px) { .lang-switch { position: absolute; top: 20px; right: 18px; } }
 </style>
 </head>
 <body>
@@ -152,8 +162,9 @@
     <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
       <a href="#about" style="text-decoration:none;">About</a>
       <a href="#experiences" style="text-decoration:none;">Experiences</a>
-      <a href="/innerware" style="text-decoration:none;">innerware</a>
+      <a href="/innerware" data-local="innerware.html" style="text-decoration:none;">innerware</a>
       <a href="#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contact</a>
+      <span class="lang-switch"><span aria-current="true">EN</span> · <a href="/pt/" data-local="pt/index.html" hreflang="pt-PT" lang="pt-PT" aria-label="Ver em português">PT</a></span>
     </div>
   </div>
 
@@ -334,7 +345,7 @@
     <a href="https://www.instagram.com/innerscapism/" class="btn-outline" style="padding: 13px 26px; font-size: 16px;">Start with a conversation</a>
   </div>
 
-  <p class="iw-bridge iw-bridge-end">Building products or tech?<br><a href="/innerware">innerware brings the same attention to how we design what we&nbsp;create&nbsp;→</a></p>
+  <p class="iw-bridge iw-bridge-end">Building products or tech?<br><a href="/innerware" data-local="innerware.html">innerware brings the same attention to how we design what we&nbsp;create&nbsp;→</a></p>
 
   <!-- FOOTER -->
   <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
@@ -347,9 +358,9 @@
 </div>
 
 <script>
-  // Opened as a local file (not on innerscapism.com): point clean /innerware links at the file itself.
+  // Opened as a local file (not on innerscapism.com): use file paths for clean links.
   if (location.protocol === 'file:') {
-    document.querySelectorAll('a[href="/innerware"]').forEach(function (a) { a.href = 'innerware.html'; });
+    document.querySelectorAll('a[data-local]').forEach(function (a) { a.href = a.getAttribute('data-local'); });
   }
 </script>
 </body>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Innerware · innerscapism</title>
+<meta name="description" content="Innerware: workshops e ferramentas de reflexão para equipas de produto, design e IA que querem perceber o que os seus produtos estão a ensinar às pessoas, e decidir o que deve continuar humano.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="innerscapism">
+<meta property="og:title" content="Innerware · Criar tecnologia e sistemas de dentro para fora">
+<meta property="og:description" content="Innerware: workshops e ferramentas de reflexão para equipas de produto, design e IA que querem perceber o que os seus produtos estão a ensinar às pessoas, e decidir o que deve continuar humano.">
+<meta property="og:url" content="https://innerscapism.com/pt/innerware">
+<meta property="og:image" content="https://innerscapism.com/assets/images/share/innerware.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://innerscapism.com/pt/innerware">
+<link rel="alternate" hreflang="en" href="https://innerscapism.com/innerware">
+<link rel="alternate" hreflang="pt-PT" href="https://innerscapism.com/pt/innerware">
+<link rel="alternate" hreflang="x-default" href="https://innerscapism.com/innerware">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:locale:alternate" content="en_GB">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/innerscapism.css">
+<style>
+  html { scroll-behavior: smooth; }
+  .kicker { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 0 0 20px; }
+  .body-copy { font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px; }
+  .serif-lines { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 24px; }
+
+  /* ---- Graph paper: the "system" that hand-drawn marks move through ---- */
+  .grid-paper {
+    background-color: oklch(96% 0.015 75);
+    background-image:
+      linear-gradient(oklch(78% 0.02 60 / 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(78% 0.02 60 / 0.35) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* ---- Hero ---- */
+  .iw-sketch { position: relative; transform: rotate(-1.5deg); filter: drop-shadow(0 16px 26px rgba(33, 25, 23, 0.1)); }
+  .iw-sketch .tape { top: -12px; left: 34px; transform: rotate(-7deg); }
+  .iw-sketch .tape + .tape { left: auto; right: 34px; transform: rotate(6deg); }
+  .iw-sketch svg { display: block; width: 100%; height: auto; }
+
+  /* ---- Every interface teaches something ---- */
+  .teaches { background-color: #a3453d; color: oklch(97% 0.01 70); text-align: center; padding: 96px 64px 100px; }
+  .teaches h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.2; margin: 0 auto 26px; max-width: 760px; }
+  .teaches p { font-family: 'Fraunces', serif; font-size: 21px; line-height: 1.6; margin: 0 auto 14px; max-width: 640px; opacity: 0.92; text-wrap: balance; }
+  .teaches .teaches-turn { font-weight: 600; font-size: 24px; margin-top: 26px; opacity: 1; }
+
+  /* ---- The workshop (reuses the experience card) ---- */
+  .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; text-align: left; align-items: start; }
+  .work-grid .door { padding: 34px 32px 30px; }
+  .work-grid .door-title { font-size: 30px; margin-bottom: 14px; }
+
+  /* ---- What is Innerware ---- */
+
+  /* ---- Four areas (reuses the experience card) ---- */
+  .doors-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 56px 32px; }
+  .doors-4 .door:nth-child(4) { margin-top: 56px; }
+  .doors-4 .door-media .drawing { aspect-ratio: 4/3; }
+  .doors-4 .door-media .drawing svg { display: block; width: 100%; height: 100%; }
+  .doors-4 .door-title { font-size: 28px; }
+  .doors-4 .door-tag { font-size: 19px; line-height: 1.35; }
+
+  /* ---- Inner to outer ---- */
+  .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+  .diagram text { font-family: 'Jost', sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; fill: oklch(40% 0.02 40); }
+  .chain p { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.5; color: oklch(30% 0.02 40); margin: 0 0 14px; max-width: 560px; }
+  .final-line { font-family: 'Fraunces', serif; font-weight: 600; font-size: 28px; color: #a3453d; margin: 34px 0 0; }
+
+  /* ---- Who it's for ---- */
+
+  /* ---- Closing ---- */
+  .closing-statement { font-family: 'Fraunces', serif; font-weight: 500; font-size: 48px; line-height: 1.18; margin: 0 auto; max-width: 860px; text-wrap: balance; }
+  .closing-statement span { display: block; font-size: 0.72em; line-height: 1.3; font-weight: 400; color: oklch(40% 0.02 40); margin-top: 18px; }
+
+  /* ---- Workshop steps ---- */
+  .work-grid { max-width: 1040px; margin: 0 auto; grid-template-columns: 1.55fr 1fr; }
+  .steps-label { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 4px 0 12px; }
+  .steps { list-style: none; margin: 0 0 24px; padding: 0; }
+  .steps li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0; border-top: 1px dashed oklch(82% 0.02 50); font-size: 15.5px; line-height: 1.6; color: oklch(38% 0.02 40); }
+  .steps li:last-child { border-bottom: 1px dashed oklch(82% 0.02 50); }
+  .steps strong { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; color: oklch(25% 0.02 40); }
+  .door-ask { display: inline-block; margin-top: 16px; font-size: 15px; color: #a3453d; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+  .door-ask:hover { color: #8a382f; }
+
+  /* ---- Who it's for ---- */
+  .for-list { list-style: none; margin: 44px auto 0; padding: 0; max-width: 760px; text-align: left; }
+  .for-list li { font-family: 'Fraunces', serif; font-size: 21px; line-height: 1.45; color: oklch(28% 0.02 40); padding: 16px 0 16px 38px; border-bottom: 1px solid oklch(88% 0.015 60); position: relative; }
+  .for-list li:first-child { border-top: 1px solid oklch(88% 0.015 60); }
+  .for-list li::before { content: ""; position: absolute; left: 2px; top: 27px; width: 18px; height: 18px; transform: rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
+
+  /* ---- Diagram labels ---- */
+  .diagram { position: relative; width: 100%; max-width: 460px; margin: 0 auto; }
+  .diagram-label { position: absolute; left: 0; right: 0; text-align: center; transform: translateY(-75%); font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(40% 0.02 40); pointer-events: none; }
+  .diagram-label-core { color: #a3453d; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 1100px) {
+    .doors-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 860px) {
+    .iw-hero, .iw-two { grid-template-columns: 1fr !important; padding-left: 28px !important; padding-right: 28px !important; gap: 48px !important; }
+    .iw-section { padding-left: 28px !important; padding-right: 28px !important; }
+    .teaches { padding: 80px 28px 84px; }
+    .teaches h2 { font-size: 32px; }
+    .closing-statement { font-size: 38px; }
+  }
+  @media (max-width: 600px) {
+    .iw-hero, .iw-two { padding-left: 18px !important; padding-right: 18px !important; padding-top: 40px !important; padding-bottom: 64px !important; }
+    .iw-section { padding-left: 18px !important; padding-right: 18px !important; padding-top: 72px !important; padding-bottom: 80px !important; }
+    .kicker { font-size: 12px; }
+    .teaches { padding: 64px 18px 68px; }
+    .teaches h2 { font-size: 27px; }
+    .teaches p { font-size: 18px; }
+    .work-grid { grid-template-columns: 1fr; }
+    .steps li { grid-template-columns: 1fr; gap: 2px; }
+    .for-list li { font-size: 18px; padding-left: 34px; }
+    .for-list li::before { top: 23px; }
+    .diagram-label { font-size: 10.5px; letter-spacing: 0.1em; }
+    .work-grid .door { padding: 26px 22px 24px; }
+    .body-copy { font-size: 16px; }
+    .serif-lines, .chain p { font-size: 19px; }
+    .final-line { font-size: 23px; }
+    .closing-statement { font-size: 30px; }
+  }
+  .lang-switch { font-size: 13px; letter-spacing: 0.12em; color: oklch(48% 0.02 40); white-space: nowrap; }
+  .lang-switch a { text-decoration: none; }
+  .lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .lang-switch [aria-current] { color: oklch(25% 0.02 40); font-weight: 500; }
+  @media (max-width: 600px) { .lang-switch { position: absolute; top: 20px; right: 18px; } }
+</style>
+</head>
+<body>
+
+<div id="top" style="font-family: 'Jost', sans-serif; color: oklch(25% 0.02 40); background: oklch(97% 0.01 70); overflow-x: hidden;">
+
+  <!-- NAV (same as homepage) -->
+  <div class="nav" style="display:flex; align-items:center; justify-content:space-between; padding: 28px 64px; position: sticky; top:0; z-index: 10; background: oklch(97% 0.01 70 / 0.9); backdrop-filter: blur(6px);">
+    <a href="index.html" style="font-family:'Fraunces', serif; font-size: 26px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);">innerscapism</a>
+    <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
+      <a href="index.html#about" style="text-decoration:none;">Sobre</a>
+      <a href="index.html#experiences" style="text-decoration:none;">Experiências</a>
+      <a href="/pt/innerware" data-local="innerware.html" aria-current="page" style="text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 6px;">innerware</a>
+      <a href="index.html#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contacto</a>
+      <span class="lang-switch"><a href="/innerware" data-local="../innerware.html" hreflang="en" lang="en" aria-label="View in English">EN</a> · <span aria-current="true">PT</span></span>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- 1. HERO -->
+  <section class="iw-hero" style="display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; padding: 60px 64px 110px; align-items:center;" aria-labelledby="iw-title">
+    <div>
+      <p class="kicker">Innerware</p>
+      <h1 id="iw-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 30px; max-width: 620px;">Criar tecnologia e sistemas <span class="circled" style="margin-left: 10px;">de dentro para fora<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
+      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 16px;">Workshops e ferramentas de reflexão para equipas de produto, design e IA que querem perceber o que os seus produtos estão a ensinar às pessoas, e decidir o que deve continuar humano.</p>
+      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 40px;">A questão não é só o que a tecnologia consegue fazer. É o que a tecnologia nos está a fazer a nós.</p>
+      <div style="display:flex; gap: 28px; align-items:center; flex-wrap: wrap;">
+        <a href="#work" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Ver o workshop</a>
+        <a href="#areas" class="btn-outline" style="padding: 13px 26px; font-size: 16px;">Explorar as quatro perguntas</a>
+      </div>
+    </div>
+    <div class="iw-sketch" aria-hidden="true">
+      <span class="tape"></span><span class="tape"></span>
+      <div class="grid-paper torn paper">
+        <svg viewBox="0 0 400 320" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="36" y="36" width="168" height="96" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <line x1="36" y1="60" x2="204" y2="60" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <rect x="222" y="196" width="146" height="84" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <rect x="238" y="212" width="54" height="8" fill="oklch(30% 0.02 40)" opacity="0.25"/>
+          <rect x="238" y="230" width="96" height="8" fill="oklch(30% 0.02 40)" opacity="0.18"/>
+          <rect x="52" y="210" width="96" height="62" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.45"/>
+          <path d="M39.4 61.2 C47.7 62.9 72.2 72.1 89.1 71.7 C106.1 71.2 124.5 58.5 141.1 58.4 C157.7 58.4 180.8 69.3 188.8 71.5" stroke="oklch(30% 0.02 40)" stroke-width="1.2" opacity="0.55"/>
+          <path d="M9.8 270.2 C20.1 266.8 53.3 251.2 71.7 249.9 C90.1 248.5 104.7 268.2 120.0 262.3 C135.4 256.5 158.7 230.2 163.7 215.0 C168.8 199.9 159.7 179.6 150.5 171.2 C141.3 162.7 116.2 158.4 108.4 164.2 C100.5 170.1 96.3 198.1 103.4 206.2 C110.4 214.4 133.5 217.2 150.8 213.2 C168.0 209.1 190.3 197.3 206.9 181.9 C223.6 166.4 235.3 133.6 250.6 120.5 C265.9 107.3 285.4 100.1 298.6 103.1 C311.9 106.0 328.4 126.4 330.1 138.2 C331.8 150.1 317.4 170.4 308.8 174.0 C300.1 177.6 279.6 168.6 278.1 159.9 C276.6 151.1 286.9 136.3 299.8 121.4 C312.6 106.5 339.7 82.0 355.1 70.6 C370.4 59.1 385.8 55.6 392.0 52.6" stroke="#a3453d" stroke-width="2.4"/>
+          <path d="M225.6 126.2 Q222.6 122.9 222.5 118.9 Q223.5 115.0 225.0 111.4 Q227.9 108.4 230.3 105.5 Q232.9 102.7 236.4 101.0 Q238.9 97.5 243.2 97.1 Q247.0 95.2 251.1 96.4 Q255.5 95.2 259.5 96.6 Q262.1 100.4 265.6 101.9 Q270.1 103.0 271.6 106.8 Q275.0 109.5 274.8 113.7 Q274.5 117.4 276.4 121.1 Q276.3 125.0 273.7 128.2 Q271.5 131.3 269.9 134.7 Q268.5 138.7 264.8 140.6 Q260.3 140.8 256.7 142.4 Q252.8 142.7 248.9 142.7 Q244.6 144.4 241.2 141.6 Q237.1 141.0 233.9 138.6 Q231.5 135.6 227.7 133.6 Q227.4 129.5 224.5 126.5 Q225.4 122.6 224.3 118.9 Q225.4 115.4 226.3 111.8 Q226.1 107.5 228.9 104.5" stroke="oklch(30% 0.02 40)" stroke-width="1.4"/>
+          <circle cx="250" cy="120" r="3" fill="#a3453d"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. EVERY INTERFACE TEACHES SOMETHING -->
+  <section class="teaches torn-band" aria-labelledby="teaches-title">
+    <h2 id="teaches-title">Todas as interfaces ensinam alguma coisa.</h2>
+    <p>Um feed ensina-nos a continuar a fazer scroll. Uma notificação ensina-nos que é outra pessoa a decidir quando prestamos atenção. O preenchimento automático ensina-nos que a primeira resposta chega.</p>
+    <p>Nada disto é neutro. Alguém o desenhou.</p>
+    <p class="teaches-turn">O que significa que alguém o pode desenhar de outra forma.</p>
+  </section>
+
+  <!-- 3. FOUR QUESTIONS -->
+  <section id="areas" class="iw-section paper" style="padding: 110px 64px 130px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="areas-title">
+    <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
+      <p class="kicker">Quatro áreas</p>
+      <h2 id="areas-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0; line-height: 1.12;">Quatro perguntas a que voltamos sempre.</h2>
+    </div>
+    <div class="doors doors-4">
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Círculos concêntricos desenhados à mão que se estreitam até um único ponto">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" aria-hidden="true">
+              <path d="M68.0 21.1 Q75.3 21.0 82.5 18.9 Q89.1 22.8 95.9 24.0 Q102.9 25.5 107.6 30.4 Q115.3 32.3 117.6 38.8 Q120.5 44.3 122.4 50.1 Q126.3 55.7 125.7 62.1 Q125.6 68.4 123.6 74.5 Q121.1 80.6 117.4 86.3 Q111.4 90.3 104.3 92.5 Q98.7 96.4 91.5 97.4 Q84.6 97.8 77.6 99.8 Q70.2 100.0 64.1 96.2 Q57.5 93.9 51.5 90.6 Q45.2 87.3 41.4 81.8 Q37.5 76.5 34.4 70.6 Q34.7 64.2 32.7 57.9 Q33.2 51.4 38.8 46.3 Q38.4 39.1 43.4 34.3 Q50.3 31.4 55.0 26.6 Q61.0 23.0 67.6 19.8 Q75.2 20.7 82.4 19.8" stroke="oklch(30% 0.02 40)" stroke-width="1.3" opacity="0.5"/>
+              <path d="M102.5 41.4 Q106.0 44.4 106.9 48.8 Q109.3 52.4 108.7 56.7 Q110.8 60.6 110.6 64.9 Q108.8 68.8 107.1 72.7 Q103.0 75.2 101.7 79.7 Q98.0 82.6 93.7 84.8 Q88.6 85.0 84.1 86.7 Q79.3 85.4 74.3 86.8 Q69.6 85.6 66.0 82.5 Q62.7 79.6 58.4 77.8 Q55.2 74.9 52.1 71.6 Q51.3 67.4 51.9 63.2 Q48.9 59.3 52.0 55.6 Q50.7 51.1 54.6 48.1 Q56.6 44.5 58.6 40.5 Q63.7 39.5 67.6 37.5 Q71.4 35.0 75.9 33.5 Q80.8 32.9 85.5 33.8 Q90.5 34.2 94.3 37.1 Q99.2 38.2 100.6 43.0 Q103.9 45.7 107.1 48.7" stroke="oklch(30% 0.02 40)" stroke-width="1.4" opacity="0.75"/>
+              <path d="M78.1 47.8 Q80.3 48.0 82.6 47.5 Q84.7 48.6 86.4 49.7 Q88.3 50.6 90.7 51.2 Q92.2 52.7 92.0 55.0 Q94.2 56.3 94.9 58.3 Q94.1 60.3 93.9 62.2 Q92.6 63.8 92.4 65.7 Q91.1 67.3 89.8 68.8 Q87.4 69.1 86.5 71.6 Q84.0 71.5 81.9 71.7 Q79.7 72.6 77.5 71.9 Q75.4 71.3 73.2 70.9 Q72.1 68.9 69.8 68.3 Q68.7 66.7 66.5 65.6 Q65.7 63.7 66.6 61.6 Q66.1 59.7 67.0 58.0 Q66.9 56.1 67.0 54.0 Q68.1 52.3 70.4 51.4 Q72.3 50.4 74.2 49.7 Q75.9 48.3 78.0 47.3 Q80.3 48.7 82.6 47.7 Q84.3 49.5 86.3 49.9" stroke="#a3453d" stroke-width="2"/>
+              <circle cx="80" cy="60" r="3" fill="#a3453d"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>01</span>Atenção</h3>
+        <p class="door-tag">A que é que o teu produto está a ensinar as pessoas a prestar atenção?</p>
+        <p class="door-note">Explorar como interfaces, notificações, algoritmos e interações moldam a atenção.</p>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Uma linha desenhada à mão que se divide em três caminhos, um deles escolhido a vermelho">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" aria-hidden="true">
+              <path d="M13.5 64.4 C17.8 63.9 30.8 61.7 39.6 61.7 C48.4 61.7 58.8 64.6 66.2 64.2 C73.7 63.8 81.4 60.1 84.5 59.2" stroke="oklch(30% 0.02 40)" stroke-width="1.6"/>
+              <path d="M84.0 59.4 C88.2 55.8 100.0 44.4 109.3 38.1 C118.6 31.8 134.8 24.4 139.8 21.7" stroke="oklch(30% 0.02 40)" stroke-width="1.3" opacity="0.5" stroke-dasharray="3 5"/>
+              <path d="M83.8 60.1 C88.4 59.9 100.8 59.6 111.2 59.3 C121.6 59.0 140.5 58.5 146.3 58.3" stroke="#a3453d" stroke-width="2.2"/>
+              <path d="M84.1 60.8 C88.1 64.8 99.4 78.2 108.3 84.9 C117.1 91.5 132.5 98.0 137.4 100.6" stroke="oklch(30% 0.02 40)" stroke-width="1.3" opacity="0.5" stroke-dasharray="3 5"/>
+              <circle cx="84" cy="60" r="3" fill="oklch(30% 0.02 40)"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>02</span>Agência</h3>
+        <p class="door-tag">Estamos a ajudar as pessoas a tomar melhores decisões, ou a decidir por elas?</p>
+        <p class="door-note">Explorar autonomia, delegação, IA e escolha humana.</p>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Um rabisco solto, desenhado à mão, cheio de voltas">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21.6 82.0 C24.5 74.9 32.0 41.3 39.1 39.1 C46.2 36.8 62.2 59.4 64.1 68.6 C66.0 77.7 56.5 95.6 50.5 93.9 C44.5 92.3 24.7 69.6 28.2 58.7 C31.6 47.8 60.2 29.0 71.1 28.8 C82.1 28.6 91.9 47.9 94.0 57.7 C96.1 67.4 88.6 86.8 83.6 87.4 C78.6 88.1 60.6 70.8 64.1 61.5 C67.7 52.2 94.2 33.0 104.9 31.6 C115.7 30.2 126.0 43.5 128.5 52.9 C131.0 62.4 125.1 85.5 120.1 88.3 C115.0 91.2 94.2 78.1 98.1 70.0 C101.9 62.0 135.8 45.0 143.3 40.0" stroke="#a3453d" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>03</span>Criatividade</h3>
+        <p class="door-tag">O que acontece à criatividade quando gerar deixa de exigir esforço?</p>
+        <p class="door-note">Explorar a relação entre IA, originalidade, expressão e agência criativa.</p>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Contorno de uma pessoa desenhado à mão, com um pequeno coração vermelho">
+            <svg viewBox="0 0 160 120" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M74.3 18.9 Q76.5 18.2 78.7 17.7 Q80.9 17.8 83.3 17.3 Q85.6 18.2 87.7 19.3 Q89.2 21.4 90.9 23.1 Q92.3 25.2 94.2 27.1 Q95.2 29.6 95.6 32.4 Q94.4 35.1 94.0 37.6 Q94.6 40.6 92.8 42.7 Q91.8 45.2 89.7 46.6 Q88.0 48.3 85.9 49.6 Q83.7 50.4 81.4 51.1 Q79.1 50.1 76.6 50.9 Q74.3 50.3 72.6 48.1 Q70.5 47.0 68.5 45.5 Q67.4 43.0 66.6 40.5 Q66.0 38.1 65.0 35.6 Q65.8 33.0 64.8 30.1 Q65.6 27.5 66.8 25.1 Q68.0 22.7 70.0 21.1 Q72.1 19.8 74.0 18.2 Q76.3 17.5 78.6 16.3 Q81.0 16.5 83.2 17.8" stroke="oklch(30% 0.02 40)" stroke-width="1.6"/>
+              <path d="M35.0 118.6 C35.9 112.9 36.9 94.0 40.7 84.8 C44.5 75.5 51.1 67.7 57.8 63.0 C64.5 58.2 73.4 56.5 80.9 56.5 C88.4 56.4 96.2 58.0 102.6 62.6 C109.1 67.3 116.1 75.4 119.8 84.5 C123.5 93.7 124.1 112.1 125.0 117.6" stroke="oklch(30% 0.02 40)" stroke-width="1.6"/>
+              <path d="M80 92 C72 85 66 80 70 74 C73 70 78 71 80 76 C82 71 87 70 90 74 C94 80 88 85 80 92 Z" fill="#a3453d" stroke="#a3453d" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="door-title"><span>04</span>Humanidade</h3>
+        <p class="door-tag">O que deve continuar humano?</p>
+        <p class="door-note">Explorar significado, incerteza, intuição, ligação e as coisas que não devíamos otimizar até desaparecerem.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 4. THE WORKSHOP -->
+  <section id="work" class="iw-section" style="padding: 120px 64px 130px; scroll-margin-top: 70px; text-align: center;" aria-labelledby="work-title">
+    <p class="kicker">O workshop</p>
+    <h2 id="work-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 auto 18px; max-width: 640px; text-wrap: balance;">Leva estas perguntas à tua equipa.</h2>
+    <p class="body-copy" style="margin: 0 auto 64px; text-align: center;">Um workshop para equipas de produto, design e tecnologia darem um passo atrás em relação ao que estão a construir e olharem para isso de dentro para fora.</p>
+    <div class="work-grid">
+      <article class="door">
+        <h3 class="door-title"><span>01 · Para equipas</span>Workshop</h3>
+        <p class="door-note">A tua equipa olha para o próprio produto através de quatro lentes: atenção, agência, criatividade e humanidade. Não só pela conversa, mas através de desenho, mapeamento e breves exercícios corporais que revelam o que os slides e as folhas de cálculo não mostram.</p>
+        <p class="steps-label">O que acontece</p>
+        <ol class="steps">
+          <li><strong>Mapear</strong><span>Percorrer o produto como os teus utilizadores o vivem, e reparar no que lhes pede.</span></li>
+          <li><strong>Olhar</strong><span>Explorá-lo através das quatro lentes, com exercícios criativos e reflexivos.</span></li>
+          <li><strong>Perguntar</strong><span>Dar nome às cedências que a equipa está a fazer, muitas vezes sem se aperceber.</span></li>
+          <li><strong>Sair com</strong><span>Um pequeno conjunto de perguntas e decisões para levar de volta ao roadmap.</span></li>
+        </ol>
+        <p class="door-tag" style="margin: 0 0 22px;">Sais com perguntas que vale a pena guardar, não com um framework para arquivar.</p>
+        <div class="door-meta">3 horas / meio dia · Grupos de 6–20 · Presencial ou remoto · Materiais incluídos</div>
+      </article>
+      <article class="door">
+        <span class="door-soon" style="top: -14px; left: auto; right: 18px;">Em desenvolvimento</span>
+        <h3 class="door-title"><span>02 · Para o teu processo</span>Prompts</h3>
+        <p class="door-note">Um conjunto de prompts de reflexão que a tua equipa pode usar em sprints, reviews e retros, para que estas perguntas não fiquem num só workshop.</p>
+        <div class="door-meta">Sprints · Reviews · Retros</div>
+        <a class="door-ask" href="https://www.instagram.com/innerscapism/">Queres acesso antecipado? Entra em contacto.</a>
+      </article>
+    </div>
+    <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 16px 34px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px; margin-top: 64px;">Começar uma conversa</a>
+  </section>
+
+  <!-- 5. WHAT IS INNERWARE -->
+  <section class="iw-section paper" style="padding: 120px 64px; background-color: oklch(94% 0.015 65);" aria-labelledby="what-title">
+    <div style="max-width: 1112px; margin: 0 auto;">
+      <div style="max-width: 820px;">
+        <p class="kicker">O que é o Innerware?</p>
+        <h2 id="what-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 26px;">O Innerware é uma prática de<br>desenhar com consciência interior.</h2>
+        <p class="body-copy">À medida que a IA e a automação assumem mais do nosso trabalho cognitivo, ganha peso aquilo que a tecnologia não pode decidir por nós: o que importa, o que tem significado, o que merece a nossa atenção, o que deve continuar humano.</p>
+        <p class="body-copy">O Innerware junta pensamento de produto, UX, IA e pensamento sistémico com criatividade, consciência corporal e atenção.</p>
+        <p class="body-copy" style="margin-bottom: 0;">O objetivo não é rejeitar a tecnologia. É tornarmo-nos mais conscientes da relação que temos com ela, e do tipo de relações que os nossos produtos criam para os outros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHO IT'S FOR -->
+  <section class="iw-section" style="padding: 110px 64px 120px; text-align: center;" aria-labelledby="for-title">
+    <p class="kicker">Para quem é</p>
+    <h2 id="for-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.4; margin: 0 auto; max-width: 680px; text-wrap: balance;">Para quem constrói as tecnologias, os produtos e as organizações que moldam a forma como vivemos e trabalhamos.</h2>
+    <ul class="for-list">
+      <li>Estás a adicionar funcionalidades de IA e queres pensar no que elas substituem, não só no que acrescentam.</li>
+      <li>Os números de engagement parecem bons, mas há algo no produto que não bate certo.</li>
+      <li>A tua equipa lança depressa e raramente tem espaço para perguntar porquê.</li>
+      <li>Lideras uma equipa de produto, design, IA ou tecnologia e queres que pensem com mais profundidade, em conjunto.</li>
+    </ul>
+  </section>
+
+  <!-- 7. FROM INNER TO OUTER -->
+  <div class="paper" style="background-color: oklch(94% 0.015 65);">
+  <section class="iw-two" style="display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; padding: 120px 64px; align-items:center; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="outer-title">
+    <div>
+      <p class="kicker">De dentro para fora</p>
+      <h2 id="outer-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 26px;">Vamos para dentro para criar de outra forma cá fora.</h2>
+      <p class="body-copy">O Innerscapism começa no mundo interior. Mas o mundo interior não existe separado do mundo que construímos.</p>
+      <div class="chain">
+        <p>A forma como nos compreendemos molda a forma como nos relacionamos com os outros.</p>
+        <p>A forma como nos relacionamos com os outros molda o que criamos.</p>
+        <p>E o que criamos passa a fazer parte dos sistemas que moldam todas as outras pessoas.</p>
+      </div>
+      <p class="final-line">Da paisagem interior ao mundo exterior.</p>
+    </div>
+    <div class="diagram" role="img" aria-label="Esboço de diagrama: um núcleo desenhado à mão chamado dentro de nós, dentro de um anel chamado uns com os outros, dentro de uma grelha precisa chamada nos sistemas que criamos">
+      <span class="diagram-label" style="top: 6.7%;">Nos sistemas que criamos</span>
+      <span class="diagram-label" style="top: 31.9%;">Uns com os outros</span>
+      <span class="diagram-label diagram-label-core" style="top: 69.5%;">Dentro de nós</span>
+      <svg viewBox="0 0 420 420" fill="none" stroke-linecap="round" aria-hidden="true">
+        <line x1="74" y1="40" x2="74" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="74" x2="380" y2="74" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="108" y1="40" x2="108" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="108" x2="380" y2="108" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="142" y1="40" x2="142" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="142" x2="380" y2="142" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="176" y1="40" x2="176" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="176" x2="380" y2="176" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="210" y1="40" x2="210" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="210" x2="380" y2="210" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="244" y1="40" x2="244" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="244" x2="380" y2="244" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="278" y1="40" x2="278" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="278" x2="380" y2="278" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="312" y1="40" x2="312" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="312" x2="380" y2="312" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="346" y1="40" x2="346" y2="380" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <line x1="40" y1="346" x2="380" y2="346" stroke="oklch(30% 0.02 40)" stroke-width="0.8" opacity="0.16"/>
+        <rect x="40" y="40" width="340" height="340" stroke="oklch(30% 0.02 40)" stroke-width="1.2"/>
+        <path d="M88.8 233.5 Q83.8 220.4 80.8 206.6 Q82.1 192.6 88.4 179.7 Q86.7 164.5 94.9 152.5 Q104.7 142.0 111.0 129.2 Q121.5 119.5 132.8 110.8 Q145.4 104.1 155.8 92.9 Q170.6 90.7 184.6 86.7 Q198.9 84.2 213.6 81.9 Q227.2 91.3 242.1 88.9 Q256.3 92.2 267.6 101.7 Q280.5 107.5 289.9 118.2 Q300.9 126.5 311.3 136.0 Q317.1 148.7 324.8 160.1 Q335.4 171.2 336.0 185.6 Q337.6 199.5 342.1 213.5 Q337.4 227.3 338.3 241.9 Q330.8 254.5 326.2 268.0 Q313.3 276.8 308.5 290.5 Q299.6 301.7 284.6 305.9 Q277.1 320.0 261.1 320.4 Q248.9 327.9 234.5 328.8 Q220.9 333.5 206.5 334.9 Q192.8 329.0 177.2 333.8 Q164.7 325.2 151.2 320.4 Q138.5 313.9 128.3 303.9 Q118.5 294.0 106.7 285.5 Q99.3 273.4 95.0 260.0 Q86.2 248.3 86.3 234.0 Q86.8 220.2 84.3 206.7" stroke="oklch(30% 0.02 40)" stroke-width="1.5" fill="oklch(97% 0.01 70)"/>
+        <path d="M258.4 222.8 Q258.6 231.2 252.9 237.2 Q249.9 245.0 243.3 250.0 Q234.5 251.5 229.2 259.1 Q220.9 261.2 212.3 257.8 Q204.0 261.7 196.3 257.9 Q188.6 255.4 180.0 253.7 Q175.8 246.0 169.3 241.3 Q162.8 235.8 160.2 228.0 Q159.2 220.0 155.6 212.4 Q156.7 204.3 159.3 196.6 Q164.5 190.1 166.0 182.1 Q171.8 176.4 178.5 172.1 Q185.5 168.5 191.6 163.1 Q199.9 162.9 207.6 160.3 Q215.9 159.5 223.7 162.0 Q231.0 165.5 238.9 167.9 Q244.8 173.4 251.8 177.9 Q255.3 185.2 261.1 191.5 Q263.2 199.5 263.2 207.7 Q260.3 215.4 258.2 222.8 Q259.2 231.5 254.7 238.3" stroke="#a3453d" stroke-width="2.2" fill="oklch(93% 0.025 75)"/>
+        <path d="M180.5 245.4 Q173.4 242.0 169.3 235.6 Q165.6 229.1 162.8 222.2 Q160.8 214.9 163.9 207.4 Q164.5 200.3 162.7 192.0 Q166.5 185.1 171.1 178.9 Q179.8 176.9 185.4 172.6 Q191.2 168.2 197.9 165.0 Q205.1 162.5 212.6 165.3 Q220.2 163.8 226.5 168.4 Q233.0 171.4 241.0 172.8 Q246.0 178.5 251.0 184.2 Q253.3 191.4 256.3 198.1 Q256.1 205.4 257.0 212.6 Q258.3 220.3 256.6 227.7 Q249.3 232.5 245.5 238.4 Q243.2 246.4 236.4 250.1 Q230.0 254.4 221.8 253.9 Q214.8 256.3 207.4 255.6 Q199.4 257.6 192.9 253.1 Q185.4 251.4 177.9 248.5" stroke="#a3453d" stroke-width="1" opacity="0.6"/>
+        <circle cx="210" cy="210" r="3.5" fill="#a3453d"/>
+      </svg>
+    </div>
+  </section>
+  </div>
+
+  <!-- 8. CLOSING -->
+  <section class="iw-section" style="padding: 130px 64px 140px; text-align: center;" aria-labelledby="closing-title">
+    <h2 id="closing-title" class="closing-statement">A tecnologia está a tornar-se mais poderosa. <span>A questão é se nós nos estamos a tornar mais conscientes ao mesmo ritmo.</span></h2>
+    <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true" style="margin-top: 40px;"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="#a3453d" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <p class="kicker" style="margin: 44px 0 10px;">Innerware</p>
+    <p style="font-family:'Fraunces', serif; font-size: 20px; line-height: 1.5; color: oklch(38% 0.02 40); margin: 0 auto 40px; max-width: 520px;">Uma prática para criar tecnologia e sistemas sem perder o que nos torna humanos.</p>
+    <a href="index.html" class="cta-pill btn-outline">← Voltar ao Innerscapism</a>
+  </section>
+
+  </main>
+
+  <!-- FOOTER (same as homepage) -->
+  <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
+    <a href="index.html" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
+    <div style="display:flex; gap: 32px;">
+      <a href="https://www.instagram.com/innerscapism/" style="text-decoration:none;">Instagram</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Opened as a local file (not on innerscapism.com): use file paths for clean links.
+  if (location.protocol === 'file:') {
+    document.querySelectorAll('a[data-local]').forEach(function (a) { a.href = a.getAttribute('data-local'); });
+  }
+</script>
+</body>
+</html>
