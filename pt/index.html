@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>innerscapism · Criar espaço para o que nos torna humanos</title>
-<meta name="description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, caminhadas, movimento, som e conversa: criar espaço para o que nos torna humanos.">
+<meta name="description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, movimento e conversa: criar espaço para o que nos torna humanos.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="innerscapism">
 <meta property="og:title" content="innerscapism · Criar espaço para o que nos torna humanos">
-<meta property="og:description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, caminhadas, movimento, som e conversa: criar espaço para o que nos torna humanos.">
+<meta property="og:description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, movimento e conversa: criar espaço para o que nos torna humanos.">
 <meta property="og:url" content="https://innerscapism.com/pt/">
 <meta property="og:image" content="https://innerscapism.com/assets/images/share/home.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,6 +22,7 @@
 <meta property="og:locale:alternate" content="en_GB">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/innerscapism.css">
+<script src="../assets/js/reveal.js" defer></script>
 <style>
   html { scroll-behavior: smooth; }
 
@@ -32,11 +33,15 @@
   .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
 
   /* ---- Two paths: one spread, organic half and system half ---- */
-  .split { padding: 120px 0 0; }
+  .split { padding: 0; margin-top: -48px; position: relative; z-index: 0; }
+  .strip { position: relative; z-index: 1; }
   .split-head { text-align: center; max-width: 680px; margin: 0 auto 64px; padding: 0 24px; }
-  .split-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid oklch(85% 0.02 60); border-bottom: 1px solid oklch(85% 0.02 60); }
-  .half { padding: 96px 64px 150px; }
-  .half-human { background-color: oklch(94% 0.015 65); }
+  .split-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; }
+  .half { padding: 144px 64px 150px; }
+  .half-human { position: relative; background-color: oklch(97% 0.01 70); }
+  .half-human::before { content: ""; position: absolute; inset: 56px 9% 120px 6%; background: #a3453d; opacity: 0.14; transform: rotate(-1.5deg); pointer-events: none;
+    clip-path: polygon(0 3%, 8% 0, 22% 2%, 37% 0, 52% 3%, 68% 1%, 84% 2%, 100% 0, 98% 30%, 100% 62%, 97% 100%, 80% 97%, 61% 100%, 43% 97%, 24% 100%, 6% 98%, 0 100%, 2% 64%, 0 33%); }
+  .half-human .half-inner { position: relative; }
   .half-system { border-left: 1px solid oklch(70% 0.02 50); }
   .half-inner { max-width: 470px; }
   .half-human .half-inner { margin-left: auto; margin-right: 24px; }
@@ -45,21 +50,14 @@
   .half-copy { font-size: 17px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 18px; }
   .half-for { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 0 0 30px; }
   .human-photo { position: relative; width: 78%; margin: 0 0 44px 4%; transform: rotate(-3deg); filter: drop-shadow(0 14px 22px rgba(33, 25, 23, 0.14)); }
-  .human-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .human-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 40%; }
   .human-photo .tape { top: -12px; left: 38%; transform: rotate(-6deg); }
   .system-photo { box-sizing: border-box; width: 78%; margin: 0 0 44px; padding: 10px; border: 1px solid oklch(30% 0.02 40); background: oklch(97% 0.01 70); }
   .system-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; filter: grayscale(0.25); }
-  .seam { position: absolute; left: 50%; top: 96px; transform: translateX(-50%); z-index: 2; width: 64px; height: 64px; border-radius: 50%; background: #a3453d; color: oklch(97% 0.01 70); display: grid; place-items: center; font-family: 'Fraunces', serif; font-size: 30px; line-height: 1; padding-bottom: 3px; box-sizing: border-box; box-shadow: 0 8px 16px rgba(40, 26, 20, 0.18); }
+  .seam { position: absolute; left: 50%; top: 144px; transform: translateX(-50%); z-index: 2; width: 64px; height: 64px; border-radius: 50%; background: #a3453d; color: oklch(97% 0.01 70); display: grid; place-items: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 24px; line-height: 1; padding-bottom: 4px; box-sizing: border-box; box-shadow: 0 8px 16px rgba(40, 26, 20, 0.18); }
   .split-line { position: absolute; left: 0; right: 0; bottom: 48px; width: 100%; height: 70px; pointer-events: none; }
 
-  /* ---- Who it's for ---- */
-  .moments-list { list-style: none; padding: 0; margin: 0; }
-  .moments-list li { font-family: 'Fraunces', serif; font-size: 24px; line-height: 1.3; padding: 14px 0 14px 38px; border-bottom: 1px solid oklch(88% 0.015 60); position: relative; }
-  .moments-list li::before { content: ""; position: absolute; left: 2px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%) rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
 
-  .stamp { position: relative; display: inline-block; transform: rotate(-3deg); margin: 40px 0 0 200px; }
-  .stamp img { width: 220px; max-width: 100%; aspect-ratio: 47 / 40; object-fit: cover; display: block; }
-  .stamp .tape { top: -8px; left: 40px; transform: rotate(-5deg); }
 
   /* ---- Experiences: four cards as a 2 x 2 grid on wide screens ---- */
   @media (min-width: 1001px) {
@@ -85,12 +83,6 @@
   .quote blockquote { margin: 0 0 18px; font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; line-height: 1.45; color: oklch(28% 0.02 40); }
   .quote figcaption { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); padding-top: 14px; border-top: 1px dashed oklch(80% 0.02 50); }
 
-  /* ---- Work & Systems ---- */
-  .work-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; max-width: 980px; margin: 0 auto; align-items: start; }
-  .work-pair .door { padding: 36px 34px 34px; }
-  .work-pair .door:nth-child(2) { margin-top: 0; }
-  .work-pair .door-title { font-size: 32px; margin-bottom: 10px; }
-  .work-pair .door-meta { margin-bottom: 24px; }
 
   /* ---- Closing ---- */
   .collage { position: relative; width: min(100%, 420px); margin: 90px auto 72px; }
@@ -103,15 +95,15 @@
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
     .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
-    .moments { grid-template-columns: 1fr !important; gap: 36px !important; padding-bottom: 72px !important; margin-bottom: 72px !important; }
     .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
-    .work-pair { grid-template-columns: 1fr; max-width: 560px; }
     .split-grid { grid-template-columns: 1fr; }
     .half { padding: 72px 28px 80px; }
+    .half-human { padding-top: 120px; }
     .half-human .half-inner, .half-system .half-inner { margin: 0 auto; max-width: 560px; }
-    .half-system { border-left: 0; border-top: 1px solid oklch(70% 0.02 50); }
+    .half-system { border-left: 0; }
     .seam { position: relative; left: auto; top: auto; transform: none; margin: -32px auto; }
     .split-line { display: none; }
+    .half-human::before { inset: 28px 4% 40px 3%; }
     .quotes-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     .quotes .door:nth-child(n) { margin-top: 0 !important; }
   }
@@ -123,17 +115,14 @@
     .hero-desc { font-size: 16px !important; }
     .strip { padding: 64px 18px !important; }
     .strip p { font-size: 28px !important; }
+    .strip h2 { font-size: 19px !important; }
     .about { padding: 56px 18px !important; }
     .about-copy p { font-size: 16px !important; }
-    .moments { padding-bottom: 56px !important; margin-bottom: 64px !important; }
-    .stamp { margin-left: 70px; }
-    .moments-list li { font-size: 20px; }
     .section-pad { padding: 72px 18px 80px !important; }
-    .split { padding-top: 72px; }
     .half { padding: 56px 18px 64px; }
+    .half-human { padding-top: 104px; }
     .half h3 { font-size: 30px; }
     .human-photo, .system-photo { width: 100%; margin-left: 0; }
-    .work-pair .door { padding: 28px 22px 26px; }
     .quotes { margin-top: 72px; }
     .quote blockquote { font-size: 18px; }
     .exp-next { margin-top: 64px; }
@@ -170,8 +159,7 @@
   <section class="hero" style="display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; padding: 60px 64px 100px; align-items:center;" aria-labelledby="hero-title">
     <div>
       <h1 id="hero-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 28px; max-width: 620px;">Criar espaço para o que nos torna <span class="circled">humanos<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
-      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 540px; margin: 0 0 16px;">Arte, movimento, caminhadas, som e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.</p>
-      <p class="hero-desc" style="font-size: 17px; line-height: 1.65; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 38px;">O Innerscapism junta experiências criativas e pensamento centrado nas pessoas para criar espaço para aquilo que tantas vezes se perde na pressa do dia a dia.</p>
+      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 540px; margin: 0 0 38px;">Arte, movimento e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.</p>
       <div class="btn-row">
         <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar Experiências</a>
         <a href="/pt/work" data-local="work.html" class="btn-secondary">Explorar Trabalho e Sistemas</a>
@@ -190,29 +178,26 @@
   <div class="strip torn-band" style="color: oklch(97% 0.01 70); padding: 80px 64px 84px; text-align: center; background-color: #A3453D">
     <p style="font-family:'Fraunces', serif; font-size: 40px; line-height: 1.3; max-width: 780px; margin: 0 auto; font-weight: 400;">Tornar visível o invisível.</p>
     <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
+    <h2 id="paths-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 24px; line-height: 1.4; margin: 22px auto 0; max-width: 640px; opacity: 0.92; text-wrap: balance;">Duas formas de explorar o que nos torna humanos.</h2>
   </div>
 
   <!-- 3. TWO PATHS: one spread, two halves (organic / system) -->
   <section class="split" aria-labelledby="paths-title">
-    <div class="split-head">
-      <p class="kicker">Dois caminhos</p>
-      <h2 id="paths-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0; line-height: 1.12; text-wrap: balance;">Duas formas de explorar o que nos torna humanos.</h2>
-    </div>
     <div class="split-grid">
-      <article class="half half-human paper">
+      <article class="half half-human">
         <div class="half-inner">
           <div class="human-photo">
             <span class="tape"></span>
-            <img width="592" height="740" class="torn" src="../assets/images/experiences/retreats.jpg" alt="Colagem de pessoas a reunir-se, a caminhar, a desenhar e a mover-se em conjunto" loading="lazy" decoding="async">
+            <img width="1015" height="1100" class="torn" src="../assets/images/compass-forest.jpg" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" loading="lazy" decoding="async">
           </div>
           <p class="kicker" style="margin-bottom: 12px;">Experiências</p>
           <h3>Abrir espaço para te reconectares.</h3>
-          <p class="half-copy">Práticas criativas para abrandar, prestar atenção e explorar o que importa. Através da arte, das caminhadas, do yoga, do som e de experiências partilhadas, criamos espaço para a curiosidade, a reflexão e a ligação.</p>
+          <p class="half-copy">Arte, caminhadas, yoga e mesas partilhadas, para abrandar e prestar atenção.</p>
           <p class="half-for">Para pessoas individuais, pequenos grupos e encontros</p>
           <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar Experiências</a>
         </div>
       </article>
-      <span class="seam" aria-hidden="true">&amp;</span>
+      <span class="seam" aria-hidden="true">ou</span>
       <article class="half half-system grid-paper">
         <div class="half-inner">
           <div class="system-photo">
@@ -220,7 +205,7 @@
           </div>
           <p class="kicker" style="margin-bottom: 12px;">Trabalho e Sistemas</p>
           <h3>Criar de outra forma.</h3>
-          <p class="half-copy">Os ambientes, produtos e sistemas que criamos moldam a forma como as pessoas vivem e trabalham. Através do design centrado nas pessoas, da facilitação criativa e do pensamento sistémico, exploramos como construir produtos, tecnologias e ambientes de trabalho sem perder de vista o que nos torna humanos.</p>
+          <p class="half-copy">Design centrado nas pessoas e facilitação criativa para equipas que constroem produtos e sistemas.</p>
           <p class="half-for">Para equipas de produto, organizações e pessoas que estão a construir o que vem a seguir</p>
           <a href="/pt/innerware" data-local="innerware.html" class="btn-secondary">Explorar o Innerware</a>
         </div>
@@ -231,34 +216,9 @@
     </div>
   </section>
 
-  <!-- 5. EXPERIENCES -->
+  <!-- 4. EXPERIENCES -->
   <section id="experiences" class="experiences paper section-pad" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="exp-title">
-      <!-- WHO IT'S FOR -->
-    <section class="moments" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; padding: 0 0 96px; margin: 0 auto 96px; align-items:start; max-width: 1112px; border-bottom: 1px dashed oklch(78% 0.03 45);" aria-labelledby="moments-title">
-      <div>
-        <p class="kicker">Para quem são as Experiências</p>
-        <h2 id="moments-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 22px; line-height: 1.15;">Para momentos em que algo está a mudar.</h2>
-        <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 420px;">Ou quando nada muda, e simplesmente queres reparar mais.</p>
-        <div class="stamp">
-          <span class="tape"></span>
-          <img width="470" height="400" class="torn" src="../assets/images/experiences/meadow.jpg" alt="Uma pessoa parada num prado, a olhar para as árvores" loading="lazy" decoding="async">
-        </div>
-      </div>
-      <div>
-        <p style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 6px 0 8px;">Talvez estejas a</p>
-        <ul class="moments-list">
-          <li>atravessar uma transição</li>
-          <li>sentir um bloqueio criativo</li>
-          <li>precisar de espaço para refletir</li>
-          <li>recuperar de um período intenso</li>
-          <li>querer voltar a ligar-te a ti</li>
-          <li>procurar ligações com mais significado</li>
-          <li>simplesmente querer abrandar e prestar atenção</li>
-        </ul>
-      </div>
-    </section>
-
-    <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
+      <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
       <p class="kicker">As Experiências</p>
       <h2 id="exp-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Quatro formas de entrar.</h2>
       <p class="body-copy" style="margin: 0 auto; text-align: center;">Para pessoas individuais, pequenos grupos e encontros, em Lisboa, no Porto e online. Não é preciso jeito para a arte. Só curiosidade.</p>
@@ -321,6 +281,25 @@
       <a href="/pt/contact#experiences" data-local="contact.html#experiences" class="btn-primary">Reservar ou pedir informações</a>
     </div>
 
+  </section>
+
+  <!-- 5. CLOSING -->
+  <section id="contact" class="contact" style="padding: 10px 64px 130px; text-align:center;" aria-labelledby="closing-title">
+    <div class="collage">
+      <aside class="doors-note torn-note paper" aria-label="Onde as Experiências acontecem">
+        <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">Isto pode acontecer</div>
+        <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
+          Para ti ·<br>
+          Com outros ·<br>
+          No trabalho - com a tua equipa!
+        </p>
+      </aside>
+      <div class="closing-reminder"><span class="tape"></span><p class="badge-paper torn-note paper">Lembrete: o mundo continua mais lento do que o teu ecrã.</p></div>
+    </div>
+    <h2 id="closing-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.15; margin: 0 auto 20px; max-width: 640px; text-wrap: balance;">Um espaço para explorar, refletir e criar.</h2>
+    <p class="contact-desc" style="font-size: 18px; line-height: 1.65; color: oklch(40% 0.02 40); margin: 0 auto 34px; max-width: 560px;">Comecemos por uma conversa. A primeira chamada é gratuita.</p>
+    <a href="/pt/contact" data-local="contact.html" class="btn-primary">Entrar em contacto</a>
+
     <!-- TESTIMONIALS -->
     <section class="quotes" aria-labelledby="quotes-title">
       <p class="kicker" id="quotes-title" style="margin-bottom: 36px;">Nas palavras de quem esteve</p>
@@ -341,77 +320,12 @@
     </section>
   </section>
 
-  <!-- 6. WORK & SYSTEMS -->
-  <section id="work" class="section-pad" style="padding: 120px 64px 130px; scroll-margin-top: 70px;" aria-labelledby="work-title">
-    <div style="text-align:center; margin: 0 auto 64px; max-width: 680px;">
-      <p class="kicker">Trabalho e Sistemas</p>
-      <h2 id="work-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Para equipas e organizações.</h2>
-      <p class="body-copy" style="margin: 0 auto; text-align: center;">Duas formas diferentes de trabalhar em conjunto, com a mesma atenção às pessoas.</p>
-    </div>
-    <div class="work-pair">
-      <article class="door">
-        <h3 class="door-title"><span>Consultoria</span>Innerware</h3>
-        <p class="door-tag">Design centrado nas pessoas e consultoria.</p>
-        <p class="door-note">Apoio remoto em UX, estratégia de produto e design systems para equipas que constroem produtos e serviços digitais.</p>
-        <div class="door-meta">Remoto · Mediante pedido</div>
-        <a href="/pt/innerware" data-local="innerware.html" class="btn-secondary">Explorar o Innerware</a>
-      </article>
-      <article class="door">
-        <h3 class="door-title"><span>Workshops</span>Experiências criativas para equipas</h3>
-        <p class="door-tag">Espaço para refletir, ligar e conversar.</p>
-        <p class="door-note">Sessões facilitadas e práticas que abrem as conversas a que as reuniões raramente chegam. Para dias de equipa, offsites e encontros.</p>
-        <div class="door-meta">60–120 min · Grupos de 6–30 · Presencial ou remoto</div>
-        <a href="/pt/contact#work" data-local="contact.html#work" class="btn-secondary">Pedir informações sobre um workshop</a>
-      </article>
-    </div>
-    <p style="text-align: center; margin: 56px 0 0;"><a href="/pt/work" data-local="work.html" class="text-link">Como se distinguem</a></p>
-  </section>
-
-  <!-- 7. PHILOSOPHY -->
-  <div class="paper" style="background-color: oklch(94% 0.015 65);">
-  <section id="philosophy" class="about" style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; padding: 110px 64px; align-items:center; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="philosophy-title">
-    <img width="1015" height="1100" class="torn" src="../assets/images/compass-forest.jpg" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" loading="lazy" decoding="async" style="width: 100%; height: auto; aspect-ratio: 3/4; display:block; object-fit: cover;">
-    <div class="about-copy">
-      <p class="kicker">O que é o Innerscapism?</p>
-      <h2 id="philosophy-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 24px; line-height: 1.15;">O Innerscapism é uma<br>prática de regresso.</h2>
-      <p style="font-family:'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 28px; max-width: 560px;">À tua atenção.<br>À tua curiosidade.<br>Ao teu corpo.<br>Ao lugar.<br>Uns aos outros.<br>Às partes de ti que ficam mais silenciosas quando a vida aperta.</p>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 18px; max-width: 560px;">Às vezes, criar espaço para o que nos torna humanos começa por abrandar, fazer algo com as mãos ou prestar atenção ao mundo à nossa volta.</p>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 22px; max-width: 560px;">Outras vezes, começa por questionar os produtos, as tecnologias e os sistemas que moldam as nossas vidas.</p>
-      <p style="font-family:'Fraunces', serif; font-weight: 600; font-size: 24px; color: #a3453d; margin: 0;">O Innerscapism explora as duas coisas.</p>
-    </div>
-  </section>
-  </div>
-
-  <!-- 8. CLOSING -->
-  <section id="contact" class="contact" style="padding: 10px 64px 130px; text-align:center;" aria-labelledby="closing-title">
-    <div class="collage">
-      <aside class="doors-note torn-note paper" aria-label="Onde as Experiências acontecem">
-        <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">Isto pode acontecer</div>
-        <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
-          Para ti ·<br>
-          Com outros ·<br>
-          No trabalho - com a tua equipa!
-        </p>
-      </aside>
-      <div class="closing-reminder"><span class="tape"></span><p class="badge-paper torn-note paper">Lembrete: o mundo continua mais lento do que o teu ecrã.</p></div>
-    </div>
-    <h2 id="closing-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.15; margin: 0 auto 20px; max-width: 640px; text-wrap: balance;">Um espaço para explorar, refletir e criar.</h2>
-    <p class="contact-desc" style="font-size: 18px; line-height: 1.65; color: oklch(40% 0.02 40); margin: 0 auto 14px; max-width: 560px;">Quer procures uma experiência criativa, um novo olhar sobre o teu trabalho ou alguém com quem repensar um produto ou sistema, comecemos por uma conversa.</p>
-    <p style="font-size: 15px; color: oklch(48% 0.02 40); margin: 0 auto 34px;">A primeira chamada é gratuita e dura 20 minutos.</p>
-    <a href="/pt/contact" data-local="contact.html" class="btn-primary">Entrar em contacto</a>
-  </section>
-
   </main>
 
   <!-- FOOTER -->
   <footer class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
     <a href="/pt/" data-local="index.html" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
     <nav class="footer-links" aria-label="Rodapé">
-      <a href="/pt/#experiences" data-local="index.html#experiences">Experiências</a>
-      <a href="/pt/work" data-local="work.html">Trabalho e Sistemas</a>
-      <a href="/pt/innerware" data-local="innerware.html">Innerware</a>
-      <a href="/pt/about" data-local="about.html">Sobre</a>
-      <a href="/pt/contact" data-local="contact.html">Contacto</a>
       <a href="https://www.instagram.com/innerscapism/">Instagram</a>
     </nav>
   </footer>

@@ -28,12 +28,12 @@ T = {
 
     # ---------------------------------------------------------- homepage
     'innerscapism · Making space for what makes us human': 'innerscapism · Criar espaço para o que nos torna humanos',
-    'Creative experiences in Lisboa, Porto and online, and human-centred design for teams and organisations. Art, walking, movement, sound and conversation: making space for what makes us human.':
-        'Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, caminhadas, movimento, som e conversa: criar espaço para o que nos torna humanos.',
+    'Creative experiences in Lisboa, Porto and online, and human-centred design for teams and organisations. Art, movement and conversation: making space for what makes us human.':
+        'Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, movimento e conversa: criar espaço para o que nos torna humanos.',
     'Making space for what makes us': 'Criar espaço para o que nos torna',
     'human': 'humanos',
-    'Art, movement, walking, sound and thoughtful conversation. Different ways to slow down, reconnect and explore how we experience ourselves, each other and the world we create.':
-        'Arte, movimento, caminhadas, som e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.',
+    'Art, movement and thoughtful conversation. Different ways to slow down, reconnect and explore how we experience ourselves, each other and the world we create.':
+        'Arte, movimento e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.',
     'Innerscapism brings together creative experiences and human-centred thinking to make space for what often gets lost in the rush of everyday life.':
         'O Innerscapism junta experiências criativas e pensamento centrado nas pessoas para criar espaço para aquilo que tantas vezes se perde na pressa do dia a dia.',
     'Explore Experiences': 'Explorar Experiências',
@@ -143,6 +143,14 @@ T = {
         'Quer procures uma experiência criativa, um novo olhar sobre o teu trabalho ou alguém com quem repensar um produto ou sistema, comecemos por uma conversa.',
     'The first call is free and takes 20 minutes.': 'A primeira chamada é gratuita e dura 20 minutos.',
     'Get in touch': 'Entrar em contacto',
+
+    # ---- trimmed homepage
+    'or': 'ou',
+    'Art, walking, yoga and shared tables, for slowing down and paying attention.': 'Arte, caminhadas, yoga e mesas partilhadas, para abrandar e prestar atenção.',
+    'Human-centred design and creative facilitation for teams building products and systems.': 'Design centrado nas pessoas e facilitação criativa para equipas que constroem produtos e sistemas.',
+    'Sometimes, making space for what makes us human begins with slowing down and making something with our hands. Sometimes, it begins by questioning the systems shaping our lives.':
+        'Às vezes, criar espaço para o que nos torna humanos começa por abrandar e fazer algo com as mãos. Outras vezes, começa por questionar os sistemas que moldam as nossas vidas.',
+    "Let's start with a conversation. The first call is free.": 'Comecemos por uma conversa. A primeira chamada é gratuita.',
 
     # ---------------------------------------------------------- innerware
     'Innerware · Human-centred design and UX consulting · innerscapism': 'Innerware · Design centrado nas pessoas e consultoria de UX · innerscapism',

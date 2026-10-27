@@ -141,3 +141,8 @@ a:hover { color: #8a382f; }
     linear-gradient(90deg, oklch(78% 0.02 60 / 0.35) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* ---- Gentle reveal on scroll (see assets/js/reveal.js) ---- */
+.reveal { opacity: 0; translate: 0 28px; transition: opacity 0.7s ease, translate 0.7s ease; }
+.reveal.is-visible { opacity: 1; translate: 0 0; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; translate: none; transition: none; } }

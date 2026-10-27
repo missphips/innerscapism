@@ -54,11 +54,6 @@ FOOTER = '''<!-- FOOTER -->
   <footer class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
     <a href="/" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
     <nav class="footer-links" aria-label="Footer">
-      <a href="/#experiences">Experiences</a>
-      <a href="/work">Work &amp; Systems</a>
-      <a href="/innerware">Innerware</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
       <a href="https://www.instagram.com/innerscapism/">Instagram</a>
     </nav>
   </footer>
