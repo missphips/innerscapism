@@ -59,6 +59,7 @@ T = {
     'Who the experiences are for': 'Para quem são as experiências',
     'For moments when something is changing.': 'Para momentos em que algo está a mudar.',
     "Or when nothing is, and you'd simply like to notice more.": 'Ou quando nada muda, e simplesmente queres reparar mais.',
+    'A person standing still in a meadow, looking up at the trees': 'Uma pessoa parada num prado, a olhar para as árvores',
     'You might be': 'Talvez estejas a',
     'navigating transition': 'atravessar uma transição',
     'feeling creatively stuck': 'sentir um bloqueio criativo',
@@ -329,8 +330,8 @@ T = {
     'From buildings to products': 'Dos edifícios aos produtos',
     'I started in architecture, where I first became interested in the relationship between people and the environments they move through.':
         'Comecei na arquitetura, onde me interessei pela primeira vez pela relação entre as pessoas e os ambientes por onde se movem.',
-    'That interest followed me into UX and product ownership. The spaces became digital: products, services and the systems behind them.':
-        'Esse interesse acompanhou-me até ao UX e ao product ownership. Os espaços tornaram-se digitais: produtos, serviços e os sistemas por trás deles.',
+    "That interest followed me into UX and product ownership. The spaces became digital: products, services and the systems behind them. For the past ten years, I've worked with companies like Tekever and BMW.":
+        'Esse interesse acompanhou-me até ao UX e ao product ownership. Os espaços tornaram-se digitais: produtos, serviços e os sistemas por trás deles. Nos últimos dez anos, trabalhei com empresas como a Tekever e a BMW.',
     "[Add a sentence about your product work: the kinds of products, teams or industries you've worked with.]":
         '[Acrescenta uma frase sobre o teu trabalho em produto: tipos de produtos, equipas ou setores com que trabalhaste.]',
     'Making, moving, slowing down': 'Criar, mover, abrandar',
