@@ -1,5 +1,6 @@
 /* Shared Innerscapism styles: paper, tape, torn edges, hand-drawn marks, cards, nav and footer */
 body { margin: 0; background: oklch(97% 0.01 70); }
+img { height: auto; }  /* width/height attributes reserve space; CSS keeps each image's shape */
 a { color: #a3453d; }
 a:hover { color: #8a382f; }
 /* ---- Paper, tape & hand-drawn marks ---- */
@@ -88,4 +89,55 @@ a:hover { color: #8a382f; }
   .footer { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
   h1 { font-size: 36px !important; }
   h2 { font-size: 26px !important; }
+}
+
+/* ---- Shared text, buttons and lists (all pages) ---- */
+.kicker { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 0 0 20px; }
+.body-copy { font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px; }
+.btn-row { display: flex; gap: 16px 24px; align-items: center; flex-wrap: wrap; }
+.btn-primary { text-decoration: none; display: inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border: 1.5px solid #a3453d; border-radius: 999px; font-size: 16px; transition: background 0.2s ease, border-color 0.2s ease; }
+.btn-primary:hover { background: #8a382f; border-color: #8a382f; color: oklch(98% 0.01 70); }
+.btn-secondary { text-decoration: none; display: inline-block; padding: 14px 26px; background: transparent; color: #a3453d; border: 1.5px solid #a3453d; border-radius: 999px; font-size: 16px; transition: background 0.2s ease, color 0.2s ease; }
+.btn-secondary:hover { background: #a3453d; color: oklch(98% 0.01 70); }
+.list-label { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 22px 0 8px; }
+.ticks { list-style: none; margin: 0 0 18px; padding: 0; }
+.ticks li { position: relative; padding: 5px 0 5px 24px; font-size: 15.5px; line-height: 1.55; color: oklch(38% 0.02 40); }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 11px; width: 13px; height: 13px; transform: rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
+.placeholder { background: oklch(93% 0.06 85); outline: 1px dashed #a3453d; padding: 2px 6px; }
+
+/* ---- Keyboard focus and skip link ---- */
+:focus-visible { outline: 2px solid #a3453d; outline-offset: 3px; border-radius: 3px; }
+.doors-note :focus-visible, .teaches :focus-visible, .strip :focus-visible { outline-color: oklch(97% 0.01 70); }
+.skip-link { position: absolute; left: 16px; top: -60px; z-index: 20; background: #a3453d; color: oklch(98% 0.01 70); padding: 10px 16px; border-radius: 999px; text-decoration: none; }
+.skip-link:focus { top: 12px; color: oklch(98% 0.01 70); }
+
+/* ---- Menu: language switch and current page ---- */
+.lang-switch { font-size: 13px; letter-spacing: 0.12em; color: oklch(48% 0.02 40); white-space: nowrap; }
+.lang-switch a { text-decoration: none; }
+.lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lang-switch [aria-current] { color: oklch(25% 0.02 40); font-weight: 500; }
+.nav-links a[aria-current="page"]:not(.cta-pill) { text-decoration: underline !important; text-decoration-thickness: 1.5px !important; text-underline-offset: 6px; }
+
+/* ---- Footer links ---- */
+.footer-links { display: flex; gap: 12px 28px; flex-wrap: wrap; justify-content: flex-end; }
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 600px) {
+  .kicker { font-size: 12px; }
+  .body-copy { font-size: 16px; }
+  .lang-switch { position: absolute; top: 20px; right: 18px; }
+  .footer-links { justify-content: center; gap: 10px 20px; }
+}
+@media (max-width: 400px) {
+  .nav-links { gap: 10px !important; font-size: 12.5px !important; }
+}
+
+/* ---- Graph paper: the "system" that hand-drawn marks move through ---- */
+.grid-paper {
+  background-color: oklch(96% 0.015 75);
+  background-image:
+    linear-gradient(oklch(78% 0.02 60 / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(78% 0.02 60 / 0.35) 1px, transparent 1px);
+  background-size: 24px 24px;
 }

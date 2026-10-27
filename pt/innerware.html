@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Innerware · innerscapism</title>
-<meta name="description" content="Innerware: workshops e ferramentas de reflexão para equipas de produto, design e IA que querem perceber o que os seus produtos estão a ensinar às pessoas, e decidir o que deve continuar humano.">
+<title>Innerware · Design centrado nas pessoas e consultoria de UX · innerscapism</title>
+<meta name="description" content="O Innerware é consultoria de design centrado nas pessoas: UX e estratégia de produto, design systems e workshops criativos sobre sistemas para equipas que constroem produtos, serviços e tecnologia. Remoto, mediante pedido.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="innerscapism">
-<meta property="og:title" content="Innerware · Criar tecnologia e sistemas de dentro para fora">
-<meta property="og:description" content="Innerware: workshops e ferramentas de reflexão para equipas de produto, design e IA que querem perceber o que os seus produtos estão a ensinar às pessoas, e decidir o que deve continuar humano.">
+<meta property="og:title" content="Innerware · Design centrado nas pessoas para um mundo mais humano">
+<meta property="og:description" content="O Innerware é consultoria de design centrado nas pessoas: UX e estratégia de produto, design systems e workshops criativos sobre sistemas para equipas que constroem produtos, serviços e tecnologia. Remoto, mediante pedido.">
 <meta property="og:url" content="https://innerscapism.com/pt/innerware">
 <meta property="og:image" content="https://innerscapism.com/assets/images/share/innerware.jpg">
 <meta property="og:image:width" content="1200">
@@ -24,18 +24,7 @@
 <link rel="stylesheet" href="../assets/css/innerscapism.css">
 <style>
   html { scroll-behavior: smooth; }
-  .kicker { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 0 0 20px; }
-  .body-copy { font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px; }
   .serif-lines { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 24px; }
-
-  /* ---- Graph paper: the "system" that hand-drawn marks move through ---- */
-  .grid-paper {
-    background-color: oklch(96% 0.015 75);
-    background-image:
-      linear-gradient(oklch(78% 0.02 60 / 0.35) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(78% 0.02 60 / 0.35) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
 
   /* ---- Hero ---- */
   .iw-sketch { position: relative; transform: rotate(-1.5deg); filter: drop-shadow(0 16px 26px rgba(33, 25, 23, 0.1)); }
@@ -78,13 +67,6 @@
 
   /* ---- Workshop steps ---- */
   .work-grid { max-width: 1040px; margin: 0 auto; grid-template-columns: 1.55fr 1fr; }
-  .steps-label { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 4px 0 12px; }
-  .steps { list-style: none; margin: 0 0 24px; padding: 0; }
-  .steps li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0; border-top: 1px dashed oklch(82% 0.02 50); font-size: 15.5px; line-height: 1.6; color: oklch(38% 0.02 40); }
-  .steps li:last-child { border-bottom: 1px dashed oklch(82% 0.02 50); }
-  .steps strong { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; color: oklch(25% 0.02 40); }
-  .door-ask { display: inline-block; margin-top: 16px; font-size: 15px; color: #a3453d; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-  .door-ask:hover { color: #8a382f; }
 
   /* ---- Who it's for ---- */
   .for-list { list-style: none; margin: 44px auto 0; padding: 0; max-width: 760px; text-align: left; }
@@ -97,8 +79,20 @@
   .diagram-label { position: absolute; left: 0; right: 0; text-align: center; transform: translateY(-75%); font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(40% 0.02 40); pointer-events: none; }
   .diagram-label-core { color: #a3453d; }
 
+  /* ---- Services ---- */
+  .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; max-width: 1180px; margin: 0 auto; align-items: start; text-align: left; }
+  .services .door { padding: 32px 30px 30px; }
+  .services .door:nth-child(2) { margin-top: 40px; }
+  .services .door-title { font-size: 28px; margin-bottom: 12px; }
+  .services .door-note { margin-bottom: 4px; }
+  .services .door-meta { margin-top: 18px; }
+  .in-dev { max-width: 640px; margin: 64px auto 0; font-size: 16px; line-height: 1.7; color: oklch(40% 0.02 40); }
+  .closing-cta { margin: 72px auto 0; padding-top: 64px; border-top: 1px dashed oklch(78% 0.03 45); max-width: 760px; }
+
   /* ---- Responsive ---- */
   @media (max-width: 1100px) {
+    .services { grid-template-columns: 1fr; max-width: 640px; }
+    .services .door:nth-child(2) { margin-top: 0; }
     .doors-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 860px) {
@@ -111,56 +105,50 @@
   @media (max-width: 600px) {
     .iw-hero, .iw-two { padding-left: 18px !important; padding-right: 18px !important; padding-top: 40px !important; padding-bottom: 64px !important; }
     .iw-section { padding-left: 18px !important; padding-right: 18px !important; padding-top: 72px !important; padding-bottom: 80px !important; }
-    .kicker { font-size: 12px; }
     .teaches { padding: 64px 18px 68px; }
     .teaches h2 { font-size: 27px; }
     .teaches p { font-size: 18px; }
     .work-grid { grid-template-columns: 1fr; }
-    .steps li { grid-template-columns: 1fr; gap: 2px; }
     .for-list li { font-size: 18px; padding-left: 34px; }
     .for-list li::before { top: 23px; }
     .diagram-label { font-size: 10.5px; letter-spacing: 0.1em; }
     .work-grid .door { padding: 26px 22px 24px; }
-    .body-copy { font-size: 16px; }
     .serif-lines, .chain p { font-size: 19px; }
     .final-line { font-size: 23px; }
     .closing-statement { font-size: 30px; }
   }
-  .lang-switch { font-size: 13px; letter-spacing: 0.12em; color: oklch(48% 0.02 40); white-space: nowrap; }
-  .lang-switch a { text-decoration: none; }
-  .lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .lang-switch [aria-current] { color: oklch(25% 0.02 40); font-weight: 500; }
-  @media (max-width: 600px) { .lang-switch { position: absolute; top: 20px; right: 18px; } }
 </style>
 </head>
 <body>
 
 <div id="top" style="font-family: 'Jost', sans-serif; color: oklch(25% 0.02 40); background: oklch(97% 0.01 70); overflow-x: hidden;">
 
-  <!-- NAV (same as homepage) -->
+  <!-- NAV -->
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
   <div class="nav" style="display:flex; align-items:center; justify-content:space-between; padding: 28px 64px; position: sticky; top:0; z-index: 10; background: oklch(97% 0.01 70 / 0.9); backdrop-filter: blur(6px);">
-    <a href="index.html" style="font-family:'Fraunces', serif; font-size: 26px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);">innerscapism</a>
-    <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
+    <a href="/pt/" data-local="index.html" style="font-family:'Fraunces', serif; font-size: 26px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);" aria-label="innerscapism, página inicial">innerscapism</a>
+    <nav class="nav-links" aria-label="Menu principal" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
       <span class="lang-switch"><a href="/innerware" data-local="../innerware.html" hreflang="en" lang="en" aria-label="View in English">EN</a> · <span aria-current="true">PT</span></span>
-      <a href="index.html#about" style="text-decoration:none;">Sobre</a>
-      <a href="index.html#experiences" style="text-decoration:none;">Experiências</a>
-      <a href="/pt/innerware" data-local="innerware.html" aria-current="page" style="text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 6px;">innerware</a>
-      <a href="index.html#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contacto</a>
-    </div>
+      <a href="/pt/#experiences" data-local="index.html#experiences" style="text-decoration:none;">Experiências</a>
+      <a href="/pt/work" data-local="work.html" style="text-decoration:none;" aria-current="page">Trabalho e Sistemas</a>
+      <a href="/pt/about" data-local="about.html" style="text-decoration:none;">Sobre</a>
+      <a href="/pt/contact" data-local="contact.html" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contacto</a>
+    </nav>
   </div>
+  <!-- /NAV -->
 
-  <main>
+  <main id="main">
 
   <!-- 1. HERO -->
   <section class="iw-hero" style="display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; padding: 60px 64px 110px; align-items:center;" aria-labelledby="iw-title">
     <div>
       <p class="kicker">Innerware</p>
-      <h1 id="iw-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 30px; max-width: 620px;">Criar tecnologia e sistemas <span class="circled" style="margin-left: 10px;">de dentro para fora<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
-      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 16px;">Workshops e ferramentas de reflexão para equipas de produto, design e IA que querem perceber o que os seus produtos estão a ensinar às pessoas, e decidir o que deve continuar humano.</p>
-      <p class="hero-desc" style="font-size: 18px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 40px;">A questão não é só o que a tecnologia consegue fazer. É o que a tecnologia nos está a fazer a nós.</p>
-      <div style="display:flex; gap: 28px; align-items:center; flex-wrap: wrap;">
-        <a href="#work" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Ver o workshop</a>
-        <a href="#areas" class="btn-outline" style="padding: 13px 26px; font-size: 16px;">Explorar as quatro perguntas</a>
+      <h1 id="iw-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 60px; line-height: 1.08; margin: 0 0 30px; max-width: 640px;">Design centrado nas pessoas para um mundo mais <span class="circled">humano<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span> .</h1>
+      <p class="hero-sub" style="font-size: 20px; line-height: 1.6; color: oklch(38% 0.02 40); max-width: 540px; margin: 0 0 16px;">O Innerware explora a forma como desenhamos produtos, tecnologias e sistemas que apoiem melhor as pessoas. Partindo do design centrado nas pessoas, do pensamento de produto e de uma perspetiva sistémica, devolve a atenção às pessoas que vivem e trabalham dentro dos sistemas que criamos.</p>
+      <p class="hero-desc" style="font-size: 17px; line-height: 1.6; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 40px;">A questão não é só o que a tecnologia consegue fazer. É o que a tecnologia nos está a fazer a nós.</p>
+      <div class="btn-row">
+        <a href="/pt/contact#work" data-local="contact.html#work" class="btn-primary">Falar sobre um projeto</a>
+        <a href="#services" class="btn-secondary">Ver como podemos trabalhar juntos</a>
       </div>
     </div>
     <div class="iw-sketch" aria-hidden="true">
@@ -182,7 +170,90 @@
     </div>
   </section>
 
-  <!-- 2. EVERY INTERFACE TEACHES SOMETHING -->
+  <!-- 2. SERVICES -->
+  <section id="services" class="iw-section paper" style="padding: 120px 64px 130px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px; text-align: center;" aria-labelledby="services-title">
+    <p class="kicker">Formas de trabalhar em conjunto</p>
+    <h2 id="services-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.12; margin: 0 auto 18px; max-width: 680px; text-wrap: balance;">Três pontos de partida.</h2>
+    <p class="body-copy" style="margin: 0 auto 72px; text-align: center;">Cada projeto é moldado ao teu contexto, por isso estes são pontos de partida e não pacotes fechados. O trabalho é feito à distância, mediante pedido.</p>
+    <div class="services">
+      <article class="door">
+        <h3 class="door-title"><span>01 · Estratégia</span>Estratégia de produto centrada nas pessoas</h3>
+        <p class="door-note">Para quando precisas de uma direção mais clara: do que os teus utilizadores precisam realmente, e o que construir a seguir.</p>
+        <p class="list-label">O que podemos explorar</p>
+        <ul class="ticks">
+          <li>Compreender as necessidades dos utilizadores</li>
+          <li>Descoberta e direção de produto</li>
+          <li>Avaliação da experiência</li>
+          <li>Identificação de oportunidades</li>
+          <li>Priorização de produto</li>
+        </ul>
+        <p class="list-label">Com o que podes sair</p>
+        <ul class="ticks">
+          <li>Síntese de investigação</li>
+          <li>Mapas de oportunidades</li>
+          <li>Recomendações de produto</li>
+          <li>Um roadmap priorizado</li>
+        </ul>
+        <div class="door-meta">Remoto · Âmbito definido em conjunto</div>
+      </article>
+      <article class="door">
+        <h3 class="door-title"><span>02 · Experiência</span>UX e design systems</h3>
+        <p class="door-note">Para quando a experiência parece inconsistente, ou o teu design system não está a ser usado como devia.</p>
+        <p class="list-label">O que podemos explorar</p>
+        <ul class="ticks">
+          <li>Avaliação de UX</li>
+          <li>Estratégia de design system</li>
+          <li>Adoção de componentes</li>
+          <li>Consistência e usabilidade</li>
+          <li>Colaboração entre design e engenharia</li>
+        </ul>
+        <p class="list-label">Com o que podes sair</p>
+        <ul class="ticks">
+          <li>Auditorias de experiência</li>
+          <li>Avaliações de design system</li>
+          <li>Recomendações</li>
+          <li>Um roadmap de adoção</li>
+        </ul>
+        <div class="door-meta">Remoto · Âmbito definido em conjunto</div>
+      </article>
+      <article class="door">
+        <h3 class="door-title"><span>03 · Workshops</span>Workshops criativos sobre sistemas</h3>
+        <p class="door-note">A tua equipa olha para o próprio produto ou forma de trabalhar através de desenho, mapeamento e breves exercícios corporais que revelam o que os slides e as folhas de cálculo não mostram.</p>
+        <p class="list-label">O que podemos explorar</p>
+        <ul class="ticks">
+          <li>Exploração colaborativa de problemas</li>
+          <li>Pensamento visual</li>
+          <li>Reflexão em equipa</li>
+          <li>Mapear atritos nas práticas de trabalho</li>
+          <li>Como os sistemas moldam a experiência humana</li>
+        </ul>
+        <p class="list-label">Com o que podes sair</p>
+        <ul class="ticks">
+          <li>Síntese do workshop</li>
+          <li>Mapas visuais</li>
+          <li>Oportunidades priorizadas</li>
+          <li>Recomendações práticas</li>
+        </ul>
+        <div class="door-meta">3 horas / meio dia · Grupos de 6–20 · Presencial ou remoto</div>
+      </article>
+    </div>
+    <p class="in-dev">Também em desenvolvimento: prompts de reflexão que a tua equipa pode usar em sprints, reviews e retros. <a href="/pt/contact#work" data-local="contact.html#work" class="text-link">Pedir acesso antecipado</a></p>
+    <p style="margin: 48px 0 0;"><a href="/pt/contact#work" data-local="contact.html#work" class="btn-primary">Falar sobre um projeto</a></p>
+  </section>
+
+  <!-- 3. WHO IT HELPS -->
+  <section class="iw-section" style="padding: 110px 64px 120px; text-align: center;" aria-labelledby="for-title">
+    <p class="kicker">A quem ajuda</p>
+    <h2 id="for-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.4; margin: 0 auto; max-width: 680px; text-wrap: balance;">Para quem constrói as tecnologias, os produtos e as organizações que moldam a forma como vivemos e trabalhamos.</h2>
+    <ul class="for-list">
+      <li>Estás a adicionar funcionalidades de IA e queres pensar no que elas substituem, não só no que acrescentam.</li>
+      <li>Os números de engagement parecem bons, mas há algo no produto que não bate certo.</li>
+      <li>A tua equipa lança depressa e raramente tem espaço para perguntar porquê.</li>
+      <li>Lideras uma equipa de produto, design, IA ou tecnologia e queres que pensem com mais profundidade, em conjunto.</li>
+    </ul>
+  </section>
+
+  <!-- 4. EVERY INTERFACE TEACHES SOMETHING -->
   <section class="teaches torn-band" aria-labelledby="teaches-title">
     <h2 id="teaches-title">Todas as interfaces ensinam alguma coisa.</h2>
     <p>Um feed ensina-nos a continuar a fazer scroll. Uma notificação ensina-nos que é outra pessoa a decidir quando prestamos atenção. O preenchimento automático ensina-nos que a primeira resposta chega.</p>
@@ -190,10 +261,10 @@
     <p class="teaches-turn">O que significa que alguém o pode desenhar de outra forma.</p>
   </section>
 
-  <!-- 3. FOUR QUESTIONS -->
+  <!-- 5. FOUR QUESTIONS -->
   <section id="areas" class="iw-section paper" style="padding: 110px 64px 130px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="areas-title">
     <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
-      <p class="kicker">Quatro áreas</p>
+      <p class="kicker">Aquilo a que prestamos atenção</p>
       <h2 id="areas-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0; line-height: 1.12;">Quatro perguntas a que voltamos sempre.</h2>
     </div>
     <div class="doors doors-4">
@@ -266,38 +337,8 @@
     </div>
   </section>
 
-  <!-- 4. THE WORKSHOP -->
-  <section id="work" class="iw-section" style="padding: 120px 64px 130px; scroll-margin-top: 70px; text-align: center;" aria-labelledby="work-title">
-    <p class="kicker">O workshop</p>
-    <h2 id="work-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 auto 18px; max-width: 640px; text-wrap: balance;">Leva estas perguntas à tua equipa.</h2>
-    <p class="body-copy" style="margin: 0 auto 64px; text-align: center;">Um workshop para equipas de produto, design e tecnologia darem um passo atrás em relação ao que estão a construir e olharem para isso de dentro para fora.</p>
-    <div class="work-grid">
-      <article class="door">
-        <h3 class="door-title"><span>01 · Para equipas</span>Workshop</h3>
-        <p class="door-note">A tua equipa olha para o próprio produto através de quatro lentes: atenção, agência, criatividade e humanidade. Não só pela conversa, mas através de desenho, mapeamento e breves exercícios corporais que revelam o que os slides e as folhas de cálculo não mostram.</p>
-        <p class="steps-label">O que acontece</p>
-        <ol class="steps">
-          <li><strong>Mapear</strong><span>Percorrer o produto como os teus utilizadores o vivem, e reparar no que lhes pede.</span></li>
-          <li><strong>Olhar</strong><span>Explorá-lo através das quatro lentes, com exercícios criativos e reflexivos.</span></li>
-          <li><strong>Perguntar</strong><span>Dar nome às cedências que a equipa está a fazer, muitas vezes sem se aperceber.</span></li>
-          <li><strong>Sair com</strong><span>Um pequeno conjunto de perguntas e decisões para levar de volta ao roadmap.</span></li>
-        </ol>
-        <p class="door-tag" style="margin: 0 0 22px;">Sais com perguntas que vale a pena guardar, não com um framework para arquivar.</p>
-        <div class="door-meta">3 horas / meio dia · Grupos de 6–20 · Presencial ou remoto · Materiais incluídos</div>
-      </article>
-      <article class="door">
-        <span class="door-soon" style="top: -14px; left: auto; right: 18px;">Em desenvolvimento</span>
-        <h3 class="door-title"><span>02 · Para o teu processo</span>Prompts</h3>
-        <p class="door-note">Um conjunto de prompts de reflexão que a tua equipa pode usar em sprints, reviews e retros, para que estas perguntas não fiquem num só workshop.</p>
-        <div class="door-meta">Sprints · Reviews · Retros</div>
-        <a class="door-ask" href="https://www.instagram.com/innerscapism/">Queres acesso antecipado? Entra em contacto.</a>
-      </article>
-    </div>
-    <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 16px 34px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px; margin-top: 64px;">Começar uma conversa</a>
-  </section>
-
-  <!-- 5. WHAT IS INNERWARE -->
-  <section class="iw-section paper" style="padding: 120px 64px; background-color: oklch(94% 0.015 65);" aria-labelledby="what-title">
+  <!-- 6. WHAT IS INNERWARE -->
+  <section class="iw-section" style="padding: 120px 64px;" aria-labelledby="what-title">
     <div style="max-width: 1112px; margin: 0 auto;">
       <div style="max-width: 820px;">
         <p class="kicker">O que é o Innerware?</p>
@@ -307,18 +348,6 @@
         <p class="body-copy" style="margin-bottom: 0;">O objetivo não é rejeitar a tecnologia. É tornarmo-nos mais conscientes da relação que temos com ela, e do tipo de relações que os nossos produtos criam para os outros.</p>
       </div>
     </div>
-  </section>
-
-  <!-- 6. WHO IT'S FOR -->
-  <section class="iw-section" style="padding: 110px 64px 120px; text-align: center;" aria-labelledby="for-title">
-    <p class="kicker">Para quem é</p>
-    <h2 id="for-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.4; margin: 0 auto; max-width: 680px; text-wrap: balance;">Para quem constrói as tecnologias, os produtos e as organizações que moldam a forma como vivemos e trabalhamos.</h2>
-    <ul class="for-list">
-      <li>Estás a adicionar funcionalidades de IA e queres pensar no que elas substituem, não só no que acrescentam.</li>
-      <li>Os números de engagement parecem bons, mas há algo no produto que não bate certo.</li>
-      <li>A tua equipa lança depressa e raramente tem espaço para perguntar porquê.</li>
-      <li>Lideras uma equipa de produto, design, IA ou tecnologia e queres que pensem com mais profundidade, em conjunto.</li>
-    </ul>
   </section>
 
   <!-- 7. FROM INNER TO OUTER -->
@@ -370,22 +399,32 @@
 
   <!-- 8. CLOSING -->
   <section class="iw-section" style="padding: 130px 64px 140px; text-align: center;" aria-labelledby="closing-title">
-    <h2 id="closing-title" class="closing-statement">A tecnologia está a tornar-se mais poderosa. <span>A questão é se nós nos estamos a tornar mais conscientes ao mesmo ritmo.</span></h2>
-    <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true" style="margin-top: 40px;"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="#a3453d" stroke-width="1.6" stroke-linecap="round"/></svg>
-    <p class="kicker" style="margin: 44px 0 10px;">Innerware</p>
-    <p style="font-family:'Fraunces', serif; font-size: 20px; line-height: 1.5; color: oklch(38% 0.02 40); margin: 0 auto 40px; max-width: 520px;">Uma prática para criar tecnologia e sistemas sem perder o que nos torna humanos.</p>
-    <a href="index.html" class="cta-pill btn-outline">← Voltar ao Innerscapism</a>
+    <p class="closing-statement">A tecnologia está a tornar-se mais poderosa. <span>A questão é se nós nos estamos a tornar mais conscientes ao mesmo ritmo.</span></p>
+    <div class="closing-cta">
+      <h2 id="closing-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 auto 16px; max-width: 640px; text-wrap: balance;">Tens um produto, uma equipa ou um sistema que gostavas de repensar?</h2>
+      <p class="body-copy" style="margin: 0 auto 36px; text-align: center;">Vamos explorar o que uma abordagem mais centrada nas pessoas pode tornar possível.</p>
+      <div class="btn-row" style="justify-content: center;">
+        <a href="/pt/contact#work" data-local="contact.html#work" class="btn-primary">Falar sobre um projeto</a>
+        <a href="/pt/" data-local="index.html" class="btn-secondary">← Voltar ao Innerscapism</a>
+      </div>
+    </div>
   </section>
 
   </main>
 
-  <!-- FOOTER (same as homepage) -->
-  <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
-    <a href="index.html" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
-    <div style="display:flex; gap: 32px;">
-      <a href="https://www.instagram.com/innerscapism/" style="text-decoration:none;">Instagram</a>
-    </div>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
+    <a href="/pt/" data-local="index.html" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
+    <nav class="footer-links" aria-label="Rodapé">
+      <a href="/pt/#experiences" data-local="index.html#experiences">Experiências</a>
+      <a href="/pt/work" data-local="work.html">Trabalho e Sistemas</a>
+      <a href="/pt/innerware" data-local="innerware.html">Innerware</a>
+      <a href="/pt/about" data-local="about.html">Sobre</a>
+      <a href="/pt/contact" data-local="contact.html">Contacto</a>
+      <a href="https://www.instagram.com/innerscapism/">Instagram</a>
+    </nav>
+  </footer>
+  <!-- /FOOTER -->
 
 </div>
 

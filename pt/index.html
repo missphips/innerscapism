@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>innerscapism · Criar espaço para o que nos torna humanos</title>
-<meta name="description" content="Experiências criativas e corporais para abrandar, reparar, criar e voltar a ligar-te - a ti, aos outros e ao mundo à tua volta. Inner Sessions, Inner Walks, Inner Tables e Inner Reset.">
+<meta name="description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, caminhadas, movimento, som e conversa: criar espaço para o que nos torna humanos.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="innerscapism">
 <meta property="og:title" content="innerscapism · Criar espaço para o que nos torna humanos">
-<meta property="og:description" content="Experiências criativas e corporais para abrandar, reparar, criar e voltar a ligar-te - a ti, aos outros e ao mundo à tua volta. Inner Sessions, Inner Walks, Inner Tables e Inner Reset.">
+<meta property="og:description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, caminhadas, movimento, som e conversa: criar espaço para o que nos torna humanos.">
 <meta property="og:url" content="https://innerscapism.com/pt/">
 <meta property="og:image" content="https://innerscapism.com/assets/images/share/home.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,88 +23,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/innerscapism.css">
 <style>
+  html { scroll-behavior: smooth; }
 
-
-  /* ---- Hero additions ---- */
+  /* ---- Hero ---- */
   .hero-scrap { position: absolute; top: -52px; right: -26px; width: 26%; transform: rotate(4deg); z-index: 2; }
   .hero-scrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; box-shadow: 0 10px 18px rgba(24, 18, 17, 0.12); }
   .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
   .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
 
+  /* ---- Two paths ---- */
+  .paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; max-width: 1080px; margin: 0 auto; align-items: start; }
+  .path { padding: 24px 24px 34px; }
+  .path:nth-child(1) { --tilt: -0.5deg; }
+  .path:nth-child(2) { --tilt: 0.5deg; margin-top: 48px; }
+  .path .door-media img, .path .door-media .drawing { aspect-ratio: 16 / 10; width: 100%; display: block; object-fit: cover; }
+  .path .door-media .drawing svg { display: block; width: 100%; height: 100%; }
+  .path h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 32px; line-height: 1.15; margin: 0 0 14px; }
+  .path .door-note { font-size: 16.5px; }
+  .path .door-meta { margin-bottom: 24px; }
 
-  /* ---- Moments list ---- */
+  /* ---- Who it's for ---- */
   .moments-list { list-style: none; padding: 0; margin: 0; }
   .moments-list li { font-family: 'Fraunces', serif; font-size: 24px; line-height: 1.3; padding: 14px 0 14px 38px; border-bottom: 1px solid oklch(88% 0.015 60); position: relative; }
   .moments-list li::before { content: ""; position: absolute; left: 2px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%) rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
-  .stamp { position: relative; display: inline-block; transform: rotate(-3deg); margin-top: 40px; }
-  .stamp { margin-left: 200px; }
-  @media (max-width: 600px) { .stamp { margin-left: 70px; } }
-  .stamp img { width: 220px; max-width: 100%; aspect-ratio: 47/40; object-fit: cover; display: block; }
-  .stamp .tape { top: -8px; left: 40px; transform: rotate(-5deg); }
 
-
-
-
-  /* ---- Responsive overrides ---- */
-
-  @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
-    .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
-    .experiences { padding: 80px 28px 96px !important; }
-    .moments { grid-template-columns: 1fr !important; padding: 80px 28px !important; gap: 36px !important; }
-    .how-section { padding: 72px 28px 88px !important; }
-    .how-grid { grid-template-columns: 1fr !important; }
-    .contact { padding: 0 28px 88px !important; }
-    .stats-row { flex-wrap: wrap !important; gap: 28px !important; }
-  }
-
-  @media (max-width: 600px) {
-    .hero { padding: 36px 18px 56px !important; gap: 40px !important; }
-    .badge-paper { padding: 20px 20px 18px; font-size: 15px; }
-    .hero-scrap { right: -6px; top: -20px; width: 34%; }
-    .hero-kicker, .about-kicker, .how-kicker, .contact-kicker, .exp-kicker, .moments-kicker { font-size: 12px !important; }
-    .hero-sub { font-size: 18px !important; }
-    .hero-desc { font-size: 16px !important; }
-    .strip { padding: 64px 18px !important; }
-    .strip p { font-size: 24px !important; }
-    .about { padding: 56px 18px !important; }
-    .about-copy p { font-size: 16px !important; }
-    .experiences { padding: 64px 18px 72px !important; }
-      .moments { padding: 64px 18px !important; }
-    .moments-list li { font-size: 20px; }
-    .how-section { padding: 56px 18px 64px !important; }
-    .card { padding: 32px 24px !important; }
-    .contact { padding: 0 18px 64px !important; }
-    .contact-desc { font-size: 16px !important; }
-  }
-
-  /* ---- Preview: next steps, teams, Innerware line ---- */
-  .teams { --tilt: -0.4deg; max-width: 1060px; margin: 96px auto 0; padding: 48px 52px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; }
-  .teams:hover { transform: rotate(var(--tilt)); }
-  .teams-kicker { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 0 0 12px; }
-  .teams-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: 32px; line-height: 1.15; margin: 0 0 14px; }
-  .teams-copy { font-size: 16.5px; line-height: 1.7; color: oklch(40% 0.02 40); margin: 0 0 26px; max-width: 520px; }
-  .teams-facts { list-style: none; margin: 0; padding: 0; border-left: 1px dashed oklch(78% 0.03 45); padding-left: 36px; }
-  .teams-facts li { font-family: 'Fraunces', serif; font-size: 21px; line-height: 1.3; padding: 10px 0; }
-  #contact { padding-top: 96px !important; }
-  .iw-bridge { text-align: center; margin: 72px auto 0; max-width: 760px; font-size: 17px; color: oklch(38% 0.02 40); }
-  .iw-bridge a { color: oklch(25% 0.02 40); text-decoration: underline; text-decoration-color: #a3453d; text-decoration-thickness: 1.5px; text-underline-offset: 6px; }
-  @media (max-width: 860px) {
-    .teams { grid-template-columns: 1fr; gap: 28px; padding: 36px 30px; }
-    .teams.door { margin-top: 80px !important; }
-    .teams-facts { border-left: 0; padding-left: 0; border-top: 1px dashed oklch(78% 0.03 45); padding-top: 14px; }
-  }
-  @media (max-width: 600px) {
-    .teams { padding: 28px 22px; }
-    .teams.door { margin-top: 64px !important; }
-    .teams-title { font-size: 26px; }
-    .teams-facts li { font-size: 18px; padding: 6px 0; }
-    .iw-bridge { font-size: 16px; margin-top: 56px; }
-    #contact { padding-top: 64px !important; }
-    .doors-note { box-sizing: border-box; padding: 40px 26px 38px; }
-    .doors-note p { font-size: 26px !important; }
-  }
-  /* Four cards: a 2 x 2 grid on wide screens */
+  /* ---- Experiences: four cards as a 2 x 2 grid on wide screens ---- */
   @media (min-width: 1001px) {
     .doors { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 960px; gap: 72px 56px; }
     .doors .door:nth-child(odd) { margin-top: 0; }
@@ -115,41 +58,70 @@
     .doors .door-tag { font-size: 22px; }
     .doors .door-note { font-size: 16.5px; }
   }
+  .exp-next { max-width: 620px; margin: 88px auto 0; text-align: center; }
+  .exp-next p { font-size: 17px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 26px; }
 
-  /* ---- Copy update: hero line, quotes, closing reminder ---- */
-  .hero-skill { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: #a3453d; margin: 0 0 18px; }
-  .quotes { margin: 96px auto 0; max-width: 1100px; text-align: center; }
-  .quotes-kicker { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin: 0 0 36px; }
+  /* ---- Testimonials ---- */
+  .quotes { margin: 104px auto 0; max-width: 1100px; text-align: center; }
   .quotes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; text-align: left; max-width: 1100px; margin: 0 auto; align-items: start; }
   .quote { margin: 0; padding: 30px 28px 26px; }
   .quote:nth-child(1) { --tilt: -0.6deg; }
   .quote:nth-child(2) { --tilt: 0.5deg; }
   .quote:nth-child(3) { --tilt: -0.3deg; }
-  .quote:nth-child(4) { --tilt: 0.6deg; }
   .quote blockquote { margin: 0 0 18px; font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; line-height: 1.45; color: oklch(28% 0.02 40); }
   .quote figcaption { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); padding-top: 14px; border-top: 1px dashed oklch(80% 0.02 50); }
+
+  /* ---- Work & Systems ---- */
+  .work-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; max-width: 980px; margin: 0 auto; align-items: start; }
+  .work-pair .door { padding: 36px 34px 34px; }
+  .work-pair .door:nth-child(2) { margin-top: 0; }
+  .work-pair .door-title { font-size: 32px; margin-bottom: 10px; }
+  .work-pair .door-meta { margin-bottom: 24px; }
+
+  /* ---- Closing ---- */
   .collage { position: relative; width: min(100%, 420px); margin: 90px auto 72px; }
   .collage .doors-note { margin: 0; width: 100%; }
   .closing-reminder { position: absolute; right: -150px; top: -74px; width: 240px; z-index: 2; transform: rotate(4deg); filter: drop-shadow(0 12px 16px rgba(40, 26, 20, 0.22)); }
   .closing-reminder .tape { top: -12px; left: 50%; transform: translateX(-50%) rotate(5deg); width: 84px; }
   .closing-reminder .badge-paper { margin: 0; text-align: left; }
-  .iw-bridge-end { margin: 0 auto; padding: 0 24px 56px; }
+
+  /* ---- Responsive ---- */
   @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
+    .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
+    .moments { grid-template-columns: 1fr !important; padding: 80px 28px !important; gap: 36px !important; }
+    .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
+    .paths, .work-pair { grid-template-columns: 1fr; max-width: 560px; }
+    .path:nth-child(2) { margin-top: 0; }
     .quotes-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     .quotes .door:nth-child(n) { margin-top: 0 !important; }
   }
   @media (max-width: 600px) {
-    .quotes { margin-top: 64px; }
+    .hero { padding: 36px 18px 56px !important; gap: 40px !important; }
+    .badge-paper { padding: 20px 20px 18px; font-size: 15px; }
+    .hero-scrap { right: -6px; top: -20px; width: 34%; }
+    .hero-sub { font-size: 18px !important; }
+    .hero-desc { font-size: 16px !important; }
+    .strip { padding: 64px 18px !important; }
+    .strip p { font-size: 28px !important; }
+    .about { padding: 56px 18px !important; }
+    .about-copy p { font-size: 16px !important; }
+    .moments { padding: 64px 18px !important; }
+    .moments-list li { font-size: 20px; }
+    .section-pad { padding: 72px 18px 80px !important; }
+    .path { padding: 18px 18px 28px; }
+    .path h3 { font-size: 26px; }
+    .work-pair .door { padding: 28px 22px 26px; }
+    .quotes { margin-top: 72px; }
     .quote blockquote { font-size: 18px; }
+    .exp-next { margin-top: 64px; }
+    .contact { padding: 0 18px 64px !important; }
     .collage { margin-top: 96px; margin-bottom: 56px; }
     .closing-reminder { right: -6px; top: -88px; width: 200px; }
     .closing-reminder .badge-paper { padding: 18px 18px 16px; font-size: 15px; }
+    .doors-note { box-sizing: border-box; padding: 40px 26px 38px; }
+    .doors-note p { font-size: 26px !important; }
   }
-  .lang-switch { font-size: 13px; letter-spacing: 0.12em; color: oklch(48% 0.02 40); white-space: nowrap; }
-  .lang-switch a { text-decoration: none; }
-  .lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .lang-switch [aria-current] { color: oklch(25% 0.02 40); font-weight: 500; }
-  @media (max-width: 600px) { .lang-switch { position: absolute; top: 20px; right: 18px; } }
 </style>
 </head>
 <body>
@@ -157,66 +129,96 @@
 <div id="top" style="font-family: 'Jost', sans-serif; color: oklch(25% 0.02 40); background: oklch(97% 0.01 70); overflow-x: hidden;">
 
   <!-- NAV -->
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
   <div class="nav" style="display:flex; align-items:center; justify-content:space-between; padding: 28px 64px; position: sticky; top:0; z-index: 10; background: oklch(97% 0.01 70 / 0.9); backdrop-filter: blur(6px);">
-    <a href="#top" style="font-family:'Fraunces', serif; font-size: 26px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);">innerscapism</a>
-    <div class="nav-links" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
+    <a href="/pt/" data-local="index.html" style="font-family:'Fraunces', serif; font-size: 26px; letter-spacing: 0.02em; font-weight: 500; text-decoration:none; color: oklch(25% 0.02 40);" aria-label="innerscapism, página inicial">innerscapism</a>
+    <nav class="nav-links" aria-label="Menu principal" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
       <span class="lang-switch"><a href="/" data-local="../index.html" hreflang="en" lang="en" aria-label="View in English">EN</a> · <span aria-current="true">PT</span></span>
-      <a href="#about" style="text-decoration:none;">Sobre</a>
-      <a href="#experiences" style="text-decoration:none;">Experiências</a>
-      <a href="/pt/innerware" data-local="innerware.html" style="text-decoration:none;">innerware</a>
-      <a href="#contact" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contacto</a>
-    </div>
+      <a href="/pt/#experiences" data-local="index.html#experiences" style="text-decoration:none;">Experiências</a>
+      <a href="/pt/work" data-local="work.html" style="text-decoration:none;">Trabalho e Sistemas</a>
+      <a href="/pt/about" data-local="about.html" style="text-decoration:none;">Sobre</a>
+      <a href="/pt/contact" data-local="contact.html" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contacto</a>
+    </nav>
   </div>
+  <!-- /NAV -->
 
-  <!-- HERO -->
-  <div class="hero" style="display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; padding: 60px 64px 100px; align-items:center;">
+  <main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" style="display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; padding: 60px 64px 100px; align-items:center;" aria-labelledby="hero-title">
     <div>
-      <h1 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 28px; max-width: 620px;">Criar espaço para o que nos torna <span class="circled">humanos<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
-      <p class="hero-sub" style="font-size: 22px; line-height: 1.5; color: oklch(38% 0.02 40); max-width: 520px; margin: 0 0 12px;">Arte, caminhadas, yoga, som e refeições partilhadas: experiências criativas para abrandar e voltar a ligar-te a ti, aos outros e ao mundo à tua volta. Em Lisboa, no Porto e online.</p>
-      <p class="hero-skill" style="margin-bottom: 40px;">Não é preciso jeito para a arte. Só curiosidade.</p>
-      <div style="display:flex; gap: 28px; align-items:center; flex-wrap: wrap;">
-        <a href="#experiences" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Explorar as experiências</a>
-        <a href="https://www.instagram.com/innerscapism/" class="btn-outline" style="padding: 13px 26px; font-size: 16px;">Conversa inicial gratuita (20 min)</a>
+      <h1 id="hero-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 64px; line-height: 1.08; margin: 0 0 28px; max-width: 620px;">Criar espaço para o que nos torna <span class="circled">humanos<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M139.3 4.4 Q151.2 6.6 164.0 8.2 Q173.7 11.0 180.6 14.3 Q186.9 17.6 192.5 21.2 Q194.4 25.1 196.5 29.1 Q195.3 33.3 187.5 37.2 Q182.7 41.4 173.6 45.1 Q162.2 48.4 147.8 50.5 Q134.1 52.6 119.9 54.3 Q105.2 55.3 90.4 55.8 Q75.3 56.3 60.3 55.8 Q46.9 54.3 36.1 51.7 Q24.9 49.4 15.6 46.4 Q12.8 42.4 5.3 39.0 Q1.9 35.1 3.0 30.9 Q5.9 26.7 12.4 22.8 Q20.9 19.1 27.3 15.0 Q40.0 12.3 50.9 8.9 Q64.4 6.4 79.9 5.5 Q94.7 4.4 110.0 3.1 Q124.9 3.6 138.0 5.3 Q150.8 6.7 162.6 8.7 Q176.2 10.3 184.5 13.6" fill="none" stroke="#a3453d" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>.</h1>
+      <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 540px; margin: 0 0 16px;">Arte, movimento, caminhadas, som e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.</p>
+      <p class="hero-desc" style="font-size: 17px; line-height: 1.65; color: oklch(45% 0.02 40); max-width: 500px; margin: 0 0 38px;">O Innerscapism junta experiências criativas e pensamento centrado nas pessoas para criar espaço para aquilo que tantas vezes se perde na pressa do dia a dia.</p>
+      <div class="btn-row">
+        <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar experiências</a>
+        <a href="/pt/work" data-local="work.html" class="btn-secondary">Explorar Trabalho e Sistemas</a>
       </div>
     </div>
     <div style="position: relative;">
-      <img src="../assets/images/experiences/gathering.jpg" alt="Amigos a conversar e a rir à volta de uma mesa com chá, comida e um círculo desenhado" style="width: 100%; aspect-ratio: 4/3; display:block; border-radius: 2px; object-fit: cover;">
+      <img width="1080" height="740" src="../assets/images/experiences/gathering.jpg" alt="Amigos a conversar e a rir à volta de uma mesa com chá, comida e um círculo desenhado" style="width: 100%; height: auto; aspect-ratio: 4/3; display:block; border-radius: 2px; object-fit: cover;">
       <div class="hero-scrap">
         <span class="tape"></span>
-        <img class="torn" src="../assets/images/collage-paper.png" alt="Jornal rasgado e papel vermelho reunidos para uma colagem">
+        <img width="522" height="700" class="torn" src="../assets/images/collage-paper.jpg" alt="Jornal rasgado e papel vermelho reunidos para uma colagem">
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- INTRO STRIP -->
-  <div class="strip torn-band" style="color: oklch(97% 0.01 70); padding: 88px 64px; text-align: center; background-color: #A3453D">
+  <!-- 2. RUST BAND -->
+  <div class="strip torn-band" style="color: oklch(97% 0.01 70); padding: 80px 64px 84px; text-align: center; background-color: #A3453D">
     <p style="font-family:'Fraunces', serif; font-size: 40px; line-height: 1.3; max-width: 780px; margin: 0 auto; font-weight: 400;">Tornar visível o invisível.</p>
     <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
-    <p style="font-family:'Fraunces', serif; font-size: 22px; line-height: 1.55; max-width: 640px; margin: 22px auto 0; font-weight: 400; opacity: 0.92;">Arte, yoga, caminhada, som e atenção.<br>Diferentes formas de entrar no mesmo espaço.</p>
   </div>
 
-  <!-- ABOUT / PHILOSOPHY -->
-  <div id="about" class="about" style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; padding: 110px 64px; align-items:start; scroll-margin-top: 90px;">
-    <img class="torn" src="../assets/images/compass-forest.png" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" style="width: 100%; aspect-ratio: 3/4; display:block; object-fit: cover;">
-    <div class="about-copy">
-      <div class="about-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">O que é o Innerscapism?</div>
-      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 24px; line-height: 1.15;">O Innerscapism é uma<br>prática de regresso.</h2>
-      <p style="font-family:'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 28px; max-width: 560px;">À tua atenção.<br>À tua curiosidade.<br>Ao teu corpo.<br>Ao lugar.<br>Uns aos outros.<br>Às partes de ti que ficam mais silenciosas quando a vida aperta.</p>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 20px; max-width: 560px;">Passamos tanto da nossa vida a fazer, resolver, produzir e responder. O Innerscapism cria espaço para parar, reparar, criar e fazer melhores perguntas.</p>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 560px;">As práticas criativas são o meio, não o fim.<br>Não é preciso experiência artística. Só curiosidade.</p>
+  <!-- 3. TWO PATHS -->
+  <section class="section-pad" style="padding: 120px 64px 130px;" aria-labelledby="paths-title">
+    <div style="text-align:center; margin: 0 auto 72px; max-width: 680px;">
+      <p class="kicker">Dois caminhos</p>
+      <h2 id="paths-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0; line-height: 1.12; text-wrap: balance;">Duas formas de explorar o que nos torna humanos.</h2>
     </div>
-  </div>
+    <div class="paths">
+      <article class="door path">
+        <div class="door-media">
+          <span class="tape"></span>
+          <img width="592" height="740" class="torn" src="../assets/images/experiences/retreats.jpg" alt="Colagem de pessoas a reunir-se, a caminhar, a desenhar e a mover-se em conjunto" loading="lazy" decoding="async">
+        </div>
+        <p class="list-label" style="margin-top: 0;">Experiências</p>
+        <h3>Abrir espaço para te reconectares.</h3>
+        <p class="door-note">Práticas criativas para abrandar, prestar atenção e explorar o que importa. Através da arte, das caminhadas, do yoga, do som e de experiências partilhadas, criamos espaço para a curiosidade, a reflexão e a ligação.</p>
+        <div class="door-meta">Para pessoas individuais, pequenos grupos e encontros</div>
+        <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar experiências</a>
+      </article>
+      <article class="door path">
+        <div class="door-media">
+          <span class="tape"></span>
+          <div class="drawing grid-paper torn" role="img" aria-label="Uma linha vermelha desenhada à mão a atravessar caixas de interface em papel quadriculado"><svg viewBox="0 0 400 320" aria-hidden="true" preserveAspectRatio="xMidYMid slice" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="36" y="36" width="168" height="96" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <line x1="36" y1="60" x2="204" y2="60" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <rect x="222" y="196" width="146" height="84" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
+          <rect x="238" y="212" width="54" height="8" fill="oklch(30% 0.02 40)" opacity="0.25"/>
+          <rect x="238" y="230" width="96" height="8" fill="oklch(30% 0.02 40)" opacity="0.18"/>
+          <rect x="52" y="210" width="96" height="62" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.45"/>
+          <path d="M39.4 61.2 C47.7 62.9 72.2 72.1 89.1 71.7 C106.1 71.2 124.5 58.5 141.1 58.4 C157.7 58.4 180.8 69.3 188.8 71.5" stroke="oklch(30% 0.02 40)" stroke-width="1.2" opacity="0.55"/>
+          <path d="M9.8 270.2 C20.1 266.8 53.3 251.2 71.7 249.9 C90.1 248.5 104.7 268.2 120.0 262.3 C135.4 256.5 158.7 230.2 163.7 215.0 C168.8 199.9 159.7 179.6 150.5 171.2 C141.3 162.7 116.2 158.4 108.4 164.2 C100.5 170.1 96.3 198.1 103.4 206.2 C110.4 214.4 133.5 217.2 150.8 213.2 C168.0 209.1 190.3 197.3 206.9 181.9 C223.6 166.4 235.3 133.6 250.6 120.5 C265.9 107.3 285.4 100.1 298.6 103.1 C311.9 106.0 328.4 126.4 330.1 138.2 C331.8 150.1 317.4 170.4 308.8 174.0 C300.1 177.6 279.6 168.6 278.1 159.9 C276.6 151.1 286.9 136.3 299.8 121.4 C312.6 106.5 339.7 82.0 355.1 70.6 C370.4 59.1 385.8 55.6 392.0 52.6" stroke="#a3453d" stroke-width="2.4"/>
+          <path d="M225.6 126.2 Q222.6 122.9 222.5 118.9 Q223.5 115.0 225.0 111.4 Q227.9 108.4 230.3 105.5 Q232.9 102.7 236.4 101.0 Q238.9 97.5 243.2 97.1 Q247.0 95.2 251.1 96.4 Q255.5 95.2 259.5 96.6 Q262.1 100.4 265.6 101.9 Q270.1 103.0 271.6 106.8 Q275.0 109.5 274.8 113.7 Q274.5 117.4 276.4 121.1 Q276.3 125.0 273.7 128.2 Q271.5 131.3 269.9 134.7 Q268.5 138.7 264.8 140.6 Q260.3 140.8 256.7 142.4 Q252.8 142.7 248.9 142.7 Q244.6 144.4 241.2 141.6 Q237.1 141.0 233.9 138.6 Q231.5 135.6 227.7 133.6 Q227.4 129.5 224.5 126.5 Q225.4 122.6 224.3 118.9 Q225.4 115.4 226.3 111.8 Q226.1 107.5 228.9 104.5" stroke="oklch(30% 0.02 40)" stroke-width="1.4"/>
+          <circle cx="250" cy="120" r="3" fill="#a3453d"/>
+        </svg></div>
+        </div>
+        <p class="list-label" style="margin-top: 0;">Trabalho e Sistemas</p>
+        <h3>Criar de outra forma.</h3>
+        <p class="door-note">Os ambientes, produtos e sistemas que criamos moldam a forma como as pessoas vivem e trabalham. Através do design centrado nas pessoas, da facilitação criativa e do pensamento sistémico, exploramos como construir produtos, tecnologias e ambientes de trabalho sem perder de vista o que nos torna humanos.</p>
+        <div class="door-meta">Para equipas de produto, organizações e pessoas que estão a construir o que vem a seguir</div>
+        <a href="/pt/innerware" data-local="innerware.html" class="btn-primary">Explorar o Innerware</a>
+      </article>
+    </div>
+  </section>
 
-  <!-- MOMENTS -->
-  <div class="moments" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; padding: 110px 64px; align-items:start; max-width: 1240px; margin: 0 auto;">
+  <!-- 4. WHO IT'S FOR -->
+  <section class="moments" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; padding: 40px 64px 120px; align-items:start; max-width: 1240px; margin: 0 auto;" aria-labelledby="moments-title">
     <div>
-      <div class="moments-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">Para quem é</div>
-      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 22px; line-height: 1.15;">Para momentos em que algo está a mudar.</h2>
+      <p class="kicker">Para quem são as experiências</p>
+      <h2 id="moments-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 22px; line-height: 1.15;">Para momentos em que algo está a mudar.</h2>
       <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 420px;">Ou quando nada muda, e simplesmente queres reparar mais.</p>
-      <div class="stamp">
-        <span class="tape"></span>
-        <img class="torn" src="../assets/images/experiences/meadow.jpg" alt="Uma pessoa parada num prado, a olhar para as árvores">
-      </div>
     </div>
     <div>
       <p style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 6px 0 8px;">Talvez estejas a</p>
@@ -230,13 +232,14 @@
         <li>simplesmente querer abrandar e prestar atenção</li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <!-- EXPERIENCES: FOUR WAYS IN -->
-  <div id="experiences" class="experiences paper" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;">
+  <!-- 5. EXPERIENCES -->
+  <section id="experiences" class="experiences paper section-pad" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="exp-title">
     <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
-      <div class="exp-kicker" style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3453d; margin-bottom: 20px;">As experiências</div>
-      <h2 style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Quatro formas de entrar.</h2>
+      <p class="kicker">As experiências</p>
+      <h2 id="exp-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Quatro formas de entrar.</h2>
+      <p class="body-copy" style="margin: 0 auto; text-align: center;">Para pessoas individuais, pequenos grupos e encontros, em Lisboa, no Porto e online. Não é preciso jeito para a arte. Só curiosidade.</p>
     </div>
 
     <div class="doors">
@@ -244,7 +247,7 @@
       <article class="door" id="inner-sessions">
         <div class="door-media">
           <span class="tape"></span>
-          <img class="torn" src="../assets/images/experiences/sessions.jpg" alt="Página rasgada de um caderno com um horizonte desenhado a carvão">
+          <img width="560" height="720" class="torn" src="../assets/images/experiences/sessions.jpg" alt="Página rasgada de um caderno com um horizonte desenhado a carvão" loading="lazy" decoding="async">
           <span class="door-num">01</span>
         </div>
         <h3 class="door-title"><span>Inner</span>Sessions</h3>
@@ -256,7 +259,7 @@
       <article class="door" id="inner-walks">
         <div class="door-media">
           <span class="tape"></span>
-          <img class="torn" style="object-position: top;" src="../assets/images/experiences/walks.jpg" alt="Três pessoas a caminhar devagar, em colagem sobre papel">
+          <img width="540" height="920" class="torn" style="object-position: top;" src="../assets/images/experiences/walks.jpg" alt="Três pessoas a caminhar devagar, em colagem sobre papel" loading="lazy" decoding="async">
           <span class="door-num">02</span>
         </div>
         <h3 class="door-title"><span>Inner</span>Walks</h3>
@@ -268,7 +271,7 @@
       <article class="door" id="inner-tables">
         <div class="door-media">
           <span class="tape"></span>
-          <img class="torn" src="../assets/images/experiences/tables.jpg" alt="Pessoas a desenhar à volta de uma mesa com velas, azeitonas e tomates">
+          <img width="903" height="624" class="torn" src="../assets/images/experiences/tables.jpg" alt="Pessoas a desenhar à volta de uma mesa com velas, azeitonas e tomates" loading="lazy" decoding="async">
           <span class="door-num">03</span>
         </div>
         <h3 class="door-title"><span>Inner</span>Tables</h3>
@@ -280,7 +283,7 @@
       <article class="door" id="inner-reset">
         <div class="door-media">
           <span class="tape"></span>
-          <img class="torn" src="../assets/images/experiences/reset.jpg" alt="Pessoas a alongar em tapetes ao lado de grandes desenhos a carvão e tinta">
+          <img width="610" height="900" class="torn" src="../assets/images/experiences/reset.jpg" alt="Pessoas a alongar em tapetes ao lado de grandes desenhos a carvão e tinta" loading="lazy" decoding="async">
           <span class="door-num">04</span>
         </div>
         <h3 class="door-title"><span>Inner</span>Reset</h3>
@@ -291,9 +294,14 @@
 
     </div>
 
+    <div class="exp-next">
+      <p>As datas e os horários variam. Envia uma mensagem sobre a experiência que te desperta curiosidade, e partilhamos o que vem aí ou encontramos um momento que te sirva.</p>
+      <a href="/pt/contact#experiences" data-local="contact.html#experiences" class="btn-primary">Reservar ou pedir informações</a>
+    </div>
+
     <!-- TESTIMONIALS -->
     <section class="quotes" aria-labelledby="quotes-title">
-      <p class="quotes-kicker" id="quotes-title">Nas palavras de quem esteve</p>
+      <p class="kicker" id="quotes-title" style="margin-bottom: 36px;">Nas palavras de quem esteve</p>
       <div class="quotes-grid">
         <figure class="quote door">
           <blockquote>“This was, by far the best walk I’ve been to in a LONG time. Great to walk and see the beach and water. People were awesome and inclusive and time flew by. Thanks to the hosts for supporting this kind of fun.”</blockquote>
@@ -309,29 +317,53 @@
         </figure>
       </div>
     </section>
+  </section>
 
-    <!-- FOR TEAMS -->
-    <div class="teams door">
-      <div>
-        <p class="teams-kicker">Para equipas</p>
-        <h3 class="teams-title">Leva uma experiência à tua equipa.</h3>
-        <p class="teams-copy">Qualquer uma das quatro experiências pode ser adaptada à tua equipa e ao que está a atravessar: um lançamento, uma reestruturação, burnout, ou simplesmente a necessidade de voltar a ligar-se. Criar em conjunto abre conversas a que as reuniões raramente chegam.</p>
-        <a href="https://www.instagram.com/innerscapism/" class="cta-pill" style="text-decoration:none; display:inline-block; padding: 14px 26px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px; font-size: 16px;">Planear uma sessão de equipa</a>
-      </div>
-      <ul class="teams-facts">
-        <li>60–120 minutos</li>
-        <li>Grupos de 6–30</li>
-        <li>Presencial ou remoto</li>
-        <li>Materiais incluídos</li>
-      </ul>
+  <!-- 6. WORK & SYSTEMS -->
+  <section id="work" class="section-pad" style="padding: 120px 64px 130px; scroll-margin-top: 70px;" aria-labelledby="work-title">
+    <div style="text-align:center; margin: 0 auto 64px; max-width: 680px;">
+      <p class="kicker">Trabalho e Sistemas</p>
+      <h2 id="work-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Para equipas e organizações.</h2>
+      <p class="body-copy" style="margin: 0 auto; text-align: center;">Duas formas diferentes de trabalhar em conjunto, com a mesma atenção às pessoas.</p>
     </div>
+    <div class="work-pair">
+      <article class="door">
+        <h3 class="door-title"><span>Consultoria</span>Innerware</h3>
+        <p class="door-tag">Design centrado nas pessoas e consultoria.</p>
+        <p class="door-note">Apoio remoto em UX, estratégia de produto e design systems para equipas que constroem produtos e serviços digitais.</p>
+        <div class="door-meta">Remoto · Mediante pedido</div>
+        <a href="/pt/innerware" data-local="innerware.html" class="btn-secondary">Explorar o Innerware</a>
+      </article>
+      <article class="door">
+        <h3 class="door-title"><span>Workshops</span>Experiências criativas para equipas</h3>
+        <p class="door-tag">Espaço para refletir, ligar e conversar.</p>
+        <p class="door-note">Sessões facilitadas e práticas que abrem as conversas a que as reuniões raramente chegam. Para dias de equipa, offsites e encontros.</p>
+        <div class="door-meta">60–120 min · Grupos de 6–30 · Presencial ou remoto</div>
+        <a href="/pt/contact#work" data-local="contact.html#work" class="btn-secondary">Pedir informações sobre um workshop</a>
+      </article>
+    </div>
+    <p style="text-align: center; margin: 56px 0 0;"><a href="/pt/work" data-local="work.html" class="text-link">Como se distinguem</a></p>
+  </section>
 
+  <!-- 7. PHILOSOPHY -->
+  <div class="paper" style="background-color: oklch(94% 0.015 65);">
+  <section id="philosophy" class="about" style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; padding: 110px 64px; align-items:center; max-width: 1240px; margin: 0 auto; box-sizing: border-box;" aria-labelledby="philosophy-title">
+    <img width="1015" height="1100" class="torn" src="../assets/images/compass-forest.jpg" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" loading="lazy" decoding="async" style="width: 100%; height: auto; aspect-ratio: 3/4; display:block; object-fit: cover;">
+    <div class="about-copy">
+      <p class="kicker">O que é o Innerscapism?</p>
+      <h2 id="philosophy-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 24px; line-height: 1.15;">O Innerscapism é uma<br>prática de regresso.</h2>
+      <p style="font-family:'Fraunces', serif; font-size: 22px; line-height: 1.55; color: oklch(30% 0.02 40); margin: 0 0 28px; max-width: 560px;">À tua atenção.<br>À tua curiosidade.<br>Ao teu corpo.<br>Ao lugar.<br>Uns aos outros.<br>Às partes de ti que ficam mais silenciosas quando a vida aperta.</p>
+      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 18px; max-width: 560px;">Às vezes, criar espaço para o que nos torna humanos começa por abrandar, fazer algo com as mãos ou prestar atenção ao mundo à nossa volta.</p>
+      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0 0 22px; max-width: 560px;">Outras vezes, começa por questionar os produtos, as tecnologias e os sistemas que moldam as nossas vidas.</p>
+      <p style="font-family:'Fraunces', serif; font-weight: 600; font-size: 24px; color: #a3453d; margin: 0;">O Innerscapism explora as duas coisas.</p>
+    </div>
+  </section>
   </div>
 
-  <!-- CLOSING / CONTACT -->
-  <div id="contact" class="contact" style="padding: 10px 64px 120px; text-align:center; background: oklch(97% 0.01 70);">
+  <!-- 8. CLOSING -->
+  <section id="contact" class="contact" style="padding: 10px 64px 130px; text-align:center;" aria-labelledby="closing-title">
     <div class="collage">
-  <aside class="doors-note torn-note paper" aria-label="Onde as experiências acontecem">
+      <aside class="doors-note torn-note paper" aria-label="Onde as experiências acontecem">
         <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-bottom: 18px;">Isto pode acontecer</div>
         <p style="font-family:'Fraunces', serif; font-size: 30px; line-height: 1.25; margin: 0;">
           Para ti ·<br>
@@ -341,19 +373,27 @@
       </aside>
       <div class="closing-reminder"><span class="tape"></span><p class="badge-paper torn-note paper">Lembrete: o mundo continua mais lento do que o teu ecrã.</p></div>
     </div>
-    <p class="contact-desc" style="font-size: 18px; line-height: 1.6; color: oklch(40% 0.02 40); margin: 0 0 36px; max-width: 480px; margin-left:auto; margin-right:auto;">Se estás aqui, isto pode ser para ti. <br>Envia uma mensagem e encontramos um momento para uma conversa gratuita de 20&nbsp;minutos.</p>
-    <a href="https://www.instagram.com/innerscapism/" class="btn-outline" style="padding: 13px 26px; font-size: 16px;">Começar com uma conversa</a>
-  </div>
+    <h2 id="closing-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.15; margin: 0 auto 20px; max-width: 640px; text-wrap: balance;">Um espaço para explorar, refletir e criar.</h2>
+    <p class="contact-desc" style="font-size: 18px; line-height: 1.65; color: oklch(40% 0.02 40); margin: 0 auto 14px; max-width: 560px;">Quer procures uma experiência criativa, um novo olhar sobre o teu trabalho ou alguém com quem repensar um produto ou sistema, comecemos por uma conversa.</p>
+    <p style="font-size: 15px; color: oklch(48% 0.02 40); margin: 0 auto 34px;">A primeira chamada é gratuita e dura 20 minutos.</p>
+    <a href="/pt/contact" data-local="contact.html" class="btn-primary">Entrar em contacto</a>
+  </section>
 
-  <p class="iw-bridge iw-bridge-end">Crias produtos ou tecnologia?<br><a href="/pt/innerware" data-local="innerware.html">o innerware traz a mesma atenção à forma como desenhamos o&nbsp;que&nbsp;criamos&nbsp;→</a></p>
+  </main>
 
   <!-- FOOTER -->
-  <div class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
-    <div style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40);">innerscapism</div>
-    <div style="display:flex; gap: 32px;">
-      <a href="https://www.instagram.com/innerscapism/" style="text-decoration:none;">Instagram</a>
-    </div>
-  </div>
+  <footer class="footer" style="padding: 40px 64px; border-top: 1px solid oklch(88% 0.015 60); display:flex; justify-content:space-between; align-items:center; gap: 24px; font-size: 14px; color: oklch(50% 0.02 40);">
+    <a href="/pt/" data-local="index.html" style="font-family:'Fraunces', serif; font-size: 17px; color: oklch(30% 0.02 40); text-decoration: none;">innerscapism</a>
+    <nav class="footer-links" aria-label="Rodapé">
+      <a href="/pt/#experiences" data-local="index.html#experiences">Experiências</a>
+      <a href="/pt/work" data-local="work.html">Trabalho e Sistemas</a>
+      <a href="/pt/innerware" data-local="innerware.html">Innerware</a>
+      <a href="/pt/about" data-local="about.html">Sobre</a>
+      <a href="/pt/contact" data-local="contact.html">Contacto</a>
+      <a href="https://www.instagram.com/innerscapism/">Instagram</a>
+    </nav>
+  </footer>
+  <!-- /FOOTER -->
 
 </div>
 
