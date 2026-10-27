@@ -36,7 +36,7 @@ T = {
         'Arte, movimento, caminhadas, som e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.',
     'Innerscapism brings together creative experiences and human-centred thinking to make space for what often gets lost in the rush of everyday life.':
         'O Innerscapism junta experiências criativas e pensamento centrado nas pessoas para criar espaço para aquilo que tantas vezes se perde na pressa do dia a dia.',
-    'Explore experiences': 'Explorar experiências',
+    'Explore Experiences': 'Explorar Experiências',
     'Explore Work & Systems': 'Explorar Trabalho e Sistemas',
     'Friends talking and laughing around a table with tea, food and a drawn circle': 'Amigos a conversar e a rir à volta de uma mesa com chá, comida e um círculo desenhado',
     'Torn newspaper and red paper gathered for collage': 'Jornal rasgado e papel vermelho reunidos para uma colagem',
@@ -56,7 +56,7 @@ T = {
     'For product teams, organisations and people building what comes next': 'Para equipas de produto, organizações e pessoas que estão a construir o que vem a seguir',
     'Explore Innerware': 'Explorar o Innerware',
 
-    'Who the experiences are for': 'Para quem são as experiências',
+    'Who the Experiences are for': 'Para quem são as Experiências',
     'For moments when something is changing.': 'Para momentos em que algo está a mudar.',
     "Or when nothing is, and you'd simply like to notice more.": 'Ou quando nada muda, e simplesmente queres reparar mais.',
     'A person standing still in a meadow, looking up at the trees': 'Uma pessoa parada num prado, a olhar para as árvores',
@@ -69,7 +69,7 @@ T = {
     'looking for more meaningful connection': 'procurar ligações com mais significado',
     'simply wanting to slow down and pay attention': 'simplesmente querer abrandar e prestar atenção',
 
-    'The experiences': 'As experiências',
+    'The Experiences': 'As Experiências',
     'Four ways in.': 'Quatro formas de entrar.',
     'For individuals, small groups and gatherings in Lisboa, Porto and online. No artistic skill needed. Just curiosity.':
         'Para pessoas individuais, pequenos grupos e encontros, em Lisboa, no Porto e online. Não é preciso jeito para a arte. Só curiosidade.',
@@ -93,8 +93,8 @@ T = {
     'Yoga and breathwork flow into drawing and painting. The body leads, creativity follows. We close with singing bowls and stillness: you lie down, listen and let things settle. Not another yoga class.':
         'O yoga e a respiração fluem para o desenho e a pintura. O corpo conduz, a criatividade segue. Terminamos com taças tibetanas e silêncio: deitas-te, escutas e deixas as coisas assentar. Não é mais uma aula de yoga.',
     'Small groups or 1:1 · 2 hours · Lisboa or Porto': 'Pequenos grupos ou 1:1 · 2 horas · Lisboa ou Porto',
-    "Dates and times vary. Send a message about the experience you're curious about, and we'll share what's coming up or find a time that works for you.":
-        'As datas e os horários variam. Envia uma mensagem sobre a experiência que te desperta curiosidade, e partilhamos o que vem aí ou encontramos um momento que te sirva.',
+    "Dates and times vary. Send a message about the Experience you're curious about, and we'll share what's coming up or find a time that works for you.":
+        'As datas e os horários variam. Envia uma mensagem sobre a Experiência que te desperta curiosidade, e partilhamos o que vem aí ou encontramos um momento que te sirva.',
     'Book or enquire': 'Reservar ou pedir informações',
 
     'In their words': 'Nas palavras de quem esteve',
@@ -132,7 +132,7 @@ T = {
         'Outras vezes, começa por questionar os produtos, as tecnologias e os sistemas que moldam as nossas vidas.',
     'Innerscapism explores both.': 'O Innerscapism explora as duas coisas.',
 
-    'Where the experiences happen': 'Onde as experiências acontecem',
+    'Where the Experiences happen': 'Onde as Experiências acontecem',
     'These can happen': 'Isto pode acontecer',
     'For yourself ·': 'Para ti ·',
     'With others ·': 'Com outros ·',
@@ -302,8 +302,8 @@ T = {
     'Remote, scoped together, by enquiry.': 'Remoto, com âmbito definido em conjunto, mediante pedido.',
     'Creative experiences for organisations': 'Experiências criativas para organizações',
     'Space for teams to reflect and connect.': 'Espaço para as equipas refletirem e se ligarem.',
-    "Facilitated, hands-on sessions using drawing, collage, movement and conversation. Any of the four experiences can be shaped around your team and what it's moving through.":
-        'Sessões facilitadas e práticas com desenho, colagem, movimento e conversa. Qualquer uma das quatro experiências pode ser adaptada à tua equipa e ao que está a atravessar.',
+    "Facilitated, hands-on sessions using drawing, collage, movement and conversation. Any of the four Experiences can be shaped around your team and what it's moving through.":
+        'Sessões facilitadas e práticas com desenho, colagem, movimento e conversa. Qualquer uma das quatro Experiências pode ser adaptada à tua equipa e ao que está a atravessar.',
     'What it can look like': 'Como pode ser',
     'Creative team reflection': 'Reflexão criativa em equipa',
     'Facilitated creative workshops': 'Workshops criativos facilitados',
@@ -357,15 +357,15 @@ T = {
     "Tell me a little about what you're looking for. The first call is free, takes 20 minutes and comes with no commitment.":
         'Conta-me um pouco sobre o que procuras. A primeira chamada é gratuita, dura 20 minutos e não tem qualquer compromisso.',
     'For you or a small group': 'Para ti ou um pequeno grupo',
-    "I'm interested in an experience.": 'Tenho interesse numa experiência.',
+    "I'm interested in an Experience.": 'Tenho interesse numa Experiência.',
     "Inner Sessions, Inner Walks, Inner Tables or Inner Reset. Share which one you're curious about, and we'll find the next date or a time that works for you.":
         'Inner Sessions, Inner Walks, Inner Tables ou Inner Reset. Diz-me qual te desperta curiosidade, e encontramos a próxima data ou um momento que te sirva.',
     'Helpful to include': 'Útil incluir',
-    "Which experience you're interested in": 'Que experiência te interessa',
+    "Which Experience you're interested in": 'Que Experiência te interessa',
     "Whether it's for you or for a group": 'Se é para ti ou para um grupo',
     'Lisboa, Porto or online': 'Lisboa, Porto ou online',
     'Message on Instagram': 'Enviar mensagem no Instagram',
-    'See the experiences': 'Ver as experiências',
+    'See the Experiences': 'Ver as Experiências',
     'For teams and organisations': 'Para equipas e organizações',
     "I'm interested in consulting or a team workshop.": 'Tenho interesse em consultoria ou num workshop de equipa.',
     "Share a little about your team, your product or system, and what you'd like to explore. If you're not sure yet whether it's consulting or a workshop, that's a good place to start.":
