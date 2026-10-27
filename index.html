@@ -31,16 +31,26 @@
   .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
   .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
 
-  /* ---- Two paths ---- */
-  .paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; max-width: 1080px; margin: 0 auto; align-items: start; }
-  .path { padding: 24px 24px 34px; }
-  .path:nth-child(1) { --tilt: -0.5deg; }
-  .path:nth-child(2) { --tilt: 0.5deg; margin-top: 48px; }
-  .path .door-media img, .path .door-media .drawing { aspect-ratio: 16 / 10; width: 100%; display: block; object-fit: cover; }
-  .path .door-media .drawing svg { display: block; width: 100%; height: 100%; }
-  .path h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 32px; line-height: 1.15; margin: 0 0 14px; }
-  .path .door-note { font-size: 16.5px; }
-  .path .door-meta { margin-bottom: 24px; }
+  /* ---- Two paths: one spread, organic half and system half ---- */
+  .split { padding: 120px 0 0; }
+  .split-head { text-align: center; max-width: 680px; margin: 0 auto 64px; padding: 0 24px; }
+  .split-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid oklch(85% 0.02 60); border-bottom: 1px solid oklch(85% 0.02 60); }
+  .half { padding: 96px 64px 150px; }
+  .half-human { background-color: oklch(94% 0.015 65); }
+  .half-system { border-left: 1px solid oklch(70% 0.02 50); }
+  .half-inner { max-width: 470px; }
+  .half-human .half-inner { margin-left: auto; margin-right: 24px; }
+  .half-system .half-inner { margin-left: 24px; }
+  .half h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.1; margin: 0 0 18px; }
+  .half-copy { font-size: 17px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 18px; }
+  .half-for { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 0 0 30px; }
+  .human-photo { position: relative; width: 78%; margin: 0 0 44px 4%; transform: rotate(-3deg); filter: drop-shadow(0 14px 22px rgba(33, 25, 23, 0.14)); }
+  .human-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .human-photo .tape { top: -12px; left: 38%; transform: rotate(-6deg); }
+  .system-photo { box-sizing: border-box; width: 78%; margin: 0 0 44px; padding: 10px; border: 1px solid oklch(30% 0.02 40); background: oklch(97% 0.01 70); }
+  .system-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; filter: grayscale(0.25); }
+  .seam { position: absolute; left: 50%; top: 96px; transform: translateX(-50%); z-index: 2; width: 64px; height: 64px; border-radius: 50%; background: #a3453d; color: oklch(97% 0.01 70); display: grid; place-items: center; font-family: 'Fraunces', serif; font-size: 30px; line-height: 1; padding-bottom: 3px; box-sizing: border-box; box-shadow: 0 8px 16px rgba(40, 26, 20, 0.18); }
+  .split-line { position: absolute; left: 0; right: 0; bottom: 48px; width: 100%; height: 70px; pointer-events: none; }
 
   /* ---- Who it's for ---- */
   .moments-list { list-style: none; padding: 0; margin: 0; }
@@ -91,8 +101,13 @@
     .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
     .moments { grid-template-columns: 1fr !important; padding: 80px 28px !important; gap: 36px !important; }
     .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
-    .paths, .work-pair { grid-template-columns: 1fr; max-width: 560px; }
-    .path:nth-child(2) { margin-top: 0; }
+    .work-pair { grid-template-columns: 1fr; max-width: 560px; }
+    .split-grid { grid-template-columns: 1fr; }
+    .half { padding: 72px 28px 80px; }
+    .half-human .half-inner, .half-system .half-inner { margin: 0 auto; max-width: 560px; }
+    .half-system { border-left: 0; border-top: 1px solid oklch(70% 0.02 50); }
+    .seam { position: relative; left: auto; top: auto; transform: none; margin: -32px auto; }
+    .split-line { display: none; }
     .quotes-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     .quotes .door:nth-child(n) { margin-top: 0 !important; }
   }
@@ -109,8 +124,10 @@
     .moments { padding: 64px 18px !important; }
     .moments-list li { font-size: 20px; }
     .section-pad { padding: 72px 18px 80px !important; }
-    .path { padding: 18px 18px 28px; }
-    .path h3 { font-size: 26px; }
+    .split { padding-top: 72px; }
+    .half { padding: 56px 18px 64px; }
+    .half h3 { font-size: 30px; }
+    .human-photo, .system-photo { width: 100%; margin-left: 0; }
     .work-pair .door { padding: 28px 22px 26px; }
     .quotes { margin-top: 72px; }
     .quote blockquote { font-size: 18px; }
@@ -170,46 +187,42 @@
     <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
   </div>
 
-  <!-- 3. TWO PATHS -->
-  <section class="section-pad" style="padding: 120px 64px 130px;" aria-labelledby="paths-title">
-    <div style="text-align:center; margin: 0 auto 72px; max-width: 680px;">
+  <!-- 3. TWO PATHS: one spread, two halves (organic / system) -->
+  <section class="split" aria-labelledby="paths-title">
+    <div class="split-head">
       <p class="kicker">Two ways in</p>
       <h2 id="paths-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0; line-height: 1.12; text-wrap: balance;">Two ways of exploring what makes us human.</h2>
     </div>
-    <div class="paths">
-      <article class="door path">
-        <div class="door-media">
-          <span class="tape"></span>
-          <img width="592" height="740" class="torn" src="assets/images/experiences/retreats.jpg" alt="Collage of people gathering, walking, drawing and moving together" loading="lazy" decoding="async">
+    <div class="split-grid">
+      <article class="half half-human paper">
+        <div class="half-inner">
+          <div class="human-photo">
+            <span class="tape"></span>
+            <img width="592" height="740" class="torn" src="assets/images/experiences/retreats.jpg" alt="Collage of people gathering, walking, drawing and moving together" loading="lazy" decoding="async">
+          </div>
+          <p class="kicker" style="margin-bottom: 12px;">Experiences</p>
+          <h3>Make space to reconnect.</h3>
+          <p class="half-copy">Creative practices for slowing down, paying attention and exploring what matters. Through art, walking, yoga, sound and shared experiences, we create room for curiosity, reflection and connection.</p>
+          <p class="half-for">For individuals, small groups and gatherings</p>
+          <a href="/#experiences" data-local="index.html#experiences" class="btn-primary">Explore experiences</a>
         </div>
-        <p class="list-label" style="margin-top: 0;">Experiences</p>
-        <h3>Make space to reconnect.</h3>
-        <p class="door-note">Creative practices for slowing down, paying attention and exploring what matters. Through art, walking, yoga, sound and shared experiences, we create room for curiosity, reflection and connection.</p>
-        <div class="door-meta">For individuals, small groups and gatherings</div>
-        <a href="/#experiences" data-local="index.html#experiences" class="btn-primary">Explore experiences</a>
       </article>
-      <article class="door path">
-        <div class="door-media">
-          <span class="tape"></span>
-          <div class="drawing grid-paper torn" role="img" aria-label="A hand-drawn rust line looping through neat interface boxes on graph paper"><svg viewBox="0 0 400 320" aria-hidden="true" preserveAspectRatio="xMidYMid slice" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="36" y="36" width="168" height="96" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
-          <line x1="36" y1="60" x2="204" y2="60" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
-          <rect x="222" y="196" width="146" height="84" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.6"/>
-          <rect x="238" y="212" width="54" height="8" fill="oklch(30% 0.02 40)" opacity="0.25"/>
-          <rect x="238" y="230" width="96" height="8" fill="oklch(30% 0.02 40)" opacity="0.18"/>
-          <rect x="52" y="210" width="96" height="62" stroke="oklch(30% 0.02 40)" stroke-width="1" opacity="0.45"/>
-          <path d="M39.4 61.2 C47.7 62.9 72.2 72.1 89.1 71.7 C106.1 71.2 124.5 58.5 141.1 58.4 C157.7 58.4 180.8 69.3 188.8 71.5" stroke="oklch(30% 0.02 40)" stroke-width="1.2" opacity="0.55"/>
-          <path d="M9.8 270.2 C20.1 266.8 53.3 251.2 71.7 249.9 C90.1 248.5 104.7 268.2 120.0 262.3 C135.4 256.5 158.7 230.2 163.7 215.0 C168.8 199.9 159.7 179.6 150.5 171.2 C141.3 162.7 116.2 158.4 108.4 164.2 C100.5 170.1 96.3 198.1 103.4 206.2 C110.4 214.4 133.5 217.2 150.8 213.2 C168.0 209.1 190.3 197.3 206.9 181.9 C223.6 166.4 235.3 133.6 250.6 120.5 C265.9 107.3 285.4 100.1 298.6 103.1 C311.9 106.0 328.4 126.4 330.1 138.2 C331.8 150.1 317.4 170.4 308.8 174.0 C300.1 177.6 279.6 168.6 278.1 159.9 C276.6 151.1 286.9 136.3 299.8 121.4 C312.6 106.5 339.7 82.0 355.1 70.6 C370.4 59.1 385.8 55.6 392.0 52.6" stroke="#a3453d" stroke-width="2.4"/>
-          <path d="M225.6 126.2 Q222.6 122.9 222.5 118.9 Q223.5 115.0 225.0 111.4 Q227.9 108.4 230.3 105.5 Q232.9 102.7 236.4 101.0 Q238.9 97.5 243.2 97.1 Q247.0 95.2 251.1 96.4 Q255.5 95.2 259.5 96.6 Q262.1 100.4 265.6 101.9 Q270.1 103.0 271.6 106.8 Q275.0 109.5 274.8 113.7 Q274.5 117.4 276.4 121.1 Q276.3 125.0 273.7 128.2 Q271.5 131.3 269.9 134.7 Q268.5 138.7 264.8 140.6 Q260.3 140.8 256.7 142.4 Q252.8 142.7 248.9 142.7 Q244.6 144.4 241.2 141.6 Q237.1 141.0 233.9 138.6 Q231.5 135.6 227.7 133.6 Q227.4 129.5 224.5 126.5 Q225.4 122.6 224.3 118.9 Q225.4 115.4 226.3 111.8 Q226.1 107.5 228.9 104.5" stroke="oklch(30% 0.02 40)" stroke-width="1.4"/>
-          <circle cx="250" cy="120" r="3" fill="#a3453d"/>
-        </svg></div>
+      <span class="seam" aria-hidden="true">&amp;</span>
+      <article class="half half-system grid-paper">
+        <div class="half-inner">
+          <div class="system-photo">
+            <img width="1200" height="1035" src="assets/images/team-workshop.jpg" alt="A team gathered around a flipchart covered in drawings during a creative workshop" loading="lazy" decoding="async">
+          </div>
+          <p class="kicker" style="margin-bottom: 12px;">Work &amp; Systems</p>
+          <h3>Create differently.</h3>
+          <p class="half-copy">The environments, products and systems we create shape how people live and work. Through human-centred design, creative facilitation and systems thinking, we explore how to build products, technologies and working environments without losing sight of what makes us human.</p>
+          <p class="half-for">For product teams, organisations and people building what comes next</p>
+          <a href="/innerware" data-local="innerware.html" class="btn-secondary">Explore Innerware</a>
         </div>
-        <p class="list-label" style="margin-top: 0;">Work &amp; Systems</p>
-        <h3>Create differently.</h3>
-        <p class="door-note">The environments, products and systems we create shape how people live and work. Through human-centred design, creative facilitation and systems thinking, we explore how to build products, technologies and working environments without losing sight of what makes us human.</p>
-        <div class="door-meta">For product teams, organisations and people building what comes next</div>
-        <a href="/innerware" data-local="innerware.html" class="btn-primary">Explore Innerware</a>
       </article>
+      <svg class="split-line" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 52 C40 30 70 78 110 58 C150 38 120 14 160 22 C205 31 190 70 240 66 C290 62 300 30 345 40 C385 49 370 74 415 68 C450 63 470 46 500 46 L560 46 L560 26 L640 26 L640 58 L740 58 L740 36 L860 36 L860 50 L1000 50" fill="none" stroke="#a3453d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+      </svg>
     </div>
   </section>
 
