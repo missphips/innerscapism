@@ -137,6 +137,16 @@ def fix_dims(s, base_dir):
     return re.sub(r'<img [^>]*>', one, s)
 
 
+
+def asset_versions(s):
+    """Add ?v=<content hash> to the shared CSS/JS so browsers never keep a stale copy."""
+    import hashlib
+    for rel in ('assets/css/innerscapism.css', 'assets/js/reveal.js'):
+        if os.path.exists(rel):
+            v = hashlib.md5(open(rel, 'rb').read()).hexdigest()[:8]
+            s = re.sub(r'(["/])' + re.escape(rel) + r'(\?v=[0-9a-f]+)?"', r'\g<1>' + rel + '?v=' + v + '"', s)
+    return s
+
 # ---------------------------------------------------------------- translation
 used = set()
 page_t = {}  # per-page overrides, set while translating each page
@@ -206,6 +216,7 @@ for fname, path, current in PAGES:
     en = clean_links(en, 'en')
     en = place_switch(en, 'en', fname, path)
     en = fix_dims(en, '.')
+    en = asset_versions(en)
     open(fname, 'w').write(en)
 
     english_text = untranslated(en)
