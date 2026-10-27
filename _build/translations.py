@@ -335,8 +335,8 @@ T = {
     "[Add a sentence about your product work: the kinds of products, teams or industries you've worked with.]":
         '[Acrescenta uma frase sobre o teu trabalho em produto: tipos de produtos, equipas ou setores com que trabalhaste.]',
     'Making, moving, slowing down': 'Criar, mover, abrandar',
-    "Alongside that work, I've been exploring art, creative practice and contemplative living, and I'm developing my practice in yoga and creative wellbeing.":
-        'Em paralelo, tenho explorado a arte, a prática criativa e uma vida mais contemplativa, e estou a desenvolver a minha prática em yoga e bem-estar criativo.',
+    "Alongside that work, I've been exploring art, creative practice and contemplative living, and I'm developing my practice in yoga and creative wellbeing. I recently completed a 200-hour yoga teacher training in Bali, and I'm a student at SPAT, the Portuguese Society of Art Therapy (Sociedade Portuguesa de Arte-Terapia).":
+        'Em paralelo, tenho explorado a arte, a prática criativa e uma vida mais contemplativa, e estou a desenvolver a minha prática em yoga e bem-estar criativo. Concluí recentemente uma formação de professora de yoga de 200 horas em Bali, e sou estudante na SPAT, a Sociedade Portuguesa de Arte-Terapia.',
     "[Add any training, teachers or courses you'd like to mention.]": '[Acrescenta formações, professores ou cursos que queiras mencionar.]',
     'Why both': 'Porquê as duas coisas',
     'I kept noticing the same question from two sides. How we feel inside shapes what we build, and what we build shapes how we feel. Innerscapism is my evolving practice for working with both: creative experiences that make space to reconnect, and human-centred design that brings the same attention into products, workplaces and systems.':
