@@ -330,8 +330,8 @@ T = {
     'From buildings to products': 'Dos edifícios aos produtos',
     'I started in architecture, where I first became interested in the relationship between people and the environments they move through.':
         'Comecei na arquitetura, onde me interessei pela primeira vez pela relação entre as pessoas e os ambientes por onde se movem.',
-    "That interest followed me into UX and product ownership. The spaces became digital: products, services and the systems behind them. For the past ten years, I've worked with companies like Tekever and BMW.":
-        'Esse interesse acompanhou-me até ao UX e ao product ownership. Os espaços tornaram-se digitais: produtos, serviços e os sistemas por trás deles. Nos últimos dez anos, trabalhei com empresas como a Tekever e a BMW.',
+    "That interest followed me into UX and product ownership. The spaces became digital: products, services and the systems behind them. For the past ten years, I've worked with companies like Tekever and BMW, mostly in Scrum and agile teams.":
+        'Esse interesse acompanhou-me até ao UX e ao product ownership. Os espaços tornaram-se digitais: produtos, serviços e os sistemas por trás deles. Nos últimos dez anos, trabalhei com empresas como a Tekever e a BMW, sobretudo em equipas Scrum e ágeis.',
     "[Add a sentence about your product work: the kinds of products, teams or industries you've worked with.]":
         '[Acrescenta uma frase sobre o teu trabalho em produto: tipos de produtos, equipas ou setores com que trabalhaste.]',
     'Making, moving, slowing down': 'Criar, mover, abrandar',
