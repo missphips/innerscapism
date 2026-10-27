@@ -57,6 +57,10 @@
   .moments-list li { font-family: 'Fraunces', serif; font-size: 24px; line-height: 1.3; padding: 14px 0 14px 38px; border-bottom: 1px solid oklch(88% 0.015 60); position: relative; }
   .moments-list li::before { content: ""; position: absolute; left: 2px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%) rotate(8deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23a3453d' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M10.2 2.2 C10 7 10.4 13 10.6 17.8'/%3E%3Cpath d='M3 6.3 C7.5 8.6 12.5 11.6 17.2 14.2'/%3E%3Cpath d='M3.4 14.4 C8 11.8 12.6 8.6 16.8 5.6'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain; }
 
+  .stamp { position: relative; display: inline-block; transform: rotate(-3deg); margin: 40px 0 0 200px; }
+  .stamp img { width: 220px; max-width: 100%; aspect-ratio: 47 / 40; object-fit: cover; display: block; }
+  .stamp .tape { top: -8px; left: 40px; transform: rotate(-5deg); }
+
   /* ---- Experiences: four cards as a 2 x 2 grid on wide screens ---- */
   @media (min-width: 1001px) {
     .doors { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 960px; gap: 72px 56px; }
@@ -99,7 +103,7 @@
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
     .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
-    .moments { grid-template-columns: 1fr !important; padding: 80px 28px !important; gap: 36px !important; }
+    .moments { grid-template-columns: 1fr !important; gap: 36px !important; padding-bottom: 72px !important; margin-bottom: 72px !important; }
     .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
     .work-pair { grid-template-columns: 1fr; max-width: 560px; }
     .split-grid { grid-template-columns: 1fr; }
@@ -121,7 +125,8 @@
     .strip p { font-size: 28px !important; }
     .about { padding: 56px 18px !important; }
     .about-copy p { font-size: 16px !important; }
-    .moments { padding: 64px 18px !important; }
+    .moments { padding-bottom: 56px !important; margin-bottom: 64px !important; }
+    .stamp { margin-left: 70px; }
     .moments-list li { font-size: 20px; }
     .section-pad { padding: 72px 18px 80px !important; }
     .split { padding-top: 72px; }
@@ -226,29 +231,33 @@
     </div>
   </section>
 
-  <!-- 4. WHO IT'S FOR -->
-  <section class="moments" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; padding: 40px 64px 120px; align-items:start; max-width: 1240px; margin: 0 auto;" aria-labelledby="moments-title">
-    <div>
-      <p class="kicker">Who the experiences are for</p>
-      <h2 id="moments-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 22px; line-height: 1.15;">For moments when something is changing.</h2>
-      <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 420px;">Or when nothing is, and you'd simply like to notice more.</p>
-    </div>
-    <div>
-      <p style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 6px 0 8px;">You might be</p>
-      <ul class="moments-list">
-        <li>navigating transition</li>
-        <li>feeling creatively stuck</li>
-        <li>needing space to reflect</li>
-        <li>recovering from an intense period</li>
-        <li>wanting to reconnect with yourself</li>
-        <li>looking for more meaningful connection</li>
-        <li>simply wanting to slow down and pay attention</li>
-      </ul>
-    </div>
-  </section>
-
   <!-- 5. EXPERIENCES -->
   <section id="experiences" class="experiences paper section-pad" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="exp-title">
+      <!-- WHO IT'S FOR -->
+    <section class="moments" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; padding: 0 0 96px; margin: 0 auto 96px; align-items:start; max-width: 1112px; border-bottom: 1px dashed oklch(78% 0.03 45);" aria-labelledby="moments-title">
+      <div>
+        <p class="kicker">Who the experiences are for</p>
+        <h2 id="moments-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 40px; margin: 0 0 22px; line-height: 1.15;">For moments when something is changing.</h2>
+        <p style="font-size: 17px; line-height: 1.75; color: oklch(38% 0.02 40); margin: 0; max-width: 420px;">Or when nothing is, and you'd simply like to notice more.</p>
+        <div class="stamp">
+          <span class="tape"></span>
+          <img width="470" height="400" class="torn" src="assets/images/experiences/meadow.jpg" alt="A person standing still in a meadow, looking up at the trees" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div>
+        <p style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 6px 0 8px;">You might be</p>
+        <ul class="moments-list">
+          <li>navigating transition</li>
+          <li>feeling creatively stuck</li>
+          <li>needing space to reflect</li>
+          <li>recovering from an intense period</li>
+          <li>wanting to reconnect with yourself</li>
+          <li>looking for more meaningful connection</li>
+          <li>simply wanting to slow down and pay attention</li>
+        </ul>
+      </div>
+    </section>
+
     <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
       <p class="kicker">The experiences</p>
       <h2 id="exp-title" style="font-family:'Fraunces', serif; font-weight: 500; font-size: 44px; margin: 0 0 18px; line-height: 1.12;">Four ways in.</h2>
