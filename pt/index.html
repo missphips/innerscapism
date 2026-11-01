@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>innerscapism · Criar espaço para o que nos torna humanos</title>
-<meta name="description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, movimento e conversa: criar espaço para o que nos torna humanos.">
+<meta name="description" content="Experiências criativas em Lisboa, no Porto e online. Arte, movimento e conversa: criar espaço para o que nos torna humanos.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="innerscapism">
 <meta property="og:title" content="innerscapism · Criar espaço para o que nos torna humanos">
-<meta property="og:description" content="Experiências criativas em Lisboa, no Porto e online, e design centrado nas pessoas para equipas e organizações. Arte, movimento e conversa: criar espaço para o que nos torna humanos.">
+<meta property="og:description" content="Experiências criativas em Lisboa, no Porto e online. Arte, movimento e conversa: criar espaço para o que nos torna humanos.">
 <meta property="og:url" content="https://innerscapism.com/pt/">
 <meta property="og:image" content="https://innerscapism.com/assets/images/share/home.jpg">
 <meta property="og:image:width" content="1200">
@@ -32,32 +32,20 @@
   .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
   .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
 
-  /* ---- Two paths: one spread, organic half and system half ---- */
-  .split { padding: 0; margin-top: -48px; position: relative; z-index: 0; }
+  /* ---- Experiences intro: one spread on cream, with a torn rust paper behind ---- */
+  .split { position: relative; z-index: 0; margin-top: -48px; padding: 150px 64px 170px; background-color: oklch(97% 0.01 70); }
   .strip { position: relative; z-index: 1; }
-  .split-head { text-align: center; max-width: 680px; margin: 0 auto 64px; padding: 0 24px; }
-  .split-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; }
-  .half { padding: 144px 64px 150px; }
-  .half-human { position: relative; background-color: oklch(97% 0.01 70); }
-  .half-human::before { content: ""; position: absolute; inset: 56px 9% 120px 6%; background: #a3453d; opacity: 0.14; transform: rotate(-1.5deg); pointer-events: none;
+  .reconnect { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; max-width: 1040px; margin: 0 auto; }
+  .reconnect::before { content: ""; position: absolute; inset: -56px -48px -56px -40px; background: #a3453d; opacity: 0.14; transform: rotate(-1.2deg); pointer-events: none;
     clip-path: polygon(0 3%, 8% 0, 22% 2%, 37% 0, 52% 3%, 68% 1%, 84% 2%, 100% 0, 98% 30%, 100% 62%, 97% 100%, 80% 97%, 61% 100%, 43% 97%, 24% 100%, 6% 98%, 0 100%, 2% 64%, 0 33%); }
-  .half-human .half-inner { position: relative; }
-  .half-system { border-left: 1px solid oklch(70% 0.02 50); }
-  .half-inner { max-width: 470px; }
-  .half-human .half-inner { margin-left: auto; margin-right: 24px; }
-  .half-system .half-inner { margin-left: 24px; }
-  .half h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 40px; line-height: 1.1; margin: 0 0 18px; }
-  .half-copy { font-size: 17px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 18px; }
+  .reconnect-copy { position: relative; }
+  .reconnect h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.1; margin: 0 0 18px; }
+  .half-copy { font-size: 18px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 18px; }
   .half-for { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 0 0 30px; }
-  .human-photo { position: relative; width: 82%; margin: 0 0 44px 2%; transform: rotate(-3deg); filter: drop-shadow(0 14px 22px rgba(33, 25, 23, 0.14)); }
+  .human-photo { position: relative; width: 100%; max-width: 440px; justify-self: end; transform: rotate(-3deg); filter: drop-shadow(0 14px 22px rgba(33, 25, 23, 0.14)); }
   .human-photo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 45%; }
   .human-photo .tape { top: -12px; left: 38%; transform: rotate(-6deg); }
-  .system-photo { box-sizing: border-box; width: 82%; margin: 0 0 44px; padding: 10px; border: 1px solid oklch(30% 0.02 40); background: oklch(97% 0.01 70); }
-  .system-photo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; filter: grayscale(0.25); }
-  .seam { position: absolute; left: 50%; top: 144px; transform: translateX(-50%); z-index: 2; width: 64px; height: 64px; border-radius: 50%; background: #a3453d; color: oklch(97% 0.01 70); display: grid; place-items: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 24px; line-height: 1; padding-bottom: 4px; box-sizing: border-box; box-shadow: 0 8px 16px rgba(40, 26, 20, 0.18); }
   .split-line { position: absolute; left: 0; right: 0; bottom: 48px; width: 100%; height: 70px; pointer-events: none; }
-
-
 
   /* ---- Experiences: four cards as a 2 x 2 grid on wide screens ---- */
   @media (min-width: 1001px) {
@@ -97,14 +85,11 @@
     .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
     .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
     .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
-    .split-grid { grid-template-columns: 1fr; }
-    .half { padding: 72px 28px 80px; }
-    .half-human { padding-top: 120px; }
-    .half-human .half-inner, .half-system .half-inner { margin: 0 auto; max-width: 560px; }
-    .half-system { border-left: 0; }
-    .seam { position: relative; left: auto; top: auto; transform: none; margin: -32px auto; }
+    .split { padding: 120px 28px 120px; }
+    .reconnect { grid-template-columns: 1fr; gap: 40px; max-width: 560px; }
+    .reconnect::before { inset: -32px -16px -32px -12px; }
+    .human-photo { justify-self: center; max-width: 420px; }
     .split-line { display: none; }
-    .half-human::before { inset: 28px 4% 40px 3%; }
     .quotes-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     .quotes .door:nth-child(n) { margin-top: 0 !important; }
   }
@@ -120,10 +105,8 @@
     .about { padding: 56px 18px !important; }
     .about-copy p { font-size: 16px !important; }
     .section-pad { padding: 72px 18px 80px !important; }
-    .half { padding: 56px 18px 64px; }
-    .half-human { padding-top: 104px; }
-    .half h3 { font-size: 30px; }
-    .human-photo, .system-photo { width: 100%; margin-left: 0; }
+    .split { padding: 100px 18px 96px; }
+    .reconnect h2 { font-size: 32px; }
     .quotes { margin-top: 72px; }
     .quote blockquote { font-size: 18px; }
     .exp-next { margin-top: 64px; }
@@ -147,7 +130,6 @@
     <nav class="nav-links" aria-label="Menu principal" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
       <span class="lang-switch"><a href="/" data-local="../index.html" hreflang="en" lang="en" aria-label="View in English">EN</a> · <span aria-current="true">PT</span></span>
       <a href="/pt/#experiences" data-local="index.html#experiences" style="text-decoration:none;">Experiências</a>
-      <a href="/pt/work" data-local="work.html" style="text-decoration:none;">Trabalho e Sistemas</a>
       <a href="/pt/about" data-local="about.html" style="text-decoration:none;">Sobre</a>
       <a href="/pt/contact" data-local="contact.html" class="cta-pill" style="text-decoration:none; padding: 10px 22px; background: #a3453d; color: oklch(98% 0.01 70); border-radius: 999px;">Contacto</a>
     </nav>
@@ -163,7 +145,7 @@
       <p class="hero-sub" style="font-size: 21px; line-height: 1.55; color: oklch(38% 0.02 40); max-width: 540px; margin: 0 0 38px;">Arte, movimento e conversas com tempo. Diferentes formas de abrandar, voltar a ligar-te e explorar a forma como nos vivemos a nós próprios, uns aos outros e ao mundo que criamos.</p>
       <div class="btn-row">
         <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar Experiências</a>
-        <a href="/pt/work" data-local="work.html" class="btn-secondary">Explorar Trabalho e Sistemas</a>
+        <a href="/pt/contact" data-local="contact.html" class="btn-secondary">Entrar em contacto</a>
       </div>
     </div>
     <div style="position: relative;">
@@ -179,42 +161,26 @@
   <div class="strip torn-band" style="color: oklch(97% 0.01 70); padding: 80px 64px 84px; text-align: center; background-color: #A3453D">
     <p style="font-family:'Fraunces', serif; font-size: 40px; line-height: 1.3; max-width: 780px; margin: 0 auto; font-weight: 400;">Tornar visível o invisível.</p>
     <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
-    <h2 id="paths-title" style="font-family:'Fraunces', serif; font-weight: 400; font-size: 24px; line-height: 1.4; margin: 22px auto 0; max-width: 640px; opacity: 0.92; text-wrap: balance;">Duas formas de explorar o que nos torna humanos.</h2>
   </div>
 
-  <!-- 3. TWO PATHS: one spread, two halves (organic / system) -->
-  <section class="split" aria-labelledby="paths-title">
-    <div class="split-grid">
-      <article class="half half-human">
-        <div class="half-inner">
-          <div class="human-photo">
-            <span class="tape"></span>
-            <img width="1015" height="1100" class="torn" src="../assets/images/compass-forest.jpg" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" loading="lazy" decoding="async">
-          </div>
-          <p class="kicker" style="margin-bottom: 12px;">Experiências</p>
-          <h3>Abrir espaço para te reconectares.</h3>
-          <p class="half-copy">Arte, caminhadas, yoga e mesas partilhadas, para abrandar e prestar atenção.</p>
-          <p class="half-for">Para pessoas individuais, pequenos grupos e encontros</p>
-          <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar Experiências</a>
-        </div>
-      </article>
-      <span class="seam" aria-hidden="true">ou</span>
-      <article class="half half-system grid-paper">
-        <div class="half-inner">
-          <div class="system-photo">
-            <img width="1200" height="1035" src="../assets/images/team-workshop.jpg" alt="Uma equipa reunida à volta de um flipchart cheio de desenhos durante um workshop criativo" loading="lazy" decoding="async">
-          </div>
-          <p class="kicker" style="margin-bottom: 12px;">Trabalho e Sistemas</p>
-          <h3>Criar de outra forma.</h3>
-          <p class="half-copy">Design centrado nas pessoas e facilitação criativa para equipas que constroem produtos e sistemas.</p>
-          <p class="half-for">Para equipas de produto, organizações e pessoas que estão a construir o que vem a seguir</p>
-          <a href="/pt/innerware" data-local="innerware.html" class="btn-secondary">Explorar o Innerware</a>
-        </div>
-      </article>
-      <svg class="split-line" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 52 C40 30 70 78 110 58 C150 38 120 14 160 22 C205 31 190 70 240 66 C290 62 300 30 345 40 C385 49 370 74 415 68 C450 63 470 46 500 46 L560 46 L560 26 L640 26 L640 58 L740 58 L740 36 L860 36 L860 50 L1000 50" fill="none" stroke="#a3453d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
-      </svg>
+  <!-- 3. EXPERIENCES INTRO: compass, torn rust paper, one loose line -->
+  <section class="split" aria-labelledby="reconnect-title">
+    <div class="reconnect">
+      <div class="human-photo">
+        <span class="tape"></span>
+        <img width="1015" height="1100" class="torn" src="../assets/images/compass-forest.jpg" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" loading="lazy" decoding="async">
+      </div>
+      <div class="reconnect-copy">
+        <p class="kicker" style="margin-bottom: 12px;">Experiências</p>
+        <h2 id="reconnect-title">Abrir espaço para te reconectares.</h2>
+        <p class="half-copy">Arte, caminhadas, yoga e mesas partilhadas, para abrandar e prestar atenção.</p>
+        <p class="half-for">Para pessoas individuais, pequenos grupos e encontros</p>
+        <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar Experiências</a>
+      </div>
     </div>
+    <svg class="split-line" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 52 C40 30 70 78 110 58 C150 38 120 14 160 22 C205 31 190 70 240 66 C290 62 300 30 345 40 C385 49 370 74 415 68 C450 63 470 40 520 44 C570 48 560 72 610 66 C660 60 650 28 700 32 C750 36 740 70 790 62 C840 54 850 30 900 38 C945 45 960 60 1000 52" fill="none" stroke="#a3453d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+    </svg>
   </section>
 
   <!-- 4. EXPERIENCES -->

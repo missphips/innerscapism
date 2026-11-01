@@ -152,6 +152,18 @@ T = {
         'Às vezes, criar espaço para o que nos torna humanos começa por abrandar e fazer algo com as mãos. Outras vezes, começa por questionar os sistemas que moldam as nossas vidas.',
     "Let's start with a conversation. The first call is free.": 'Comecemos por uma conversa. A primeira chamada é gratuita.',
 
+    # ---- without Work & Systems
+    'Creative Experiences in Lisboa, Porto and online. Art, movement and conversation: making space for what makes us human.':
+        'Experiências criativas em Lisboa, no Porto e online. Arte, movimento e conversa: criar espaço para o que nos torna humanos.',
+    'Get in touch about a creative Experience in Lisboa, Porto or online, for yourself, a small group or your team. The first call is free.':
+        'Entra em contacto sobre uma Experiência criativa em Lisboa, no Porto ou online, para ti, para um pequeno grupo ou para a tua equipa. A primeira chamada é gratuita.',
+    "I'd like an Experience for my team.": 'Gostava de uma Experiência para a minha equipa.',
+    "Any of the four Experiences can be shaped around a team and what it's moving through. Share a little about your team and what you'd like to make space for.":
+        'Qualquer uma das quatro Experiências pode ser adaptada a uma equipa e ao que está a atravessar. Partilha um pouco sobre a tua equipa e aquilo para que gostavas de criar espaço.',
+    'Your team and roughly how many people': 'A tua equipa e quantas pessoas, aproximadamente',
+    "What's happening for the team right now": 'O que a equipa está a viver neste momento',
+    'Rough timing, and on-site or remote': 'Prazos aproximados, e se é presencial ou remoto',
+
     # ---------------------------------------------------------- innerware
     'Innerware · Human-centred design and UX consulting · innerscapism': 'Innerware · Design centrado nas pessoas e consultoria de UX · innerscapism',
     'Innerware is human-centred design consulting: UX and product strategy, design systems and creative systems workshops for teams building products, services and technology. Remote, by enquiry.':

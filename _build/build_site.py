@@ -16,13 +16,10 @@ from translations import T, KEEP, PAGE_T  # noqa: E402
 SITE = 'https://innerscapism.com'
 PAGES = [  # file, clean path, menu item marked as current
     ('index.html', '/', 'home'),
-    ('work.html', '/work', 'work'),
-    ('innerware.html', '/innerware', 'work'),
     ('about.html', '/about', 'about'),
     ('contact.html', '/contact', 'contact'),
 ]
-FILE_FOR = {'/': 'index.html', '/work': 'work.html', '/innerware': 'innerware.html',
-            '/about': 'about.html', '/contact': 'contact.html'}
+FILE_FOR = {'/': 'index.html', '/about': 'about.html', '/contact': 'contact.html'}
 
 NAV_STYLE = ('display:flex; align-items:center; justify-content:space-between; padding: 28px 64px; '
              'position: sticky; top:0; z-index: 10; background: oklch(97% 0.01 70 / 0.9); backdrop-filter: blur(6px);')
@@ -42,7 +39,6 @@ def nav(current):
     <nav class="nav-links" aria-label="Main menu" style="display:flex; gap: 36px; align-items:center; font-size: 15px;">
       <!--SWITCH-->
       <a href="/#experiences" style="text-decoration:none;">Experiences</a>
-      <a href="/work" style="text-decoration:none;"{cur('work')}>Work &amp; Systems</a>
       <a href="/about" style="text-decoration:none;"{cur('about')}>About</a>
       <a href="/contact" class="cta-pill" style="{PILL_STYLE}"{cur('contact')}>Contact</a>
     </nav>
