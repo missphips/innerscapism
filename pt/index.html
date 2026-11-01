@@ -32,18 +32,9 @@
   .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
   .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
 
-  /* ---- Experiences intro: compass and text on cream ---- */
-  .split { position: relative; z-index: 0; margin-top: -48px; padding: 150px 64px 170px; background-color: oklch(97% 0.01 70); }
+  /* ---- Experiences tuck under the rust band ---- */
   .strip { position: relative; z-index: 1; }
-  .reconnect { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; max-width: 1040px; margin: 0 auto; }
-  .reconnect-copy { position: relative; }
-  .reconnect h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.1; margin: 0 0 18px; }
-  .half-copy { font-size: 18px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 18px; }
-  .half-for { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(48% 0.02 40); margin: 0 0 30px; }
-  .human-photo { position: relative; width: 100%; max-width: 440px; justify-self: end; transform: rotate(-3deg); filter: drop-shadow(0 14px 22px rgba(33, 25, 23, 0.14)); }
-  .human-photo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 45%; }
-  .human-photo .tape { top: -12px; left: 38%; transform: rotate(-6deg); }
-  .split-line { position: absolute; left: 0; right: 0; bottom: 48px; width: 100%; height: 70px; pointer-events: none; }
+  #experiences { position: relative; z-index: 0; margin-top: -48px; padding-top: 158px !important; }
 
   /* ---- Experiences: four cards as a 2 x 2 grid on wide screens ---- */
   @media (min-width: 1001px) {
@@ -83,10 +74,6 @@
     .hero { grid-template-columns: 1fr !important; padding: 48px 28px 64px !important; gap: 48px !important; }
     .about { grid-template-columns: 1fr !important; padding: 72px 28px !important; gap: 36px !important; }
     .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
-    .split { padding: 120px 28px 120px; }
-    .reconnect { grid-template-columns: 1fr; gap: 40px; max-width: 560px; }
-    .human-photo { justify-self: center; max-width: 420px; }
-    .split-line { display: none; }
     .quotes-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     .quotes .door:nth-child(n) { margin-top: 0 !important; }
   }
@@ -102,8 +89,7 @@
     .about { padding: 56px 18px !important; }
     .about-copy p { font-size: 16px !important; }
     .section-pad { padding: 72px 18px 80px !important; }
-    .split { padding: 100px 18px 96px; }
-    .reconnect h2 { font-size: 32px; }
+    #experiences { padding-top: 112px !important; }
     .quotes { margin-top: 72px; }
     .quote blockquote { font-size: 18px; }
     .exp-next { margin-top: 64px; }
@@ -160,27 +146,7 @@
     <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
   </div>
 
-  <!-- 3. EXPERIENCES INTRO: compass and one loose line -->
-  <section class="split" aria-labelledby="reconnect-title">
-    <div class="reconnect">
-      <div class="human-photo">
-        <span class="tape"></span>
-        <img width="1015" height="1100" class="torn" src="../assets/images/compass-forest.jpg" alt="Uma mão a segurar uma bússola de papel desenhada à mão numa floresta com sol" loading="lazy" decoding="async">
-      </div>
-      <div class="reconnect-copy">
-        <p class="kicker" style="margin-bottom: 12px;">Experiências</p>
-        <h2 id="reconnect-title">Abrir espaço para te reconectares.</h2>
-        <p class="half-copy">Arte, caminhadas, yoga e mesas partilhadas, para abrandar e prestar atenção.</p>
-        <p class="half-for">Para pessoas individuais, pequenos grupos e encontros</p>
-        <a href="/pt/#experiences" data-local="index.html#experiences" class="btn-primary">Explorar Experiências</a>
-      </div>
-    </div>
-    <svg class="split-line" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0 52 C40 30 70 78 110 58 C150 38 120 14 160 22 C205 31 190 70 240 66 C290 62 300 30 345 40 C385 49 370 74 415 68 C450 63 470 40 520 44 C570 48 560 72 610 66 C660 60 650 28 700 32 C750 36 740 70 790 62 C840 54 850 30 900 38 C945 45 960 60 1000 52" fill="none" stroke="#a3453d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
-    </svg>
-  </section>
-
-  <!-- 4. EXPERIENCES -->
+  <!-- 3. EXPERIENCES -->
   <section id="experiences" class="experiences paper section-pad" style="padding: 110px 64px 120px; background-color: oklch(94% 0.015 65); scroll-margin-top: 70px;" aria-labelledby="exp-title">
       <div style="text-align:center; margin: 0 auto 72px; max-width: 640px;">
       <p class="kicker">As Experiências</p>
@@ -247,7 +213,7 @@
 
   </section>
 
-  <!-- 5. CLOSING -->
+  <!-- 4. CLOSING -->
   <section id="contact" class="contact" style="padding: 10px 64px 130px; text-align:center;" aria-labelledby="closing-title">
     <div class="collage">
       <aside class="doors-note torn-note paper" aria-label="Onde as Experiências acontecem">
