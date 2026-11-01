@@ -32,12 +32,10 @@
   .hero-scrap .tape { top: -10px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
   .badge-paper { background-color: oklch(93% 0.025 75); color: oklch(25% 0.02 40); padding: 26px 26px 24px; font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.45; }
 
-  /* ---- Experiences intro: one spread on cream, with a torn rust paper behind ---- */
+  /* ---- Experiences intro: compass and text on cream ---- */
   .split { position: relative; z-index: 0; margin-top: -48px; padding: 150px 64px 170px; background-color: oklch(97% 0.01 70); }
   .strip { position: relative; z-index: 1; }
   .reconnect { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; max-width: 1040px; margin: 0 auto; }
-  .reconnect::before { content: ""; position: absolute; inset: -56px -48px -56px -40px; background: #a3453d; opacity: 0.14; transform: rotate(-1.2deg); pointer-events: none;
-    clip-path: polygon(0 3%, 8% 0, 22% 2%, 37% 0, 52% 3%, 68% 1%, 84% 2%, 100% 0, 98% 30%, 100% 62%, 97% 100%, 80% 97%, 61% 100%, 43% 97%, 24% 100%, 6% 98%, 0 100%, 2% 64%, 0 33%); }
   .reconnect-copy { position: relative; }
   .reconnect h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 44px; line-height: 1.1; margin: 0 0 18px; }
   .half-copy { font-size: 18px; line-height: 1.7; color: oklch(38% 0.02 40); margin: 0 0 18px; }
@@ -87,7 +85,6 @@
     .section-pad { padding-left: 28px !important; padding-right: 28px !important; }
     .split { padding: 120px 28px 120px; }
     .reconnect { grid-template-columns: 1fr; gap: 40px; max-width: 560px; }
-    .reconnect::before { inset: -32px -16px -32px -12px; }
     .human-photo { justify-self: center; max-width: 420px; }
     .split-line { display: none; }
     .quotes-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
@@ -163,7 +160,7 @@
     <svg class="scribble-under" viewBox="0 0 240 14" aria-hidden="true"><path d="M2 8 C40 2 80 12 120 6 S200 3 238 9" fill="none" stroke="oklch(97% 0.01 70)" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/></svg>
   </div>
 
-  <!-- 3. EXPERIENCES INTRO: compass, torn rust paper, one loose line -->
+  <!-- 3. EXPERIENCES INTRO: compass and one loose line -->
   <section class="split" aria-labelledby="reconnect-title">
     <div class="reconnect">
       <div class="human-photo">
