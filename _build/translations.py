@@ -164,6 +164,28 @@ T = {
     "What's happening for the team right now": 'O que a equipa está a viver neste momento',
     'Rough timing, and on-site or remote': 'Prazos aproximados, e se é presencial ou remoto',
 
+    # ---- About, Experiences-only version
+    'The person behind Innerscapism: an artist since childhood, a yoga teacher and art therapy student, with a background in architecture and product teams.':
+        'A pessoa por trás do Innerscapism: artista desde a infância, professora de yoga e estudante de arte-terapia, com um percurso em arquitetura e equipas de produto.',
+    'Innerscapism is where I make space for what gets lost when life moves fast: attention, curiosity, making things with our hands, and time with each other.':
+        'O Innerscapism é onde crio espaço para aquilo que se perde quando a vida corre depressa: a atenção, a curiosidade, fazer coisas com as mãos e o tempo uns com os outros.',
+    "I've been an amateur artist since I was two years old. Drawing, painting and collage have always been how I slow down and notice what's going on inside.":
+        'Sou artista amadora desde os dois anos. Desenhar, pintar e fazer colagens sempre foi a minha forma de abrandar e reparar no que se passa cá dentro.',
+    "I recently completed a 200-hour yoga teacher training in Bali, and I'm a student at SPAT, the Portuguese Society of Art Therapy (Sociedade Portuguesa de Arte-Terapia).":
+        'Concluí recentemente uma formação de professora de yoga de 200 horas em Bali, e sou estudante na SPAT, a Sociedade Portuguesa de Arte-Terapia.',
+    'From buildings to fast-moving teams': 'Dos edifícios às equipas aceleradas',
+    "I started in architecture, curious about how places shape the people who move through them. That curiosity took me into UX and product ownership: for the past ten years, I've worked with companies like Tekever and BMW, mostly in Scrum and agile teams.":
+        'Comecei na arquitetura, curiosa sobre a forma como os lugares moldam as pessoas que os percorrem. Essa curiosidade levou-me ao UX e ao product ownership: nos últimos dez anos, trabalhei com empresas como a Tekever e a BMW, sobretudo em equipas Scrum e ágeis.',
+    'Years of fast-moving work taught me how much we need space to pause, notice and talk properly.':
+        'Anos de trabalho a um ritmo acelerado mostraram-me o quanto precisamos de espaço para parar, reparar e conversar a sério.',
+    'Why the Experiences': 'Porquê as Experiências',
+    'The Experiences bring these threads together: art, movement and conversation, held with care, in Lisboa, Porto and online. No artistic skill needed, just curiosity.':
+        'As Experiências juntam estes fios: arte, movimento e conversa, com cuidado, em Lisboa, no Porto e online. Não é preciso jeito para a arte, só curiosidade.',
+    "I don't see myself as an expert in everything I bring together. What I offer is the space, the connection between these practices, and a lot of curiosity.":
+        'Não me vejo como especialista em tudo o que junto. O que ofereço é o espaço, a ligação entre estas práticas, e muita curiosidade.',
+    'Art therapy studies': 'Estudos de arte-terapia',
+    'Product teams': 'Equipas de produto',
+
     # ---------------------------------------------------------- innerware
     'Innerware · Human-centred design and UX consulting · innerscapism': 'Innerware · Design centrado nas pessoas e consultoria de UX · innerscapism',
     'Innerware is human-centred design consulting: UX and product strategy, design systems and creative systems workshops for teams building products, services and technology. Remote, by enquiry.':
